@@ -45,6 +45,9 @@ mlruns/
 # Test data (locally generated)
 test_data/
 
+# Reports (contain security data)
+reports/
+
 # MyPy and Ruff cache
 .mypy_cache/
 .ruff_cache/
