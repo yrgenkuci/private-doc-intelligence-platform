@@ -167,9 +167,9 @@ def test_extract_with_retry_on_transient_error(
     mock_response = MagicMock()
     mock_response.choices = [MagicMock()]
     mock_response.choices[0].message.function_call = MagicMock()
-    mock_response.choices[
-        0
-    ].message.function_call.arguments = '{"invoice_number": "INV-RETRY", "total_amount": 500.00}'
+    mock_response.choices[0].message.function_call.arguments = (
+        '{"invoice_number": "INV-RETRY", "total_amount": 500.00}'
+    )
 
     mock_client.chat.completions.create.side_effect = [
         Exception("Temporary API error"),  # First attempt fails
