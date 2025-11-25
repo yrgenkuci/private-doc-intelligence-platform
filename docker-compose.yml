@@ -1,0 +1,25 @@
+services:
+  # API Service - Main FastAPI gateway with OCR capabilities
+  api:
+    build:
+      context: .
+      dockerfile: services/api/Dockerfile
+    container_name: doc-intel-api
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    networks:
+      - doc-intel-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import httpx; httpx.get('http://localhost:8000/health', timeout=2.0)"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+networks:
+  doc-intel-network:
+    driver: bridge
+

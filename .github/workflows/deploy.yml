@@ -1,0 +1,86 @@
+name: Deploy to Kubernetes
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        type: choice
+        options:
+          - dev
+          - prod
+      image_tag:
+        description: 'Docker image tag to deploy'
+        required: true
+        default: 'latest'
+
+jobs:
+  deploy:
+    name: Deploy to ${{ github.event.inputs.environment }}
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v4
+        with:
+          version: 'latest'
+      
+      - name: Configure kubectl context
+        run: |
+          mkdir -p $HOME/.kube
+          echo "${{ secrets.KUBE_CONFIG }}" | base64 -d > $HOME/.kube/config
+          kubectl config use-context ${{ secrets.KUBE_CONTEXT }}
+      
+      - name: Update image tags in Kustomize overlays
+        run: |
+          cd k8s/overlays/${{ github.event.inputs.environment }}
+          
+          # Update API image
+          kustomize edit set image \
+            doc-intel-api=ghcr.io/${{ github.repository_owner }}/doc-intel-api:${{ github.event.inputs.image_tag }}
+          
+          # Update OCR image
+          kustomize edit set image \
+            doc-intel-ocr=ghcr.io/${{ github.repository_owner }}/doc-intel-ocr:${{ github.event.inputs.image_tag }}
+      
+      - name: Validate Kubernetes manifests
+        run: |
+          kubectl apply --dry-run=client -k k8s/overlays/${{ github.event.inputs.environment }}
+      
+      - name: Deploy to Kubernetes
+        run: |
+          kubectl apply -k k8s/overlays/${{ github.event.inputs.environment }}
+      
+      - name: Wait for deployment rollout
+        run: |
+          kubectl rollout status deployment/api-deployment -n doc-intelligence --timeout=5m
+          kubectl rollout status deployment/ocr-deployment -n doc-intelligence --timeout=5m
+      
+      - name: Verify deployment
+        run: |
+          kubectl get pods -n doc-intelligence
+          kubectl get services -n doc-intelligence
+          kubectl get ingress -n doc-intelligence
+      
+      - name: Run smoke tests
+        run: |
+          # Wait for pods to be ready
+          kubectl wait --for=condition=ready pod -l app=api -n doc-intelligence --timeout=2m
+          
+          # Port forward and test health endpoint
+          kubectl port-forward -n doc-intelligence svc/api-service 8000:8000 &
+          sleep 5
+          
+          # Test health endpoint
+          curl -f http://localhost:8000/health || exit 1
+          echo "Health check passed"
+          
+          # Test metrics endpoint
+          curl -f http://localhost:8000/metrics || exit 1
+          echo "Metrics endpoint passed"
+

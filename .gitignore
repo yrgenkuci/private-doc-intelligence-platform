@@ -41,3 +41,10 @@ htmlcov/
 
 # MLflow
 mlruns/
+
+# Test data (locally generated)
+test_data/
+
+# MyPy and Ruff cache
+.mypy_cache/
+.ruff_cache/

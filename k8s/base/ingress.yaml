@@ -1,0 +1,37 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: doc-intel-ingress
+  namespace: doc-intelligence
+  labels:
+    app.kubernetes.io/name: ingress
+    app.kubernetes.io/component: ingress
+    app.kubernetes.io/part-of: doc-intelligence
+  annotations:
+    # NGINX Ingress Controller annotations
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    # Request size limit (for document uploads)
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    # Rate limiting
+    nginx.ingress.kubernetes.io/limit-rps: "100"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: doc-intel.example.com  # Replace with your domain
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: api-service
+                port:
+                  number: 8000
+  # TLS configuration (uncomment when cert-manager is set up)
+  # tls:
+  #   - hosts:
+  #       - doc-intel.example.com
+  #     secretName: doc-intel-tls
+

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ocr-deployment
+  namespace: doc-intelligence
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+        - name: ocr
+          image: doc-intel-ocr:dev
+          imagePullPolicy: Never
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+

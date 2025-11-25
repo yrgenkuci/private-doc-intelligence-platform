@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: doc-intel-config
+  namespace: doc-intelligence
+  labels:
+    app.kubernetes.io/name: document-intelligence-platform
+    app.kubernetes.io/component: config
+data:
+  # Service configuration
+  SERVICE_NAME: "document-intelligence-api"
+  SERVICE_VERSION: "0.1.0"
+  LOG_LEVEL: "INFO"
+  
+  # Internal service URLs (within cluster)
+  OCR_SERVICE_URL: "http://ocr-service:8001"
+  
+  # API settings
+  API_PORT: "8000"
+  API_HOST: "0.0.0.0"
+

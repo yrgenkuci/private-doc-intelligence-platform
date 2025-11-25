@@ -4,6 +4,7 @@ Tests cover:
 - Health check endpoints
 - File upload validation
 - OCR integration
+- Prometheus metrics endpoint
 """
 
 import io
@@ -97,3 +98,29 @@ def test_upload_empty_file(client: TestClient) -> None:
     assert response.status_code == status.HTTP_400_BAD_REQUEST
     data = response.json()
     assert "detail" in data
+
+
+def test_metrics_endpoint(client: TestClient) -> None:
+    """Test Prometheus metrics endpoint."""
+    response = client.get("/metrics")
+
+    assert response.status_code == status.HTTP_200_OK
+    # Check for Prometheus/OpenMetrics format
+    content_type = response.headers["content-type"]
+    assert "openmetrics-text" in content_type or "text/plain" in content_type
+    # Check for some expected metrics
+    content = response.text
+    assert "http_requests_total" in content or "# HELP" in content
+
+
+def test_metrics_recorded_on_requests(client: TestClient) -> None:
+    """Test that metrics are recorded on API requests."""
+    # Make a health check request
+    client.get("/health")
+
+    # Get metrics
+    response = client.get("/metrics")
+    content = response.text
+
+    # Verify that http_requests_total metric exists
+    assert "http_requests_total" in content

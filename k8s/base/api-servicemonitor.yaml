@@ -1,0 +1,19 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: doc-intel-api-metrics
+  namespace: doc-intelligence
+  labels:
+    app.kubernetes.io/name: api
+    app.kubernetes.io/component: monitoring
+    app.kubernetes.io/part-of: doc-intelligence
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: api
+  endpoints:
+    - port: http
+      path: /metrics
+      interval: 30s
+      scrapeTimeout: 10s
+

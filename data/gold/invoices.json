@@ -1,0 +1,51 @@
+[
+  {
+    "id": "invoice_001",
+    "ocr_text": "INVOICE #INV-2024-001\nDate: January 15, 2024\nDue Date: February 15, 2024\n\nBill To:\nAcme Corporation\n456 Business Ave\nNew York, NY 10001\n\nFrom:\nTech Suppliers Inc\n123 Industrial Pkwy\nSan Francisco, CA 94105\n\nITEM DESCRIPTION          QTY    UNIT PRICE    AMOUNT\nLaptop Computer            5     $1,200.00    $6,000.00\nWireless Mouse            10        $25.00      $250.00\nUSB-C Cable               15        $15.00      $225.00\n\nSubtotal:                                      $6,475.00\nTax (8.5%):                                      $550.38\nTotal:                                         $7,025.38",
+    "expected": {
+      "invoice_number": "INV-2024-001",
+      "invoice_date": "2024-01-15",
+      "due_date": "2024-02-15",
+      "supplier_name": "Tech Suppliers Inc",
+      "supplier_address": "123 Industrial Pkwy, San Francisco, CA 94105",
+      "customer_name": "Acme Corporation",
+      "subtotal": 6475.00,
+      "tax_amount": 550.38,
+      "total_amount": 7025.38,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "invoice_002",
+    "ocr_text": "Invoice Number: 2024-Q1-042\nIssued: March 10, 2024\nPayment Due: April 9, 2024\n\nClient: Global Services Ltd\nVendor: Office Supplies Co\n789 Commerce Street\n\nOffice Chairs (Ergonomic)     8 @ €245.00 = €1,960.00\nStanding Desks                3 @ €580.00 = €1,740.00\nDesk Lamps (LED)             12 @ €45.00  = €540.00\n\nNet Amount: €4,240.00\nVAT (20%): €848.00\nGross Total: €5,088.00",
+    "expected": {
+      "invoice_number": "2024-Q1-042",
+      "invoice_date": "2024-03-10",
+      "due_date": "2024-04-09",
+      "supplier_name": "Office Supplies Co",
+      "supplier_address": "789 Commerce Street",
+      "customer_name": "Global Services Ltd",
+      "subtotal": 4240.00,
+      "tax_amount": 848.00,
+      "total_amount": 5088.00,
+      "currency": "EUR"
+    }
+  },
+  {
+    "id": "invoice_003",
+    "ocr_text": "INVOICE\nNo: INV-2024-0156\nDate: 2024-02-20\n\nTo: Manufacturing Corp\nFrom: Industrial Parts Ltd\n321 Factory Road\n\nMachine Parts Kit         2    £1,850.00    £3,700.00\nHydraulic Fluid (20L)     5      £120.00      £600.00\nSafety Equipment Set      4      £275.00    £1,100.00\n\nSubtotal                                     £5,400.00\nVAT @ 20%                                    £1,080.00\nTotal Amount Due                             £6,480.00\n\nPayment Terms: Net 30",
+    "expected": {
+      "invoice_number": "INV-2024-0156",
+      "invoice_date": "2024-02-20",
+      "due_date": null,
+      "supplier_name": "Industrial Parts Ltd",
+      "supplier_address": "321 Factory Road",
+      "customer_name": "Manufacturing Corp",
+      "subtotal": 5400.00,
+      "tax_amount": 1080.00,
+      "total_amount": 6480.00,
+      "currency": "GBP"
+    }
+  }
+]
+

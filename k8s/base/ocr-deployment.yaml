@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ocr-deployment
+  namespace: doc-intelligence
+  labels:
+    app.kubernetes.io/name: ocr
+    app.kubernetes.io/component: ocr-service
+    app.kubernetes.io/part-of: doc-intelligence
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ocr
+  template:
+    metadata:
+      labels:
+        app: ocr
+        app.kubernetes.io/name: ocr
+        app.kubernetes.io/component: ocr-service
+    spec:
+      containers:
+        - name: ocr
+          image: doc-intel-ocr:latest  # Replace with your registry
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8001
+              protocol: TCP
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "1000m"
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            runAsUser: 1000
+            capabilities:
+              drop:
+                - ALL
+      securityContext:
+        fsGroup: 1000
+

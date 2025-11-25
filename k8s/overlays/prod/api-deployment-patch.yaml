@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  namespace: doc-intelligence
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+        - name: api
+          image: your-registry.io/doc-intel-api:1.0.0  # Production image
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "1000m"
+
