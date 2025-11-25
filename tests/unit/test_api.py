@@ -69,6 +69,28 @@ def test_upload_valid_image(client: TestClient, sample_image_bytes: bytes) -> No
         assert data["success"] is True
         assert "document_id" in data
         assert data["text"] == "Sample extracted text"
+        assert "extracted_data" in data
+        assert data["extracted_data"] is None  # Not requested, should be None
+
+
+def test_upload_with_extract_fields_parameter(
+    client: TestClient, sample_image_bytes: bytes
+) -> None:
+    """Test upload endpoint accepts extract_fields parameter."""
+    files = {"file": ("test.png", sample_image_bytes, "image/png")}
+
+    with patch("services.api.main.ocr_service.extract_text") as mock_ocr:
+        mock_ocr.return_value = OCRResult(text="Sample extracted text", success=True)
+
+        # Test with extract_fields=true
+        response = client.post("/api/v1/documents/upload?extract_fields=true", files=files)
+
+        assert response.status_code == status.HTTP_200_OK
+        data = response.json()
+        assert data["success"] is True
+        assert "extracted_data" in data
+        # TODO: Will be non-None once LLM service is wired (Phase 2, Task 2)
+        assert data["extracted_data"] is None
 
 
 def test_upload_no_file(client: TestClient) -> None:

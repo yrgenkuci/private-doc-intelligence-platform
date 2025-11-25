@@ -16,10 +16,11 @@ import time
 import uuid
 from pathlib import Path
 
-from fastapi import FastAPI, File, HTTPException, Request, Response, UploadFile, status
+from fastapi import FastAPI, File, HTTPException, Query, Request, Response, UploadFile, status
 from pydantic import BaseModel
 
 from services.api import metrics
+from services.extraction.schema import InvoiceData
 from services.ocr.service import OCRService
 from services.shared.config import get_settings
 
@@ -84,6 +85,7 @@ class UploadResponse(BaseModel):
     success: bool
     document_id: str
     text: str
+    extracted_data: InvoiceData | None = None
     error: str | None = None
 
 
@@ -123,14 +125,16 @@ def get_metrics() -> Response:
 @app.post("/api/v1/documents/upload", response_model=UploadResponse, tags=["Documents"])
 async def upload_document(
     file: UploadFile = File(...),  # noqa: B008
+    extract_fields: bool = Query(False, description="Extract structured fields using LLM"),
 ) -> UploadResponse:
     """Upload document for OCR processing.
 
     Args:
         file: Image file to process
+        extract_fields: If True, extract structured invoice fields using LLM (optional)
 
     Returns:
-        Upload response with extracted text
+        Upload response with extracted text and optionally structured data
 
     Raises:
         HTTPException: If file is invalid or processing fails
@@ -179,7 +183,13 @@ async def upload_document(
         metrics.ocr_requests_total.labels(status="success").inc()
         metrics.documents_uploaded_total.labels(status="success").inc()
 
-        return UploadResponse(success=True, document_id=doc_id, text=result.text)
+        # TODO: Wire LLM extraction when extract_fields=True (Phase 2, Task 2)
+        # For now, always return None for extracted_data
+        extracted_data = None
+
+        return UploadResponse(
+            success=True, document_id=doc_id, text=result.text, extracted_data=extracted_data
+        )
 
     finally:
         # Clean up temp file
