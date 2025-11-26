@@ -24,7 +24,7 @@ Production-grade document intelligence platform on Kubernetes. OCR + LLM extract
 
 ## Quick Start
 
-**Get running in 5 minutes:** See [Quick Start Guide](docs/quickstart.md)
+Get running in 5 minutes - see [getting-started.md](docs/getting-started.md)
 
 ### Prerequisites
 - Docker Desktop (running)
@@ -45,11 +45,11 @@ curl http://localhost:8000/health
 # Expected: {"status":"healthy",...}
 ```
 
-**That's it!** See [quickstart.md](docs/quickstart.md) for testing with actual documents.
+See [getting-started.md](docs/getting-started.md) for testing with actual documents.
 
 ### Advanced Setup
 
-**Python development:**
+Python development:
 ```bash
 python3 -m venv venv
 source venv/bin/activate
@@ -57,14 +57,15 @@ pip install -r requirements.txt
 PYTHONPATH=. pytest tests/ -v
 ```
 
-**Kubernetes deployment:**
+Kubernetes deployment:
 ```bash
 kubectl apply -k k8s/overlays/dev/
 ```
 
 See detailed guides:
-- [Docker Deployment](docs/step-07-docker.md)
-- [Kubernetes Deployment](k8s/README.md)
+- [getting-started.md](docs/getting-started.md) - Setup and configuration
+- [deployment.md](docs/deployment.md) - Docker and Kubernetes deployment
+- [kubernetes.md](docs/kubernetes.md) - Advanced Kubernetes configuration
 
 ## Architecture
 
@@ -85,26 +86,26 @@ Based on industry best practices from:
 
 ## Documentation
 
-- **[Quick Start](docs/quickstart.md)** - Get running in 5 minutes
-- [Setup Guide](docs/setup.md) - Detailed setup with secrets management
-- [Testing Guide](docs/testing.md) - Complete testing guide with examples
-- [Implementation Notes](docs/implementation-notes.md) - Technical validation
-- [Docker Deployment](docs/step-07-docker.md)
-- [Grafana Dashboards](docs/step-11-grafana.md)
-- [Kubernetes Deployment](k8s/README.md)
-- [GitHub Actions CI/CD](.github/workflows/)
+- [getting-started.md](docs/getting-started.md) - Setup and configuration
+- [testing.md](docs/testing.md) - Testing guide with examples
+- [deployment.md](docs/deployment.md) - Docker and production deployment
+- [kubernetes.md](docs/kubernetes.md) - Kubernetes deployment guide
+- [monitoring.md](docs/monitoring.md) - Prometheus and Grafana dashboards
+- [architecture.md](docs/architecture.md) - Technical decisions and validation
+- [roadmap.md](docs/roadmap.md) - Future enhancements
+- [.github/workflows/](.github/workflows/) - CI/CD workflows
 
 ## Technology Stack
 
-- **Framework:** FastAPI 0.104.1
+- **Framework:** FastAPI 0.122.0
 - **Configuration:** Pydantic Settings 2.1.0
-- **LLM:** OpenAI GPT-4o-mini (via openai 1.3.7)
-- **OCR:** Tesseract + Pillow
-- **Testing:** Pytest with 100% coverage target
+- **LLM:** OpenAI GPT-4o-mini (via openai 1.109.1)
+- **OCR:** Tesseract + Pillow 10.4.0
+- **Testing:** Pytest with comprehensive test coverage
 - **Type Checking:** MyPy (strict mode)
 - **Code Quality:** Black + Ruff
 - **Container Orchestration:** Kubernetes + Kustomize
-- **Monitoring:** Prometheus + Grafana (planned)
+- **Monitoring:** Prometheus + Grafana
 
 ## Development Guidelines
 

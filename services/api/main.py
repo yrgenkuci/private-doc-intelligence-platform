@@ -126,20 +126,62 @@ def get_metrics() -> Response:
 
 @app.post("/api/v1/documents/upload", response_model=UploadResponse, tags=["Documents"])
 async def upload_document(
-    file: UploadFile = File(...),  # noqa: B008
-    extract_fields: bool = Query(False, description="Extract structured fields using LLM"),
+    file: UploadFile = File(..., description="Image file (PNG, JPEG, etc.)"),  # noqa: B008
+    extract_fields: bool = Query(
+        False,
+        description="Enable LLM-powered structured field extraction (requires OPENAI_API_KEY)",
+    ),
 ) -> UploadResponse:
-    """Upload document for OCR processing.
+    """Upload document for OCR processing and optional field extraction.
+
+    This endpoint performs:
+    1. **OCR (Optical Character Recognition)**: Extracts text from uploaded image
+       using Tesseract
+    2. **Field Extraction (optional)**: Extracts structured invoice fields using
+       GPT-4o-mini
+
+    ## Usage Examples
+
+    **Basic OCR only:**
+    ```bash
+    curl -X POST "http://localhost:8000/api/v1/documents/upload" \\
+      -F "file=@invoice.png"
+    ```
+
+    **OCR + Field Extraction:**
+    ```bash
+    curl -X POST "http://localhost:8000/api/v1/documents/upload?extract_fields=true" \\
+      -F "file=@invoice.png"
+    ```
+
+    ## Requirements
+
+    - **File Types**: PNG, JPEG, GIF, BMP, TIFF
+    - **Max Size**: 10MB (configurable)
+    - **LLM Extraction**: Requires `OPENAI_API_KEY` environment variable
+
+    ## Response Fields
+
+    - `success`: Always `true` if OCR succeeds
+    - `document_id`: Unique identifier for this document
+    - `text`: Raw OCR text extracted from the image
+    - `extracted_data`: Structured invoice fields (null if not requested or extraction fails)
+
+    ## Error Handling
+
+    - Returns 400 if file is invalid, empty, or wrong type
+    - Returns 500 if OCR processing fails
+    - Returns 200 with `extracted_data: null` if OCR succeeds but LLM extraction fails
 
     Args:
-        file: Image file to process
-        extract_fields: If True, extract structured invoice fields using LLM (optional)
+        file: Image file to process (required)
+        extract_fields: Enable LLM field extraction (optional, default: false)
 
     Returns:
-        Upload response with extracted text and optionally structured data
+        Upload response with OCR text and optionally structured invoice data
 
     Raises:
-        HTTPException: If file is invalid or processing fails
+        HTTPException: If file is invalid or OCR processing fails
     """
     # Validate file
     if not file.filename:

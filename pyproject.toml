@@ -46,6 +46,11 @@ testpaths = ["tests"]
 python_files = "test_*.py"
 python_functions = "test_*"
 asyncio_mode = "auto"
+# Test markers
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+    "integration: marks tests as integration tests requiring external services",
+]
 # Suppress deprecation warnings from third-party libraries
 # pytesseract uses pkgutil.find_loader (deprecated in 3.12, removed in 3.14)
 # Issue: https://github.com/madmaze/pytesseract/issues/XXX
