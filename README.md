@@ -10,8 +10,8 @@ Production-grade document intelligence platform on Kubernetes. OCR + LLM extract
 **Phase 2: Core Services** - Complete
 - Basic OCR service with Tesseract
 - Document ingestion API
-- LLM extraction service
-- Evaluation harness
+- LLM extraction service with OpenAI GPT-4o-mini
+- Evaluation harness (code complete, requires OpenAI API key to run)
 
 **Phase 3: Infrastructure** - Complete
 - Docker containers
@@ -81,8 +81,8 @@ Based on industry best practices from:
 2. **OCR & Layout Analysis** - Tesseract + EasyOCR (Tesseract implemented)
 3. **LLM Extraction** - OpenAI GPT-4o-mini for structured field extraction
 4. **Validation & Storage** - PostgreSQL with schema validation (planned)
-5. **Evaluation Harness** - Precision/Recall/F1 metrics (planned)
-6. **Kubernetes Deployment** - Helm charts with GitOps (planned)
+5. **Evaluation Harness** - P/R/F1 metrics implementation complete (requires valid OpenAI API key for testing)
+6. **Kubernetes Deployment** - Kustomize manifests with GitOps
 
 ## Documentation
 
