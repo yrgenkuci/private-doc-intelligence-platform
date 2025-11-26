@@ -9,7 +9,7 @@ python-multipart==0.0.20
 httpx==0.25.1
 
 # OCR and Image Processing
-pytesseract==0.3.10
+pytesseract==0.3.13
 Pillow==10.4.0
 
 # LLM Extraction
