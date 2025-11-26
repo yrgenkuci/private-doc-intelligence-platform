@@ -188,9 +188,18 @@ async def upload_document(
         # Extract structured fields if requested
         extracted_data = None
         if extract_fields:
+            extraction_start = time.time()
             extraction_result = extraction_service.extract_invoice_fields(result.text)
+            extraction_duration = time.time() - extraction_start
+
+            # Record extraction metrics
+            metrics.extraction_processing_duration_seconds.observe(extraction_duration)
+
             if extraction_result.success:
                 extracted_data = extraction_result.invoice_data
+                metrics.extraction_requests_total.labels(status="success").inc()
+            else:
+                metrics.extraction_requests_total.labels(status="failed").inc()
             # Note: If extraction fails, we still return OCR text successfully
             # This provides graceful degradation - OCR succeeded even if LLM failed
 

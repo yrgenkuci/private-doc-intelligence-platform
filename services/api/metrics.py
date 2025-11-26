@@ -5,6 +5,7 @@ Exposes key metrics for monitoring:
 - Request duration histograms
 - Document upload metrics
 - OCR processing metrics
+- LLM extraction metrics
 
 Based on Prometheus best practices:
 https://prometheus.io/docs/practices/naming/
@@ -51,6 +52,19 @@ ocr_requests_total = Counter(
     "ocr_requests_total",
     "Total OCR processing requests",
     ["status"],  # success, failed
+)
+
+# LLM extraction metrics
+extraction_requests_total = Counter(
+    "extraction_requests_total",
+    "Total LLM extraction requests",
+    ["status"],  # success, failed
+)
+
+extraction_processing_duration_seconds = Histogram(
+    "extraction_processing_duration_seconds",
+    "LLM extraction duration in seconds",
+    buckets=(0.5, 1.0, 2.0, 5.0, 10.0, 20.0, 30.0),  # LLM calls can be slower
 )
 
 

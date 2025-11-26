@@ -143,6 +143,51 @@ def test_upload_with_extraction_failure_graceful_degradation(
         assert data["extracted_data"] is None
 
 
+def test_extraction_metrics_recorded(client: TestClient, sample_image_bytes: bytes) -> None:
+    """Test that extraction metrics are recorded properly."""
+    files = {"file": ("test.png", sample_image_bytes, "image/png")}
+
+    # Import metrics module to check counters
+    from services.api import metrics
+
+    # Get initial metric values
+    initial_success = metrics.extraction_requests_total.labels(status="success")._value.get()
+    initial_failed = metrics.extraction_requests_total.labels(status="failed")._value.get()
+
+    # Mock successful extraction
+    with (
+        patch("services.api.main.ocr_service.extract_text") as mock_ocr,
+        patch("services.api.main.extraction_service.extract_invoice_fields") as mock_extract,
+    ):
+        mock_ocr.return_value = OCRResult(text="Sample text", success=True)
+        sample_data = InvoiceData(invoice_number="INV-001", currency="USD")
+        mock_extract.return_value = ExtractionResult(invoice_data=sample_data, success=True)
+
+        # Make request with extraction enabled
+        client.post("/api/v1/documents/upload?extract_fields=true", files=files)
+
+    # Check success counter incremented
+    final_success = metrics.extraction_requests_total.labels(status="success")._value.get()
+    assert final_success == initial_success + 1
+
+    # Mock failed extraction
+    with (
+        patch("services.api.main.ocr_service.extract_text") as mock_ocr,
+        patch("services.api.main.extraction_service.extract_invoice_fields") as mock_extract,
+    ):
+        mock_ocr.return_value = OCRResult(text="Sample text", success=True)
+        mock_extract.return_value = ExtractionResult(
+            invoice_data=None, success=False, error="Failed"
+        )
+
+        # Make request with extraction enabled
+        client.post("/api/v1/documents/upload?extract_fields=true", files=files)
+
+    # Check failed counter incremented
+    final_failed = metrics.extraction_requests_total.labels(status="failed")._value.get()
+    assert final_failed == initial_failed + 1
+
+
 def test_upload_no_file(client: TestClient) -> None:
     """Test upload endpoint with no file."""
     response = client.post("/api/v1/documents/upload")
