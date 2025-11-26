@@ -21,6 +21,7 @@ from pydantic import BaseModel
 
 from services.api import metrics
 from services.extraction.schema import InvoiceData
+from services.extraction.service import ExtractionService
 from services.ocr.service import OCRService
 from services.shared.config import get_settings
 
@@ -32,6 +33,7 @@ app = FastAPI(
 )
 
 ocr_service = OCRService(settings)
+extraction_service = ExtractionService(settings)
 
 
 @app.middleware("http")
@@ -183,9 +185,14 @@ async def upload_document(
         metrics.ocr_requests_total.labels(status="success").inc()
         metrics.documents_uploaded_total.labels(status="success").inc()
 
-        # TODO: Wire LLM extraction when extract_fields=True (Phase 2, Task 2)
-        # For now, always return None for extracted_data
+        # Extract structured fields if requested
         extracted_data = None
+        if extract_fields:
+            extraction_result = extraction_service.extract_invoice_fields(result.text)
+            if extraction_result.success:
+                extracted_data = extraction_result.invoice_data
+            # Note: If extraction fails, we still return OCR text successfully
+            # This provides graceful degradation - OCR succeeded even if LLM failed
 
         return UploadResponse(
             success=True, document_id=doc_id, text=result.text, extracted_data=extracted_data

@@ -16,6 +16,8 @@ from fastapi.testclient import TestClient
 from PIL import Image
 
 from services.api.main import app
+from services.extraction.schema import InvoiceData
+from services.extraction.service import ExtractionResult
 from services.ocr.service import OCRResult
 
 
@@ -76,11 +78,24 @@ def test_upload_valid_image(client: TestClient, sample_image_bytes: bytes) -> No
 def test_upload_with_extract_fields_parameter(
     client: TestClient, sample_image_bytes: bytes
 ) -> None:
-    """Test upload endpoint accepts extract_fields parameter."""
+    """Test upload endpoint with LLM extraction enabled."""
     files = {"file": ("test.png", sample_image_bytes, "image/png")}
 
-    with patch("services.api.main.ocr_service.extract_text") as mock_ocr:
-        mock_ocr.return_value = OCRResult(text="Sample extracted text", success=True)
+    # Mock both OCR and extraction services
+    with (
+        patch("services.api.main.ocr_service.extract_text") as mock_ocr,
+        patch("services.api.main.extraction_service.extract_invoice_fields") as mock_extract,
+    ):
+        mock_ocr.return_value = OCRResult(text="Sample invoice text", success=True)
+
+        # Mock successful extraction
+        sample_invoice_data = InvoiceData(
+            invoice_number="INV-12345",
+            invoice_date="2024-01-15",
+            total_amount=1000.00,
+            currency="USD",
+        )
+        mock_extract.return_value = ExtractionResult(invoice_data=sample_invoice_data, success=True)
 
         # Test with extract_fields=true
         response = client.post("/api/v1/documents/upload?extract_fields=true", files=files)
@@ -88,8 +103,43 @@ def test_upload_with_extract_fields_parameter(
         assert response.status_code == status.HTTP_200_OK
         data = response.json()
         assert data["success"] is True
-        assert "extracted_data" in data
-        # TODO: Will be non-None once LLM service is wired (Phase 2, Task 2)
+        assert data["text"] == "Sample invoice text"
+        assert data["extracted_data"] is not None
+        assert data["extracted_data"]["invoice_number"] == "INV-12345"
+        assert data["extracted_data"]["total_amount"] == "1000.0"  # Decimal serialized
+        assert data["extracted_data"]["currency"] == "USD"
+
+        # Verify extraction service was called
+        mock_extract.assert_called_once_with("Sample invoice text")
+
+
+def test_upload_with_extraction_failure_graceful_degradation(
+    client: TestClient, sample_image_bytes: bytes
+) -> None:
+    """Test that OCR succeeds even if LLM extraction fails."""
+    files = {"file": ("test.png", sample_image_bytes, "image/png")}
+
+    # Mock OCR success but extraction failure
+    with (
+        patch("services.api.main.ocr_service.extract_text") as mock_ocr,
+        patch("services.api.main.extraction_service.extract_invoice_fields") as mock_extract,
+    ):
+        mock_ocr.return_value = OCRResult(text="Sample invoice text", success=True)
+
+        # Mock extraction failure
+        mock_extract.return_value = ExtractionResult(
+            invoice_data=None, success=False, error="API key not set"
+        )
+
+        # Test with extract_fields=true
+        response = client.post("/api/v1/documents/upload?extract_fields=true", files=files)
+
+        # Request should still succeed (OCR succeeded)
+        assert response.status_code == status.HTTP_200_OK
+        data = response.json()
+        assert data["success"] is True
+        assert data["text"] == "Sample invoice text"
+        # Extraction failed, so extracted_data should be None
         assert data["extracted_data"] is None
 
 
