@@ -16,6 +16,13 @@ Pillow==10.4.0
 openai==1.109.1
 tenacity==8.2.3
 
+# Local Model Inference (Phase 2b)
+# PyTorch with CUDA support for RTX 2000 Ada (CUDA 13.0)
+torch==2.5.1
+transformers==4.46.3
+sentencepiece==0.2.0  # Required for Donut tokenizer
+protobuf==6.33.1  # Required for XLM-RoBERTa tokenizer
+
 # Monitoring
 prometheus-client==0.19.0
 

@@ -53,6 +53,20 @@ class Settings(BaseSettings):
         ),
     )
 
+    # Local model configuration (for extraction_provider="local")
+    local_model_device: Literal["auto", "cuda", "cpu"] = Field(
+        default="auto",
+        description="Device for local model inference (auto=GPU if available, else CPU)",
+    )
+    local_model_precision: Literal["fp32", "fp16"] = Field(
+        default="fp32",
+        description="Model precision (fp16=half precision, faster but less accurate)",
+    )
+    local_model_warmup: bool = Field(
+        default=True,
+        description="Run warmup inference on model load to optimize first request",
+    )
+
 
 def get_settings() -> Settings:
     """Factory function to get settings instance.

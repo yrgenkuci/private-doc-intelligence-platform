@@ -86,3 +86,60 @@ def test_extraction_provider_invalid_value(clean_env: None) -> None:
 
     with pytest.raises(ValidationError, match="extraction_provider"):
         Settings(_env_file=None)
+
+
+def test_local_model_device_default(clean_env: None) -> None:
+    """Test that local model device defaults to auto."""
+    settings = Settings(_env_file=None)
+
+    assert settings.local_model_device == "auto"
+
+
+def test_local_model_device_cuda(clean_env: None) -> None:
+    """Test that local model device can be set to cuda."""
+    os.environ["APP_LOCAL_MODEL_DEVICE"] = "cuda"
+
+    settings = Settings(_env_file=None)
+
+    assert settings.local_model_device == "cuda"
+
+
+def test_local_model_device_cpu(clean_env: None) -> None:
+    """Test that local model device can be set to cpu."""
+    os.environ["APP_LOCAL_MODEL_DEVICE"] = "cpu"
+
+    settings = Settings(_env_file=None)
+
+    assert settings.local_model_device == "cpu"
+
+
+def test_local_model_precision_default(clean_env: None) -> None:
+    """Test that local model precision defaults to fp32."""
+    settings = Settings(_env_file=None)
+
+    assert settings.local_model_precision == "fp32"
+
+
+def test_local_model_precision_fp16(clean_env: None) -> None:
+    """Test that local model precision can be set to fp16."""
+    os.environ["APP_LOCAL_MODEL_PRECISION"] = "fp16"
+
+    settings = Settings(_env_file=None)
+
+    assert settings.local_model_precision == "fp16"
+
+
+def test_local_model_warmup_default(clean_env: None) -> None:
+    """Test that local model warmup defaults to True."""
+    settings = Settings(_env_file=None)
+
+    assert settings.local_model_warmup is True
+
+
+def test_local_model_warmup_disabled(clean_env: None) -> None:
+    """Test that local model warmup can be disabled."""
+    os.environ["APP_LOCAL_MODEL_WARMUP"] = "false"
+
+    settings = Settings(_env_file=None)
+
+    assert settings.local_model_warmup is False
