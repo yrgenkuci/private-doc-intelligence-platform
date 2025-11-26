@@ -13,8 +13,9 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
+from services.extraction.base import ExtractionResult
 from services.extraction.schema import InvoiceData
-from services.extraction.service import ExtractionResult, ExtractionService
+from services.extraction.service import ExtractionService
 from services.shared.config import Settings
 
 
@@ -72,6 +73,21 @@ def test_extraction_service_initialization(extraction_service: ExtractionService
     """Test that extraction service initializes correctly."""
     assert extraction_service is not None
     assert isinstance(extraction_service.settings, Settings)
+    assert extraction_service.provider_name == "openai"
+
+
+@patch.dict("os.environ", {"OPENAI_API_KEY": "test-key"})
+def test_provider_is_available_with_key() -> None:
+    """Test is_available returns True when API key is set."""
+    service = ExtractionService(Settings())
+    assert service.is_available() is True
+
+
+@patch.dict("os.environ", {}, clear=True)
+def test_provider_is_available_without_key() -> None:
+    """Test is_available returns False when API key is not set."""
+    service = ExtractionService(Settings())
+    assert service.is_available() is False
 
 
 @patch.dict("os.environ", {}, clear=True)
@@ -94,7 +110,7 @@ def test_extract_empty_text(extraction_service: ExtractionService) -> None:
         assert "Empty OCR text" in result.error
 
 
-@patch("services.extraction.service.OpenAI")
+@patch("services.extraction.openai_provider.OpenAI")
 @patch.dict("os.environ", {"OPENAI_API_KEY": "test-key"})
 def test_extract_success(
     mock_openai_class: MagicMock,
@@ -126,7 +142,7 @@ def test_extract_success(
     mock_client.chat.completions.create.assert_called_once()
 
 
-@patch("services.extraction.service.OpenAI")
+@patch("services.extraction.openai_provider.OpenAI")
 @patch.dict("os.environ", {"OPENAI_API_KEY": "test-key"})
 def test_extract_api_error(
     mock_openai_class: MagicMock, extraction_service: ExtractionService
@@ -146,15 +162,18 @@ def test_extract_api_error(
 
 def test_extraction_result_model() -> None:
     """Test ExtractionResult model."""
-    result = ExtractionResult(invoice_data=InvoiceData(invoice_number="TEST-123"), success=True)
+    result = ExtractionResult(
+        invoice_data=InvoiceData(invoice_number="TEST-123"), success=True, provider="test"
+    )
 
     assert result.success is True
     assert result.invoice_data is not None
     assert result.invoice_data.invoice_number == "TEST-123"
     assert result.error is None
+    assert result.provider == "test"
 
 
-@patch("services.extraction.service.OpenAI")
+@patch("services.extraction.openai_provider.OpenAI")
 @patch.dict("os.environ", {"OPENAI_API_KEY": "test-key"})
 def test_extract_with_retry_on_transient_error(
     mock_openai_class: MagicMock, extraction_service: ExtractionService
@@ -186,7 +205,7 @@ def test_extract_with_retry_on_transient_error(
     assert mock_client.chat.completions.create.call_count == 2  # Retried once
 
 
-@patch("services.extraction.service.OpenAI")
+@patch("services.extraction.openai_provider.OpenAI")
 @patch.dict("os.environ", {"OPENAI_API_KEY": "test-key"})
 def test_extract_fails_after_max_retries(
     mock_openai_class: MagicMock, extraction_service: ExtractionService

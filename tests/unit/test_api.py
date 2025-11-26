@@ -16,8 +16,8 @@ from fastapi.testclient import TestClient
 from PIL import Image
 
 from services.api.main import app
+from services.extraction.base import ExtractionResult
 from services.extraction.schema import InvoiceData
-from services.extraction.service import ExtractionResult
 from services.ocr.service import OCRResult
 
 
@@ -95,7 +95,9 @@ def test_upload_with_extract_fields_parameter(
             total_amount=1000.00,
             currency="USD",
         )
-        mock_extract.return_value = ExtractionResult(invoice_data=sample_invoice_data, success=True)
+        mock_extract.return_value = ExtractionResult(
+            invoice_data=sample_invoice_data, success=True, provider="openai"
+        )
 
         # Test with extract_fields=true
         response = client.post("/api/v1/documents/upload?extract_fields=true", files=files)
@@ -128,7 +130,7 @@ def test_upload_with_extraction_failure_graceful_degradation(
 
         # Mock extraction failure
         mock_extract.return_value = ExtractionResult(
-            invoice_data=None, success=False, error="API key not set"
+            invoice_data=None, success=False, error="API key not set", provider="openai"
         )
 
         # Test with extract_fields=true
@@ -161,7 +163,9 @@ def test_extraction_metrics_recorded(client: TestClient, sample_image_bytes: byt
     ):
         mock_ocr.return_value = OCRResult(text="Sample text", success=True)
         sample_data = InvoiceData(invoice_number="INV-001", currency="USD")
-        mock_extract.return_value = ExtractionResult(invoice_data=sample_data, success=True)
+        mock_extract.return_value = ExtractionResult(
+            invoice_data=sample_data, success=True, provider="openai"
+        )
 
         # Make request with extraction enabled
         client.post("/api/v1/documents/upload?extract_fields=true", files=files)
@@ -177,7 +181,7 @@ def test_extraction_metrics_recorded(client: TestClient, sample_image_bytes: byt
     ):
         mock_ocr.return_value = OCRResult(text="Sample text", success=True)
         mock_extract.return_value = ExtractionResult(
-            invoice_data=None, success=False, error="Failed"
+            invoice_data=None, success=False, error="Failed", provider="openai"
         )
 
         # Make request with extraction enabled

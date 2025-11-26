@@ -20,8 +20,8 @@ from fastapi import FastAPI, File, HTTPException, Query, Request, Response, Uplo
 from pydantic import BaseModel
 
 from services.api import metrics
+from services.extraction.factory import create_extraction_service
 from services.extraction.schema import InvoiceData
-from services.extraction.service import ExtractionService
 from services.ocr.service import OCRService
 from services.shared.config import get_settings
 
@@ -33,7 +33,7 @@ app = FastAPI(
 )
 
 ocr_service = OCRService(settings)
-extraction_service = ExtractionService(settings)
+extraction_service = create_extraction_service(settings)
 
 
 @app.middleware("http")

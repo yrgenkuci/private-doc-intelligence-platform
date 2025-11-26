@@ -4,6 +4,7 @@ import os
 from collections.abc import Generator
 
 import pytest
+from pydantic import ValidationError
 
 from services.shared.config import Settings, get_settings
 
@@ -28,6 +29,7 @@ def test_settings_defaults(clean_env: None) -> None:
     assert settings.log_level == "INFO"
     assert settings.service_name == "doc-intelligence-platform"
     assert settings.service_version == "0.1.0"
+    assert settings.extraction_provider == "openai"  # Default provider
 
 
 def test_settings_from_env_vars(clean_env: None) -> None:
@@ -60,3 +62,27 @@ def test_get_settings_factory() -> None:
     assert isinstance(settings, Settings)
     # Don't assert specific service_name since it may come from .env file
     assert settings.service_name in ["doc-intelligence-platform", "doc-intel-api"]
+
+
+def test_extraction_provider_default(clean_env: None) -> None:
+    """Test that extraction provider defaults to openai."""
+    settings = Settings(_env_file=None)
+
+    assert settings.extraction_provider == "openai"
+
+
+def test_extraction_provider_env_override(clean_env: None) -> None:
+    """Test that extraction provider can be overridden via environment variable."""
+    os.environ["APP_EXTRACTION_PROVIDER"] = "local"
+
+    settings = Settings(_env_file=None)
+
+    assert settings.extraction_provider == "local"
+
+
+def test_extraction_provider_invalid_value(clean_env: None) -> None:
+    """Test that invalid extraction provider raises ValidationError."""
+    os.environ["APP_EXTRACTION_PROVIDER"] = "invalid"
+
+    with pytest.raises(ValidationError, match="extraction_provider"):
+        Settings(_env_file=None)

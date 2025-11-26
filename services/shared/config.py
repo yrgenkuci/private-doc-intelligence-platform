@@ -45,6 +45,14 @@ class Settings(BaseSettings):
         description="Service version",
     )
 
+    # Extraction provider configuration
+    extraction_provider: Literal["openai", "local"] = Field(
+        default="openai",
+        description=(
+            "Extraction provider to use (openai for cloud API, local for self-hosted models)"
+        ),
+    )
+
 
 def get_settings() -> Settings:
     """Factory function to get settings instance.
