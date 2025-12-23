@@ -46,11 +46,21 @@ class Settings(BaseSettings):
     )
 
     # Extraction provider configuration
-    extraction_provider: Literal["openai", "local"] = Field(
+    extraction_provider: Literal["openai", "local", "ollama"] = Field(
         default="openai",
         description=(
-            "Extraction provider to use (openai for cloud API, local for self-hosted models)"
+            "Extraction provider: openai (cloud API), local (Donut model), ollama (self-hosted LLM)"
         ),
+    )
+
+    # Ollama configuration (for extraction_provider="ollama")
+    ollama_base_url: str = Field(
+        default="http://localhost:11434",
+        description="Ollama server base URL",
+    )
+    ollama_model: str = Field(
+        default="qwen2.5:7b",
+        description="Ollama model to use for extraction (e.g., qwen2.5:7b, llama3.1:8b)",
     )
 
     # Local model configuration (for extraction_provider="local")

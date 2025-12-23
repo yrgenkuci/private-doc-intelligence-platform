@@ -57,9 +57,16 @@ def calculate_field_match(expected: Any, predicted: Any) -> bool:
     if isinstance(expected, date) and isinstance(predicted, date):
         return expected == predicted
 
-    # String comparison (case-insensitive, stripped)
+    # String comparison (case-insensitive, stripped, normalized whitespace)
     if isinstance(expected, str) and isinstance(predicted, str):
-        return expected.strip().lower() == predicted.strip().lower()
+        # Normalize: replace newlines with commas, collapse multiple spaces
+        def normalize_string(s: str) -> str:
+            s = s.strip().lower()
+            s = s.replace("\n", ", ")  # Newlines to commas (common in addresses)
+            s = " ".join(s.split())  # Collapse whitespace
+            return s
+
+        return normalize_string(expected) == normalize_string(predicted)
 
     # Direct comparison for other types
     return bool(expected == predicted)

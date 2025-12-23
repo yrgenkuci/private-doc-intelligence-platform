@@ -14,6 +14,7 @@ import logging
 
 from services.extraction.base import ExtractionProvider
 from services.extraction.local_provider import LocalExtractionProvider
+from services.extraction.ollama_provider import OllamaExtractionProvider
 from services.extraction.openai_provider import OpenAIExtractionProvider
 from services.shared.config import Settings
 
@@ -30,6 +31,7 @@ class ProviderRegistry:
     _providers: dict[str, type[ExtractionProvider]] = {
         "openai": OpenAIExtractionProvider,
         "local": LocalExtractionProvider,
+        "ollama": OllamaExtractionProvider,
     }
 
     @classmethod

@@ -185,7 +185,7 @@ class OpenAIExtractionProvider(ExtractionProvider):
         """
         return f"""Extract invoice information from OCR text and return structured data.
 
-Example 1:
+Example 1 (Standard format):
 OCR Text: "INVOICE #INV-12345\\nDate: January 15, 2024\\nDue: February 15, 2024\\n\
 Bill To: ABC Corp\\nFrom: XYZ Suppliers Inc\\n123 Main Street\\n\
 Subtotal: $1,000.00\\nTax (10%): $100.00\\nTotal: $1,100.00"
@@ -195,26 +195,41 @@ Expected Output: {{"invoice_number": "INV-12345", "invoice_date": "2024-01-15", 
 "supplier_name": "XYZ Suppliers Inc", "supplier_address": "123 Main Street", \
 "subtotal": 1000.00, "tax_amount": 100.00, "total_amount": 1100.00, "currency": "USD"}}
 
-Example 2:
+Example 2 (Seller/Client side-by-side format):
+OCR Text: "Invoice no: 84652373 Date of issue: 02/23/2021 Seller: Client: \
+Nguyen-Roach Clark-Foster 247 David Highway 77477 Cliff Apt. 853 \
+Lake John, WV 84178 Washingtonbury, MS 78346 Tax Id: 991-72-5826 \
+SUMMARY VAT [%] Net worth VAT Gross worth 10% 211,77 21,18 232,95 Total $ 232,95"
+
+Expected Output: {{"invoice_number": "84652373", "invoice_date": "2021-02-23", \
+"supplier_name": "Nguyen-Roach", "supplier_address": "247 David Highway, Lake John, WV 84178", \
+"customer_name": "Clark-Foster", \
+"subtotal": 211.77, "tax_amount": 21.18, "total_amount": 232.95, "currency": "USD"}}
+
+Example 3 (European format):
 OCR Text: "Invoice Number: 2024-001\\nIssued: 03/10/2024\\n\
 Client: Tech Solutions Ltd\\nVendor: Office Supplies Co\\n\
-Amount Due: €850.00\\nVAT (20%): €170.00\\nGrand Total: €1,020.00"
+Amount Due: EUR 850.00\\nVAT (20%): EUR 170.00\\nGrand Total: EUR 1,020.00"
 
 Expected Output: {{"invoice_number": "2024-001", "invoice_date": "2024-03-10", \
 "customer_name": "Tech Solutions Ltd", "supplier_name": "Office Supplies Co", \
 "subtotal": 850.00, "tax_amount": 170.00, "total_amount": 1020.00, "currency": "EUR"}}
 
-Instructions:
-- Extract all available fields from the OCR text below
-- Return null for any field not found in the text
-- Parse dates into YYYY-MM-DD format
-- Extract numeric values without currency symbols
-- Identify the currency code (USD, EUR, GBP, etc.)
+CRITICAL Instructions for parsing:
+- When you see "Seller: Client:" the FIRST company name is the seller, SECOND is the client
+- For addresses in side-by-side format: Look for Tax Id patterns to find address boundaries
+- The seller address is between seller name and "Tax Id: XXX-XX-XXXX" (first Tax Id)
+- Format supplier_address as: "street, city, state zip" (use comma between street and city)
+- "Net worth" in SUMMARY = subtotal (before tax)
+- "Gross worth" or "Total" = total_amount (after tax)
+- Parse dates: "02/23/2021" -> "2021-02-23" (MM/DD/YYYY to YYYY-MM-DD)
+- European decimals: "211,77" -> 211.77 (comma is decimal separator)
+- Return null for any field not clearly present
 
 OCR Text:
 {ocr_text}
 
-Extract the invoice data following the format shown in the examples."""
+Extract the invoice data. For supplier_address, extract ONLY the seller's address."""
 
     def _get_invoice_schema(self) -> dict[str, Any]:
         """Get OpenAI function calling schema for InvoiceData.

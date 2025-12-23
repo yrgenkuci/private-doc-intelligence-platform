@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "batch1-0494",
+    "ocr_text": "Invoice no: 84652373 Date of issue: 02/23/2021 Seller: Client: Nguyen-Roach Clark-Foster 247 David Highway 77477 Cliff Apt. 853 Lake John, WV 84178 Washingtonbury, MS 78346 Tax Id: 991-72-5826 Tax Id: 937-70-8530 IBAN: GB91/YXO05542456978150 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Stemware Rack Display Kitchen 1,00 each 42,32 42,32 10% 46,55 Wine Glass Holder Bottle Carbon Steel Free Punch 2 VTG (4) 7 Ounce Since 1852 1,00 each 14,00 14,00 10% 15,40 Milk Bottle Wine Carafe Juice Glass with Cork Lids 3 Vintage Crystal Red Wine 1,00 each 35,45 35,45 10% 39,00 Glasses NOS West Germany 1983 6 10 ounce elegant stems 3 Ikea Stainless Steel 4-bottle 4,00 each 25,00 100,00 10% 110,00 Wine Rack 300.557.60 great condition gift it! 5 Lolita \"Wine Bouquet\" Hand 1,00 each 20,00 20,00 10% 22,00 Painted and Decorated Wine Glass NIB SUMMARY VAT [%] Net worth VAT Gross worth 10% 211,77 21,18 232,95 Total $ 211,77 $ 21,18 $ 232,95 Troy",
+    "expected": {
+      "invoice_number": "84652373",
+      "invoice_date": "2021-02-23",
+      "due_date": null,
+      "supplier_name": "Nguyen-Roach",
+      "supplier_address": "247 David Highway\nLake John, WV 84178",
+      "customer_name": "Clark-Foster",
+      "subtotal": 211.77,
+      "tax_amount": 21.18,
+      "total_amount": 232.95,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0489",
+    "ocr_text": "Invoice no: 37451664 Date of issue: 06/11/2020 Seller: Client: Scott-Howard Williams, Schneider and Gomez 45558 Davis Mountains 588 Morales Rapids East Zacharyville, IA 99376 East Katherineton, MT 53545 Tax Id: 997-75-1112 Tax Id: 916-94-8739 IBAN: GB3IKIAV64209378666800 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth PUMA Boys Youth Universal FG 2,00 each 19,99 39,98 10% 43,98 Jr Soccer Cleats 2.5 White High Red NEW Futbol 2 Lotto Youth Boys Fuerzapura 5,00 each 19,99 99,95 10% 109,94 LSOO Jr Soccer Cleats Size 2.5 White Blue M6147 2.5Y SUMMARY VAT [%] Net worth VAT Gross worth 10% 139,93 13,99 153,92 Total $ 139,93 $ 13,99 $ 153,92",
+    "expected": {
+      "invoice_number": "37451664",
+      "invoice_date": "2020-06-11",
+      "due_date": null,
+      "supplier_name": "Scott-Howard",
+      "supplier_address": "45558 Davis Mountains\nEast Zacharyville, IA 99376",
+      "customer_name": "Williams, Schneider and Gomez",
+      "subtotal": 139.93,
+      "tax_amount": 13.99,
+      "total_amount": 153.92,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0499",
+    "ocr_text": "Invoice no: 40108666 Date of issue: 02/07/2020 Seller: Client: Bailey, Murray and Lewis Hester Inc 33771 Powell Pike Suite 054 4000 Tonya Rapid Suite 963 East Lisastad, RI 21938 South Marissaport, MN 39537 Tax Id: 993-75-3149 Tax Id: 998-98-6887 IBAN: GBBOMTNI52501633185191 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Microsoft Xbox One 1 - 500 GB 1,00 each 175,00 175,00 10% 192,50 Console Black wl Controller & Power Supply GOOD 2 Nintendo DSOriginal NTR-001 3,00 each 0,99 2,97 10% 3,27 Console Camouflage Tested Works 3 Nintendo 2DS Console Blue 5,00 each 54,99 274,95 10% 302,45 Japan model Combine Shipping available 2 SUMMARY VAT [%] Net worth VAT Gross worth 10% 452,92 45,29 498,21 Total $ 452,92 $ 45,29 $ 498,21",
+    "expected": {
+      "invoice_number": "40108666",
+      "invoice_date": "2020-02-07",
+      "due_date": null,
+      "supplier_name": "Bailey, Murray and Lewis",
+      "supplier_address": "33771 Powell Pike Suite 054\nEast Lisastad, RI 21938",
+      "customer_name": "Hester Inc",
+      "subtotal": 452.92,
+      "tax_amount": 45.29,
+      "total_amount": 498.21,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0497",
+    "ocr_text": "Invoice no: 73285932 Date of issue: 07/25/2017 Seller: Client: Merritt, Williams and Young Olson, Cisneros and Moore 6801 Frank Run 80943 Beck Divide West IN 06055 Wadeport, IA 90419 Tax Id: 963-86-7453 Tax Id: 901-73-0142 IBAN: GBI6HUWQ31434229260013 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Bcbgeneration Black Sleeveless 2,00 each 2,99 5,98 10% 6,58 Lace Back Cut Out Dress Sz 2 2 Zpcs baby clothes cotton 5,00 each 10,99 54,95 10% 60,45 hoodied top+pants baby boys Outfits gentleman 3 NWT $1200 J Crew Silk Chiffon 1,00 each 295,00 295,00 10% 324,50 Ivory Wedding Dress with Beading Shein Blue And White Striped 5,00 each 8,00 40,00 10% 44,00 Wrap Dress 5 Guess Dress Size 6 2,00 each 20,00 40,00 10% 00 CLIFFORD & WILLS BLACK 5,00 each 5,99 29,95 10% 32,95 NETIMESH OVER TAUPE LONG DRESS SIZE Matilda Jane Women's Light 3,00 each 50,00 150,00 10% 165,00 Rising High Low Green Floral Dress Size L Pockets SUMMARY VAT [%] Net worth VAT Gross worth 10% 615,88 61,59 677,47 Total $ 615,88 $ 61,59 $ 677,47 Mary , boys 44,C",
+    "expected": {
+      "invoice_number": "73285932",
+      "invoice_date": "2017-07-25",
+      "due_date": null,
+      "supplier_name": "Merritt, Williams and Young",
+      "supplier_address": "6801 Frank Run\nWest Mary, IN 06055",
+      "customer_name": "Olson, Cisneros and Moore",
+      "subtotal": 615.88,
+      "tax_amount": 61.59,
+      "total_amount": 677.47,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0081",
+    "ocr_text": "Invoice no: 15288019 Date of issue: 09/07/2014 Seller: Client: Fernandez Ltd Wilson-Wilson 06398 Jensen Loaf 85455 Carter Estate Andrewton, AR 65741 Mooremouth, CT 29699 Tax Id: 983-71-0649 Tax Id: 922-87-0964 IBAN: GB88DSHK83384951793426 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Easy No Tie Rubber Shoe Laces 1,00 each 1,55 1,55 10% 1,71 Colored Trainers Snickers Kids + Adults Shoelaces SUMMARY VAT [%] Net worth VAT Gross worth 10% 1,55 0,16 1,71 Total $ 1,55 $ 0,16 $ 1,71",
+    "expected": {
+      "invoice_number": "15288019",
+      "invoice_date": "2014-09-07",
+      "due_date": null,
+      "supplier_name": "Fernandez Ltd",
+      "supplier_address": "06398 Jensen Loaf\nAndrewton, AR 65741",
+      "customer_name": "Wilson-Wilson",
+      "subtotal": 1.55,
+      "tax_amount": 0.16,
+      "total_amount": 1.71,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0105",
+    "ocr_text": "Invoice no: 57290992 Date of issue: 10/03/2011 Seller: Client: Adams PLC Johnson, Daniels and Ramirez USS Moon 6889 Oliver Summit FPO AA 34591 South Ebony, NY 23978 Tax Id: 964-98-1799 Tax Id: 925-71-0496 IBAN: GB3OOLCJ81769735097340 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 25\"x25 Marble Black Top 5,00 each 2 789,00 13 945,00 10% 15 339,50 custom Table Carnelian Marquetry Art Halloween Gift 2 7'x4 Blue Random Marble 3,00 each 8 194,09 24 582,27 10% 27 040,50 Dining Hallway Table Top Lapis Lazuli Decor E947A 3 6'x3' White Marble Dining Table 4,00 each 6 408,49 25 633,96 10% 28 197,36 Top Multi Inlay Floral Elephant Art Decor H4952 SUMMARY VAT [%] Net worth VAT Gross worth 10% 64 161,23 6 416,12 70 577,35 Total $ 64 161,23 $ 6 416,12 $ 70 577,35 Inlay",
+    "expected": {
+      "invoice_number": "57290992",
+      "invoice_date": "2011-10-03",
+      "due_date": null,
+      "supplier_name": "Adams PLC",
+      "supplier_address": "USS Moon\nFPO AA 34591",
+      "customer_name": "Johnson, Daniels and Ramirez",
+      "subtotal": null,
+      "tax_amount": null,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0019",
+    "ocr_text": "Invoice no: 56908352 Date of issue: 01/11/2015 Seller: Client: Lozano, Wang and Smith Evans, Curtis and Salinas 8162 Dunn Radial 13078 Mora Garden Lauraland, ID 83827 Morseberg, WV 48959 Tax Id: 914-76-8473 Tax Id: 904-76-9217 IBAN: GB68RRBM34982962207975 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Rage By Bob Woodward 5,00 each 22,93 114,65 10% 126,12 Donald Trump NEW HARDCOVER Sept 2020 2 Spectacular Ireland Coffee 4,00 each 10,00 40,00 10% 44,00 Table Book very large 3 The Complete Life's Little 4,00 each 4,09 16,36 10% 18,00 Instruction Book by Brown, H_ Jackson, Jr. SUMMARY VAT [%] Net worth VAT Gross worth 10% 171,01 17,10 188,11 Total $ 171,01 $ 17,10 $ 188,11",
+    "expected": {
+      "invoice_number": "56908352",
+      "invoice_date": "2015-01-11",
+      "due_date": null,
+      "supplier_name": "Lozano, Wang and Smith",
+      "supplier_address": "8162 Dunn Radial\nLauraland, ID 83827",
+      "customer_name": "Evans, Curtis and Salinas",
+      "subtotal": 171.01,
+      "tax_amount": 17.1,
+      "total_amount": 188.11,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0108",
+    "ocr_text": "Invoice no: 20012449 Date of issue: 04/22/2013 Seller: Client: Jackson Ltd Combs Inc 58538 Brandon Union Apt. 536 433 Ferguson Land Apt: 377 Taylorshire, PA 90588 Kirkstad, MN 16124 Tax Id: 989-83-1608 Tax Id: 940-79-9180 IBAN: GBIZKVLY05129120946380 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Press Wine 20L Fruit Cider 1,00 each 299,00 299,00 10% 328,90 Apple Crusher Juice Grape Stainless Maker Grapes New 2 MARIJUANA LEAF WINE STOPPER 4,00 each 7,20 28,80 10% 31,68 SUMMARY VAT [%] Net worth VAT Gross worth 10% 327,80 32,78 360,58 Total $ 327,80 $ 32,78 $ 360,58",
+    "expected": {
+      "invoice_number": "20012449",
+      "invoice_date": "2013-04-22",
+      "due_date": null,
+      "supplier_name": "Jackson Ltd",
+      "supplier_address": "58538 Brandon Union Apt. 536\nTaylorshire, PA 90588",
+      "customer_name": "Combs Inc",
+      "subtotal": 327.8,
+      "tax_amount": 32.78,
+      "total_amount": 360.58,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0087",
+    "ocr_text": "Invoice no: 87734908 Date of issue: 12/19/2019 Seller: Client: Chase, Green and Bailey Buckley, Wright and Chase Unit 1572 Box 9604 3524 Chandler Shoal DPO AP 69096 Nicholasfurt, VA 09561 Tax Id: 934-71-9062 Tax Id: 982-90-4927 IBAN: GB68UCAD28621555301869 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth the invisible life of addie larue, 2,00 each 2,99 5,98 10% 6,58 EBOOK new original high quality, updated 2020 SUMMARY VAT [%] Net worth VAT Gross worth 10% 5,98 0,60 6,58 Total $ 5,98 $ 0,60 $ 6,58",
+    "expected": {
+      "invoice_number": "87734908",
+      "invoice_date": "2019-12-19",
+      "due_date": null,
+      "supplier_name": "Chase, Green and Bailey",
+      "supplier_address": "Unit 1572 Box 9604\nDPO AP 69096",
+      "customer_name": "Buckley, Wright and Chase",
+      "subtotal": 5.98,
+      "tax_amount": 0.6,
+      "total_amount": 6.58,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0151",
+    "ocr_text": "Invoice no: 92059706 Date of issue: 04/28/2017 Seller: Client: Archer, Davis and Hudson Barton, Decker and Ferguson 089 Heath Point Suite 115 731 Clark Fords New David, IL 52837 Johnbury, HI 95582 Tax Id: 963-96-1538 Tax Id: 946-82-6210 IBAN: GBIORHGR66287471350836 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Working Super Nintendo SNES 4,00 each 85,00 340,00 10% 374,00 Original System Console wl Mario World! 2 Sony PlayStation 5 Console 3,00 each 849,99 2 549,97 10% 2 804,97 PSS- PRESALE- Disc Version Order Confirmed 3 Nintendo Wii Console Mario Kart 3,00 each 199,97 599,91 10% 659,90 Controller Wii Fit 2 Board Remotes Game BUNDLE SUMMARY VAT [%] Net worth VAT Gross worth 10% 3 489,88 348,99 3 838,87 Total $ 3 489,88 $ 348,99 $ 3 838,87 Pre",
+    "expected": {
+      "invoice_number": "92059706",
+      "invoice_date": "2017-04-28",
+      "due_date": null,
+      "supplier_name": "Archer, Davis and Hudson",
+      "supplier_address": "089 Heath Point Suite 115\nNew David, IL 52837",
+      "customer_name": "Barton, Decker and Ferguson",
+      "subtotal": null,
+      "tax_amount": 348.99,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0187",
+    "ocr_text": "Invoice no: 72591450 Date of issue: 05/13/2012 Seller: Client: Bishop, Kelley and Wright Allen, Murray and Carroll 058 Sullivan Village 87328 Arnold Crossroad Suite 206 North Isabella, ND 69747 South MS 29781 Tax Id: 956-72-8059 Tax Id: 902-99-1117 IBAN: GB63MUDA41776263491543 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Dell Optiplex Desktop Computer 5,00 each 149,95 749,75 10% 824,73 with Dual 19\" LCD Monitors Windows 10 Pro 2 Fast Dell Optiplex Windows 10 3,00 each 119,95 359,85 10% 395,84 Pro Desktop Computer Dual Core 6GB 160GB DVD WIFI 3 HP ProDesk 400 GS Mini 5,00 each 200,50 1 002,50 10% 1 102,75 Desktop Computer i5-9500T 8GB 256GB SSD WIOP custom gaming computer 2,00 each 450,00 900,00 10% 990,00 5 FAST Dell Optiplex Windows 10 3,00 each 124,95 374,85 10% 412,34 Desktop Computer Tower CZD 4GB DVD WiFi 17\" LCD AMD Dual Core 3.9Ghz 4GB 3,00 each 249,99 749,97 10% 824,97 DDR3 500GB WiFi Windows 10 office Desktop PC Computer Custom Build Dell Optiplex 9020 3,00 each 221,99 665,97 10% 732,57 MT i5-4570 3.20GHz Desktop Computer PC SUMMARY VAT [%] Net worth VAT Gross worth 10% 4 802,89 480,29 5 283,18 Total $ 4 802,89 480,29 $ 5 283,18 Amy,",
+    "expected": {
+      "invoice_number": "72591450",
+      "invoice_date": "2012-05-13",
+      "due_date": null,
+      "supplier_name": "Bishop, Kelley and Wright",
+      "supplier_address": "058 Sullivan Village\nNorth Isabella, ND 69747",
+      "customer_name": "Allen, Murray and Carroll",
+      "subtotal": null,
+      "tax_amount": 480.29,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0039",
+    "ocr_text": "Invoice no: 35593328 Date of issue: 06/08/2011 Seller: Client: Cruz-Carter Alexander-Arias 11251 Braun Square 63947 Erin Parkway Apt: 073 North Alejandro, UT 73496 Guzmanshire, NY 08857 Tax Id: 938-91-6436 Tax Id: 942-92-5992 IBAN: GB4ZRIFK65000994976015 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth hp all in one desktop computer 4,00 each 205,00 820,00 10% 902,00 touch screen 2 WS Pro Mini Pocket PC Windows 3,00 each 119,00 357,00 10% 392,70 10 Computer Stick Intel Z8350 Quad Core 3 Gaming PC Desktop Computer 1,00 each 999,50 999,50 10% 1 099,45 HDMI RGB Intel i7 RTX 2060, HDD+SSD, Windows 10, Wifi Lenovo C2O-OO..all in one 2,00 each 277,64 555,28 10% 610,81 desktop computer with Wireless Mouse_ SUMMARY VAT [%] Net worth VAT Gross worth 10% 2 731,78 273,18 3 004,96 Total $ 2 731,78 $ 273,18 $ 3 004,96",
+    "expected": {
+      "invoice_number": "35593328",
+      "invoice_date": "2011-06-08",
+      "due_date": null,
+      "supplier_name": "Cruz-Carter",
+      "supplier_address": "11251 Braun Square\nNorth Alejandro, UT 73496",
+      "customer_name": "Alexander-Arias",
+      "subtotal": 2731.78,
+      "tax_amount": 273.18,
+      "total_amount": 3004.96,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0490",
+    "ocr_text": "Invoice no: 32135544 Date of issue: 08/16/2014 Seller: Client: Reed and Sons Lucas-Barnett Unit 5010 Box 0461 USNS Scott DPO AA 27717 FPO AA 73490 Tax Id: 912-95-0493 Tax Id: 997-85-1616 IBAN: GB2IVGUQ93040788957754 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Wine Bottle Storage 6 Slots 4,00 each 30,59 122,36 10% 134,60 Modern Countertop Metal Rack Kitchen Bar Organizer 2 Anthropologie Gold Elegant 4,00 each 19,98 79,92 10% 87,91 Swan Decorative Metal Bottle Stopper Wine Saver 3 mDesign Metal Wine Rack 4,00 each 44,99 179,96 10% 197,96 Storage Organizer, 12 Bottles Dark Gray Tiffany and Co Pair 2 Stemless 2,00 each 74,99 149,98 10% 164,98 Wine Champagne Glasses Original Stickers NO BOX 5 Outdoor Wine Glass Beer Holder 3,00 each 11,44 34,32 10% 37,75 To Armrest With Attachments Red Wine Base _yoxq Hardwood Wine Rack 12 Bottles 3,00 each 20,00 60,00 10% 66,00 Very Nice Eonophiles Delight SUMMARY VAT [%] Net worth VAT Gross worth 10% 626,54 62,65 689,19 Total $ 626,54 $ 62,65 $ 689,19",
+    "expected": {
+      "invoice_number": "32135544",
+      "invoice_date": "2014-08-16",
+      "due_date": null,
+      "supplier_name": "Reed and Sons",
+      "supplier_address": "Unit 5010 Box 0461\nDPO AA 27717",
+      "customer_name": "Lucas-Barnett",
+      "subtotal": 626.54,
+      "tax_amount": 62.65,
+      "total_amount": 689.19,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0196",
+    "ocr_text": "Invoice no: 67117171 Date of issue: 01/27/2021 Seller: Client: Gilmore, Brady and Carter Phillips-Moreno 56436 Dam Suite 437 1293 Lawrence Estates Suite 940 Lake Rebecca, LA 78907 Besthaven, NV 23717 Tax Id: 905-96-1343 Tax Id: 953-91-5577 IBAN: GB86OULB80821848504333 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth The Complete Idiots Guide to 4,00 each 4,49 17,96 10% 19,76 Trouble-Free Home Re 2 Aesop's Fables Aesop Illustrated 4,00 each 34,65 138,60 10% 152,46 By A. Rackham Sealed Leather Bound Collectible SUMMARY VAT [%] Net worth VAT Gross worth 10% 156,56 15,66 172,22 Total $ 156,56 $ 15,66 $ 172,22 Amy",
+    "expected": {
+      "invoice_number": "67117171",
+      "invoice_date": "2021-01-27",
+      "due_date": null,
+      "supplier_name": "Gilmore, Brady and Carter",
+      "supplier_address": "56436 Amy Dam Suite 437\nLake Rebecca, LA 78907",
+      "customer_name": "Phillips-Moreno",
+      "subtotal": 156.56,
+      "tax_amount": 15.66,
+      "total_amount": 172.22,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0132",
+    "ocr_text": "Invoice no: 86164702 Date of issue: 05/15/2020 Seller: Client: Peterson, Hester and Mckee Hernandez, Wright and Pena Unit 6986 Box 0053 01185 Sherry Manor DPO AE 88791 Robertburgh, IL 76443 Tax Id: 910-72-7762 Tax Id: 914-91-3852 IBAN: GB49JBKJ55747171436200 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Dell Optiplex All in One 5,00 each 129,99 649,95 10% 714,95 Windows 10 Desktop Computer 780 3.OGHz 4GB 250GB 19 LCD SUMMARY VAT [%] Net worth VAT Gross worth 10% 649,95 65,00 714,95 Total $ 649,95 $ 65,00 $ 714,95",
+    "expected": {
+      "invoice_number": "86164702",
+      "invoice_date": "2020-05-15",
+      "due_date": null,
+      "supplier_name": "Peterson, Hester and Mckee",
+      "supplier_address": "Unit 6986 Box 0053\nDPO AE 88791",
+      "customer_name": "Hernandez, Wright and Pena",
+      "subtotal": 649.95,
+      "tax_amount": 65.0,
+      "total_amount": 714.95,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0210",
+    "ocr_text": "Invoice no: 46920651 Date of issue: 11/15/2015 Seller: Client: Powell Ltd Clark, Brown and Jones 008 Gallagher Unions 252 Courtney Motorway South Brettton, FL 39360 North Laurie, DC 43805 Tax Id: 903-73-3000 Tax Id: 947-82-8284 IBAN: GBZIAYTX61593300702772 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth NEW 6 Pcs Rabbit Wine Opener 4,00 each 19,95 79,80 10% 87,78 Set With Accessories Tools Gift Box #A16 2 Alcoholmeter Alcohol Meter 3,00 each 14,08 42,24 10% 46,46 Wine 0-100%+Thermometer Set Bar Tools Vintage Tester 3 Vintage Metal Art Sculpture 4,00 each 25,98 103,92 10% 114,31 Carving Chef Wine Bottle Holder and Display Tin Chef Grand Reserve Wine Bottle 2,00 each 39,99 79,98 10% 87,98 Opener, Bar Stand, Table Top Cork Puller 5 Wine Opener Accessories Gift 1,00 each 11,71 11,71 10% 12,88 Tools Set with Waiters Corkscrew Opener 5 Piece 6 (2) stacking Metal 8 Wine bottle 1,00 each 16,99 16,99 10% 18,69 holder Storage Rack, 8 bottles counter Display HOME ESSENTIALS GRADIENT 4,00 each 12,99 51,96 10% 57,16 STEMLESS WINE GLASSES SET OF 4 20 FL OZ (591 ml) NEW SUMMARY VAT [%] Net worth VAT Gross worth 10% 386,60 38,66 425,26 Total $ 386,60 $ 38,66 $ 425,26",
+    "expected": {
+      "invoice_number": "46920651",
+      "invoice_date": "2015-11-15",
+      "due_date": null,
+      "supplier_name": "Powell Ltd",
+      "supplier_address": "008 Gallagher Unions\nSouth Brettton, FL 39360",
+      "customer_name": "Clark, Brown and Jones",
+      "subtotal": 347.94,
+      "tax_amount": 38.66,
+      "total_amount": 386.6,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0020",
+    "ocr_text": "Invoice no: 15001300 Date of issue: 02/18/2014 Seller: Client: Kerr, Ryan and Gomez Mason Ltd 8069 Nicholas Greens 8053 Friedman Burg Lake Vincentbury , RI 06574 Patrickfort, FL 71567 Tax Id: 929-82-4759 Tax Id: 991-91-7229 IBAN: GB3ZMKCO74382010852522 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 100Pcs Wall Stickers Home 1,00 each 1,70 1,70 10% 1,87 Decor Glow In The Dark Star sticker Decal Kids room 2 PUMA Boys Kids Athletic Shoes 3,00 each 19,00 57,00 10% 62,70 Flats Plimsouls Gray Black Denim size 12C 3 Joma Youth Boys Gol 205 Piso 5,00 each 19,99 99,95 10% 109,94 Multitaco Soccer Cleats 2.5 White Blue Yellow NEW Fila Boys Skele-Toes RNR 3 3,00 each 10,25 30,75 10% 33,83 Black Running Shoes 11 Medium (D) Little Kid 9953 5 Kid Connection Kids Winter 5,00 each 21,59 107,95 10% 118,75 Waterproof Boots Size 5 Cozy & Warm Slipn On Booties SUMMARY VAT [%] Net worth VAT Gross worth 10% 297,35 29,73 327,08 Total $ 297,35 $ 29,73 $ 327,08 Bay",
+    "expected": {
+      "invoice_number": "15001300",
+      "invoice_date": "2014-02-18",
+      "due_date": null,
+      "supplier_name": "Kerr, Ryan and Gomez",
+      "supplier_address": "8069 Nicholas Greens\nLake Vincentbury, RI 06574",
+      "customer_name": "Mason Ltd",
+      "subtotal": 297.35,
+      "tax_amount": 29.73,
+      "total_amount": 327.08,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0276",
+    "ocr_text": "Invoice no: 25210895 Date of issue: 05/14/2019 Seller: Client: Lyons Inc Watson-Blanchard 64411 Taylor Cape PSC 0164, Box 7355 Carrollview, RI 87544 APO AA 37205 Tax Id: 987-99-8997 Tax Id: 992-82-0219 IBAN: GBZOVREM81930507643275 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth LuLaRoe Nicole Dress Size Large 3,00 each 1,99 5,97 10% 6,57 25 2 Escada Long Black Dress SZ 40 1,00 each 74,99 74,99 10% 82,49 100% Silk Lining SUMMARY VAT [%] Net worth VAT Gross worth 10% 80,96 8,10 89,06 Total $ 80,96 $ 8,10 $ 89,06",
+    "expected": {
+      "invoice_number": "25210895",
+      "invoice_date": "2019-05-14",
+      "due_date": null,
+      "supplier_name": "Lyons Inc",
+      "supplier_address": "64411 Taylor Cape\nCarrollview, RI 87544",
+      "customer_name": "Watson-Blanchard",
+      "subtotal": 80.96,
+      "tax_amount": 8.1,
+      "total_amount": 89.06,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0300",
+    "ocr_text": "Invoice no: 76619276 Date of issue: 11/16/2011 Seller: Client: Bailey, Adams and Pacheco Morgan Ltd 8114 Blake Course 8866 Brown Centers Suite 945 Shieldsshire, KS 95278 New Stephaniemouth, IN 94165 Tax Id: 988-86-2916 Tax Id: 971-85-8091 IBAN: GBZZBWOK82952788901911 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Vintage Metal Art Sculpture 5,00 each 25,98 129,90 10% 142,89 Carving Chef Wine Bottle Holder and Display Tin Chef 2 Gold Band Wine Glasses Clear 4,00 each 1,99 7,96 10% 8,76 glass round stems 2 12 ounce elegant stems 3 Galvanized Metal Wine Caddy 5,00 each 34,95 174,75 10% 192,23 SUMMARY VAT [%] Net worth VAT Gross worth 10% 312,61 31,26 343,87 Total $ 312,61 $ 31,26 $ 343,87",
+    "expected": {
+      "invoice_number": "76619276",
+      "invoice_date": "2011-11-16",
+      "due_date": null,
+      "supplier_name": "Bailey, Adams and Pacheco",
+      "supplier_address": "8114 Blake Course\nShieldsshire, KS 95278",
+      "customer_name": "Morgan Ltd",
+      "subtotal": 312.61,
+      "tax_amount": 31.26,
+      "total_amount": 343.87,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0158",
+    "ocr_text": "Invoice no: 49565075 Date of issue: 10/28/2019 Seller: Client: Kane-Morgan Garcia Inc 968 Carr Mission Apt: 320 445 Haas Viaduct Suite 454 Bernardville, VA 28211 Michaelhaven, LA 32852 Tax Id: 964-95-3813 Tax Id: 909-75-5482 IBAN: GB73WCIJ55232646970614 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Anthropologie Gold Elegant 3,00 each 19,98 59,94 10% 65,93 Swan Decorative Metal Bottle Stopper Wine Saver 2 Lolita Happy Retirement Wine 1,00 each 8,00 8,00 10% 8,80 Glass 15 Ounce GLS11-5534H 3 Lolita \"Congratulations\" Hand 1,00 each 20,00 20,00 10% 22,00 Painted and Decorated Wine Glass NIB SUMMARY VAT [%] Net worth VAT Gross worth 10% 87,94 8,79 96,73 Total $ 87,94 $ 8,79 $ 96,73",
+    "expected": {
+      "invoice_number": "49565075",
+      "invoice_date": "2019-10-28",
+      "due_date": null,
+      "supplier_name": "Kane-Morgan",
+      "supplier_address": "968 Carr Mission Apt. 320\nBernardville, VA 28211",
+      "customer_name": "Garcia Inc",
+      "subtotal": 87.94,
+      "tax_amount": 8.79,
+      "total_amount": 96.73,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0136",
+    "ocr_text": "Invoice no: 36475327 Date of issue: 08/23/2020 Seller: Client: Faulkner Group Mendoza-Scott 956 Dennis Cliffs Apt: 138 581 Christian Canyon West Haley, DE 93178 Paulburgh, NV 98729 Tax Id: 902-95-7823 Tax Id: 976-79-4311 IBAN: GBZ8YNHU63382554245346 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Dell Optiplex XE2 SFF Desktop 3,00 each 99,00 297,00 10% 326,70 Computer W1O Pro Licensed 2 Custom Build Dell Desktop 1,00 each 99,00 99,00 10% 108,90 Computer i5 16GB 1TB SSD HDMI Windows 10 PC WiFi 3 custom gaming computer 4,00 each 450,00 1 800,00 10% 1 980,00 Dell Optiplex Windows 10 Pro 3,00 each 149,95 449,85 10% 494,83 Desktop Computer PC i5 4th Gen 3.2GHz 8 GB 2 TB HDD 5 HP Desktop Computers Core i5 5,00 each 139,95 699,75 10% 769,73 16GB 2TB 256GB SSD Wifi 22\" LCD Windows 10 Pro PC 6 2 Gaming Computers 1,00 each 1 300,00 1 300,00 10% 1 430,00 HP AII-in-One Computer 22- 1,00 each 449,99 449,99 10% 494,99 Full-HD Display Intel 2.90GHz 4GB 1TB HD Winlo TEAL SUMMARY VAT [%] Net worth VAT Gross worth 10% 5 095,59 509,56 5 605,15 Total $ 5 095,59 $ 509,56 $ 5 605,15",
+    "expected": {
+      "invoice_number": "36475327",
+      "invoice_date": "2020-08-23",
+      "due_date": null,
+      "supplier_name": "Faulkner Group",
+      "supplier_address": "956 Dennis Cliffs Apt. 138\nWest Haley, DE 93178",
+      "customer_name": "Mendoza-Scott",
+      "subtotal": 5095.59,
+      "tax_amount": 509.56,
+      "total_amount": 5605.15,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0274",
+    "ocr_text": "Invoice no: 65123866 Date of issue: 11/20/2012 Seller: Client: Potts, Pittman and Beck Garcia-Perkins USNV Stone 897 Gonzalez Junction Apt: 934 FPO AE 65337 Jesseburgh, MN 12053 Tax Id: 970-95-1799 Tax Id: 992-87-3315 IBAN: GBSSYMCMO2538391714621 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth The Four Agreements: A 1,00 each 3,30 3,30 10% 3,63 Practical Guide to Personal Freedom by Don Miguel Ruiz 2 The World of Van Gogh from 4,00 each 14,97 59,88 10% 65,87 Time Life Library of Art 3 Principles of Virology, 2 Volume 5,00 each 121,90 609,50 10% 670,45 Set (ASM Books) boy who grew up eating 3,00 each 19,50 58,50 10% 64,35 nightmare It's Okay to Not Be Okay Picturebook 5 The Value Of Time 5,00 each 17,73 88,65 10% 97,52 The Home Stretch 2,00 each 5,38 10,76 10% 11,84 SUMMARY VAT [%] Net worth VAT Gross worth 10% 830,59 83,06 913,65 Total $ 830,59 $ 83,06 $ 913,65",
+    "expected": {
+      "invoice_number": "65123866",
+      "invoice_date": "2012-11-20",
+      "due_date": null,
+      "supplier_name": "Potts, Pittman and Beck",
+      "supplier_address": "USNV Stone\nFPO AE 65337",
+      "customer_name": "Garcia-Perkins",
+      "subtotal": 830.59,
+      "tax_amount": 83.06,
+      "total_amount": 913.65,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0435",
+    "ocr_text": "Invoice no: 61819195 Date of issue: 08/28/2019 Seller: Client: Mason-Beltran Morrison, Stewart and Graham 5622 Erik Knolls 51370 Thompson Oval Suite 431 New Kristafurt, MT 51436 Beckerburgh, ME 77062 Tax Id: 944-76-3164 Tax Id: 902-99-3657 IBAN: GB33ARJE04963501593840 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth My Way Home: Voices of 2,00 each 5,61 11,22 10% 12,34 the New American Roots 2 Goodnight from London: A 5,00 each 4,49 22,45 10% 24,70 Novel 3 The WORLD of ART Time Life 5,00 each 50,00 250,00 10% 275,00 Books~CompleteSet of 24 + American Modern Art SUMMARY VAT [%] Net worth VAT Gross worth 10% 283,67 28,37 312,04 Total $ 283,67 $ 28,37 $ 312,04 Sing",
+    "expected": {
+      "invoice_number": "61819195",
+      "invoice_date": "2019-08-28",
+      "due_date": null,
+      "supplier_name": "Mason-Beltran",
+      "supplier_address": "5622 Erik Knolls\nNew Kristafurt, MT 51436",
+      "customer_name": "Morrison, Stewart and Graham",
+      "subtotal": 283.67,
+      "tax_amount": 28.37,
+      "total_amount": 312.04,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0384",
+    "ocr_text": "Invoice no: 20295549 Date of issue: 11/20/2011 Seller: Client: Williams-Morris Ward-Jordan 232 Kelly Route 8182 Hancock Street Apt: 613 Adamsborough, TX 58099 West David, MA 55043 Tax Id: 917-74-0669 Tax Id: 999-79-0463 IBAN: GB2SFVFP72557385738524 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Dell Optiplex SFF Desktop 4,00 each 89,99 359,96 10% 395,96 Computer Windows 10 4GB 160GB 2 Lenovo C2O-OO_all in one 5,00 each 277,64 1 388,20 10% 1 527,02 desktop computer with Wireless Mouse 3 Fast Dell Optiplex Desktop PC 2,00 each 217,00 434,00 10% 477,40 Computer Dual Core 3.4Ghz 8GB 1TB Win 10 Pro WIFI Fast Dell Optiplex Windows 10 1,00 each 89,95 89,95 10% 98,95 Desktop Computer Tower PC Core i3 3.1GHz 4GB 320GB 5 WS Pro Mini Pocket PC Windows 3,00 each 119,00 357,00 10% 392,70 10 Computer Stick Intel 28350 Quad Core Fast i7 RGB Gaming Desktop PC 5,00 each 790,00 3 950,00 10% 4 345,00 Computer VR-Ready WiFi AAA Fortnite GTAV PUBG 1G3 SUMMARY VAT [%] Net worth VAT Gross worth 10% 6 579,11 657,91 7 237,02 Total $ 6 579,11 $ 657,91 $ 7 237,02",
+    "expected": {
+      "invoice_number": "20295549",
+      "invoice_date": "2011-11-20",
+      "due_date": null,
+      "supplier_name": "Williams-Morris",
+      "supplier_address": "232 Kelly Route\nAdamsborough, TX 58099",
+      "customer_name": "Ward-Jordan",
+      "subtotal": 6579.11,
+      "tax_amount": 657.91,
+      "total_amount": 7237.02,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0401",
+    "ocr_text": "Invoice no: 63131640 Date of issue: 06/21/2015 Seller: Client: White PLC Richards, Williams and Houston 63583 Marshall Flats 0388 Hutchinson Corner Apt: 019 Leestad, CT 23486 Deborahside, SC 93156 Tax Id: 981-71-0351 Tax Id: 937-75-0747 IBAN: GBIZEEGV74815787185844 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 3 Gal 12L Moonshine Still 5,00 each 99,92 499,60 10% 549,56 Stainless Steel Water Wine Alcohol Distiller Equipment 2 BLACK Butterfly Winged 5,00 each 8,95 44,75 10% 49,23 Corkscrew WINE BOTTLE OPENER Swing-a-Way 3 Vintage Set of 3 Cobalt Blue 5,00 each 24,00 120,00 10% 132,00 Glass Wine Glasses Water Goblets Barware Stemware New Never Used CROFTON 3,00 each 3,00 9,00 10% 9,90 CHEFS COLLECTION WINE COOLING STICK IN PACKAGE SUMMARY VAT [%] Net worth VAT Gross worth 10% 673,35 67,34 740,69 Total $ 673,35 $ 67,34 $ 740,69",
+    "expected": {
+      "invoice_number": "63131640",
+      "invoice_date": "2015-06-21",
+      "due_date": null,
+      "supplier_name": "White PLC",
+      "supplier_address": "63583 Marshall Flats\nLeestad, CT 23486",
+      "customer_name": "Richards, Williams and Houston",
+      "subtotal": 673.35,
+      "tax_amount": 67.34,
+      "total_amount": 740.69,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0035",
+    "ocr_text": "Invoice no: 78605417 Date of issue: 08/07/2017 Seller: Client: Campos LLC Wilson-Hernandez 15809 Christina Cove Apt: 190 5998 Stephen Squares Danielmouth, OR 11509 Maryville, OH 19487 Tax Id: 909-73-7194 Tax Id: 940-87-7017 IBAN: GBIZWVTT56005535188252 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Nike Pre School Kids Size 12C 3,00 each 59,99 179,97 10% 197,97 Jordan Jumpman Team Il (PS) AQ2797-300 2 Nike Air Force 1 Low 3,00 each 54,95 164,85 10% 181,34 314192-117 Triple White Youth Boys Size 5Y 3 Adult Girl Version Hermione 2,00 each 64,16 128,32 10% 141,15 Granger Cosplay Costume Gryffindor Kid size In Stock Adidas Baseball Youth Cleats 3,00 each 11,99 35,97 10% 39,57 Spikes Kids Shoes Black White Size 12K 5 Harry Potter Hogwarts Adult 5,00 each 17,48 87,40 10% 96,14 Child Robe Cloak Halloween COS Costumes Party Xmas. 6 Sperry Infant Size 6 Boat Shoes 5,00 each 0,99 4,95 10% 5,45 DC Kids Pixie 3 Sneaker 1,00 each 55,00 55,00 10% 60,50 (Toddler/Little Kid/Big Kid) Color WHITEIBATTLESHIP SUMMARY VAT [%] Net worth VAT Gross worth 10% 656,46 65,65 722,11 Total $ 656,46 $ 65,65 $ 722,11",
+    "expected": {
+      "invoice_number": "78605417",
+      "invoice_date": "2017-08-07",
+      "due_date": null,
+      "supplier_name": "Campos LLC",
+      "supplier_address": "15809 Christina Cove Apt. 190\nDanielmouth, OR 11509",
+      "customer_name": "Wilson-Hernandez",
+      "subtotal": 656.46,
+      "tax_amount": 65.65,
+      "total_amount": 722.11,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0023",
+    "ocr_text": "Invoice no: 33102457 Date of issue: 09/18/2018 Seller: Client: Harris LLC Pierce, Bush and Jones 19049 Norma Centers Apt: 108 Unit 0758 Box 0909 Fieldsmouth, AZ 08845 DPO AA 34990 Tax Id: 937-81-0462 Tax Id: 974-83-3645 IBAN: GBAZMQKW89908599665710 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Blue Shiny Stone Floral Art 4,00 each 3 960,00 15 840,00 10% 17 424,00 Dinning Table Top Marble Kitchen Table Top 48 Inches 2 12\" Marble Side Coffee Table 3,00 each 259,77 779,31 10% 857,24 Top Multi Stone Floral Inlay Occasional Decor W260 SUMMARY VAT [%] Net worth VAT Gross worth 10% 16 619,31 1 661,93 18 281,24 Total $ 16 619,31 $ 1 661,93 $ 18 281,24",
+    "expected": {
+      "invoice_number": "33102457",
+      "invoice_date": "2018-09-18",
+      "due_date": null,
+      "supplier_name": "Harris LLC",
+      "supplier_address": "19049 Norma Centers Apt. 108\nFieldsmouth, AZ 08845",
+      "customer_name": "Pierce, Bush and Jones",
+      "subtotal": null,
+      "tax_amount": null,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0093",
+    "ocr_text": "Invoice no: 57696752 Date of issue: 10/03/2017 Seller: Client: Lopez-Smith Rodriguez, Grant and Green 1019 Jamie Coves Suite 536 36999 Cynthia Walk Suite 460 Garciaberg, AK 23239 Greenchester, NC 24265 Tax Id: 902-87-1700 Tax Id: 943-76-5369 IBAN: GB46FUGV21945539731839 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Nautica Kids Boys Navy & Red 4,00 each 500,00 2 000,00 10% 2 200,00 with White Rubber Sole Running Sneakers Shoes US 10 2 Nike Kids KD Trey 5 Nike Black 1,00 each 22,00 22,00 10% 24,20 Size 4.5ay 3 Timberland brown slip on shoes 5,00 each 2,00 10,00 10% 11,00 size 4.5 juniors SUMMARY VAT [%] Net worth VAT Gross worth 10% 2 032,00 203,20 2 235,20 Total $ 2 032,00 $ 203,20 $ 2 235,20",
+    "expected": {
+      "invoice_number": "57696752",
+      "invoice_date": "2017-10-03",
+      "due_date": null,
+      "supplier_name": "Lopez-Smith",
+      "supplier_address": "1019 Jamie Coves Suite 536\nGarciaberg, AK 23239",
+      "customer_name": "Rodriguez, Grant and Green",
+      "subtotal": null,
+      "tax_amount": 203.2,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0080",
+    "ocr_text": "Invoice no: 66389180 Date of issue: 07/30/2016 Seller: Client: Mercer-Donovan Murphy LLC 457 Shawn Roads 824 Brown Village Suite 249 Shawfurt; OK 52770 Johnsonland, NH 47691 Tax Id: 946-92-9578 Tax Id: 965-84-6097 IBAN: GB78TZMSO2094878294026 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Hot Toys COSB748 Mandalorian 2,00 each 32,89 65,78 10% 72,36 & The Child COSBABY Mini Figure Model Collection 2 Jordan B'Loyal Boys Grade 1,00 each 9,00 9,00 10% 9,90 School Sneakers US 3Y 3 Nike Ty Black 1,00 each 15,00 15,00 10% 16,50 Joma Youth Boys Gol 205 Piso 4,00 each 19,99 79,96 10% 87,96 Multitaco Soccer Cleats 3.5 White Blue Yellow NEW 5 Star Wars 100% 925 sterling 3,00 each 19,88 59,64 10% 65,60 silver BB8 Darth Vader Charm R2-D2 Fiit Pandora Gift Toddler Kids Monster Jam Shoes 4,00 each 9,00 36,00 10% 39,60 Size llc Grave Digger SUMMARY VAT [%] Net worth VAT Gross worth 10% 265,38 26,54 291,92 Total $ 265,38 $ 26,54 $ 291,92",
+    "expected": {
+      "invoice_number": "66389180",
+      "invoice_date": "2016-07-30",
+      "due_date": null,
+      "supplier_name": "Mercer-Donovan",
+      "supplier_address": "457 Shawn Roads\nShawfurt, OK 52770",
+      "customer_name": "Murphy LLC",
+      "subtotal": 265.38,
+      "tax_amount": 26.54,
+      "total_amount": 291.92,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0059",
+    "ocr_text": "Invoice no: 93219493 Date of issue: 05/16/2019 Seller: Client: James PLC Bryant-Taylor 452 Michelle Branch 075 Gary Union Suite 231 Aaronberg, UT 13177 New Lindsayberg, WY 10457 Tax Id: 911-98-9831 Tax Id: 956-92-2147 IBAN: GB71QDSH79257841046423 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Microsoft Xbox 360 Console 49 3,00 each 25,00 75,00 10% 82,50 Game Bundle 250GB Black 2 N64 Nintendo System Console 4,00 each 95,99 383,96 10% 422,36 Lot Bundle WI 2 Games Controller Tested Working 3 Nintendo Switch Lite Turquoise 2,00 each 130,00 260,00 10% 286,00 Blue CONSOLE ONLY No Charger [B4-1] SEGA Dreamcast White Console 4,00 each 93,00 372,00 10% 409,20 [Japan Import] HKT-3000 5 B451 Nintendo DSi console Pink 5,00 each 9,99 49,95 10% 54,95 Japan NDS X SUMMARY VAT [%] Net worth VAT Gross worth 10% 1 140,91 114,09 1 255,00 Total $ 1 140,91 $ 114,09 $ 1 255,00",
+    "expected": {
+      "invoice_number": "93219493",
+      "invoice_date": "2019-05-16",
+      "due_date": null,
+      "supplier_name": "James PLC",
+      "supplier_address": "452 Michelle Branch\nAaronberg, UT 13177",
+      "customer_name": "Bryant-Taylor",
+      "subtotal": 1140.91,
+      "tax_amount": 114.09,
+      "total_amount": 1255.0,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0056",
+    "ocr_text": "Invoice no: 13367493 Date of issue: 02/21/2012 Seller: Client: Terry, Crawford and Vega Martin-Schmidt 2744 Olson Extension Suite 147 726 Mills Island Apt: 702 Lake Edward, VA 62672 Randyville, MA 40113 Tax Id: 926-79-2155 Tax Id: 912-97-1608 IBAN: GBZ9WHIU45376170748238 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Escada Long Black Dress SZ 40 4,00 each 74,99 299,96 10% 329,96 100% Silk Lining 2 Boden Size 8 US Green & 2,00 each 35,00 00 10% 77,00 Dark Blue Belted Midi Wool Knit Sweater Fall Dress 3 J crew mercantile Knitted Tweed 1,00 each 26,00 26,00 10% 28,60 Dress Size 4 Black And White NEW NWT OPEN BACK 5,00 each 2,99 14,95 10% 16,45 XHILERATION PLUM LACY DRESS WOMENS SIZE MEDIUM 10/12 5 Bcbgeneration Black Sleeveless 1,00 each 2,99 2,99 10% 3,29 Lace Back Cut Out Dress Sz 2 Papaya Floral Dress Medium 4,00 each 9,00 36,00 10% 39,60 Blue White SUMMARY VAT [%] Net worth VAT Gross worth 10% 449,90 44,99 494,89 Total $ 449,90 $ 44,99 $ 494,89 70,C Navy",
+    "expected": {
+      "invoice_number": "13367493",
+      "invoice_date": "2012-02-21",
+      "due_date": null,
+      "supplier_name": "Terry, Crawford and Vega",
+      "supplier_address": "2744 Olson Extension Suite 147\nLake Edward, VA 62672",
+      "customer_name": "Martin-Schmidt",
+      "subtotal": 449.9,
+      "tax_amount": 44.99,
+      "total_amount": 494.89,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0170",
+    "ocr_text": "Invoice no: 20591219 Date of issue: 01/12/2019 Seller: Client: Schneider, Aguirre and Dennis Black-Jackson 0670 Mccann Knoll Suite 220 3674 Graham Cliff Suite 842 Phylliston, NC 68045 East Brandonport, Hl 46902 Tax Id: 915-77-6696 Tax Id: 987-96-1251 IBAN: GBSZSBER24626542837126 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth The Fall of Berlin 1945 by 5,00 each 4,49 22,45 10% 24,70 Antony Beevor 2 CCNA 200-301 50 GB AUG 2020 3,00 each 1,99 5,97 10% 6,57 Cisco Video/Official Books/Exam Dumps/Licences 3 Art History Portables Book 6 by 2,00 each 26,00 52,00 10% 57,20 Michael W. Cothren and Marilyn Stokstad Sth edtn Admission Assessment Exam 5,00 each 2,50 12,50 10% 13,75 Review 4th Edition by HESI (P.DF) 5 Game of Thrones: The Poster 4,00 each 20,87 83,48 10% 91,83 Collection (Paperback or Softback) C S Forester Hornblower Saga 3,00 each 169,95 509,85 10% 560,83 11 Books Series Collection Set BRAND NEW Rebecca to the Rescue 3,00 each 4,89 14,67 10% 16,14 (American Girl (Quality)) SUMMARY VAT [%] Net worth VAT Gross worth 10% 700,92 70,09 771,01 Total $ 700,92 $ 70,09 $ 771,01",
+    "expected": {
+      "invoice_number": "20591219",
+      "invoice_date": "2019-01-12",
+      "due_date": null,
+      "supplier_name": "Schneider, Aguirre and Dennis",
+      "supplier_address": "0670 Mccann Knoll Suite 220\nPhylliston, NC 68045",
+      "customer_name": "Black-Jackson",
+      "subtotal": 700.92,
+      "tax_amount": 70.09,
+      "total_amount": 771.01,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0123",
+    "ocr_text": "Invoice no: 47037480 Date of issue: 09/03/2012 Seller: Client: Fernandez-Evans Ruiz-Cowan 374 Mora Parks 8737 Guzman Flat Suite 825 Lake Debrachester, TX 96528 East John, ME 21474 Tax Id: 986-83-9815 Tax Id: 947-90-1471 IBAN: GBI9MABV2O261310111262 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. balmain dress 36 5,00 each 1 550,00 7 750,00 10% 8 525,00 2 Jones Wear Dress Women White 3,00 each 20,00 60,00 10% 66,00 Pink Floral Sleeveless Formal Tea Dress Size 12 3 Women Black Dress Mori Girl 2,00 each 13,99 27,98 10% 30,78 Puff Sleeve Korean Casual Loose Peter Pan Collar SUMMARY VAT [%] Net worth VAT Gross worth 10% 7 837,98 783,80 8 621,78 Total $ 7 837,98 $ 783,80 $ 8 621,78",
+    "expected": {
+      "invoice_number": "47037480",
+      "invoice_date": "2012-09-03",
+      "due_date": null,
+      "supplier_name": "Fernandez-Evans",
+      "supplier_address": "374 Mora Parks\nLake Debrachester, TX 96528",
+      "customer_name": "Ruiz-Cowan",
+      "subtotal": null,
+      "tax_amount": 783.8,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0137",
+    "ocr_text": "Invoice no: 77169807 Date of issue: 05/13/2018 Seller: Client: Flores, David and Fleming Williams Group Unit 4806 Box 9700 357 Thomas Street Apt: 860 DPO AA 87029 West Douglas, SC 32151 Tax Id: 996-82-4136 Tax Id: 904-73-5811 IBAN: GB19ULGS16178127502019 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth The Children's Place Brown 5,00 each 8,00 40,00 10% 44,00 Dress Boy Lace Up Shoes Size 12 SUMMARY VAT [%] Net worth VAT Gross worth 10% 40,00 4,00 44,00 Total $ 40,00 $ 4,00 $ 44,00",
+    "expected": {
+      "invoice_number": "77169807",
+      "invoice_date": "2018-05-13",
+      "due_date": null,
+      "supplier_name": "Flores, David and Fleming",
+      "supplier_address": "Unit 4806 Box 9700\nDPO AA 87029",
+      "customer_name": "Williams Group",
+      "subtotal": 40.0,
+      "tax_amount": 4.0,
+      "total_amount": 44.0,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0320",
+    "ocr_text": "Invoice no: 12408005 Date of issue: 08/08/2019 Seller: Client: Gonzales-Hart Shepard, Garcia and Summers 4245 Owens Roads Apt: 890 83872 Neal Villages Apt. 420 Riverahaven, AK 40128 Moodyport; DE 12787 Tax Id: 941-94-8001 Tax Id: 967-83-3797 IBAN: GB93DJF79261659731272 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Matilda Jane Womans Lets Go 5,00 each 19,60 98,00 10% 107,80 Together Black Knit Dress Size M Medium NWT 2 Liza Byrd Dress Sz L- Coral 4,00 each 17,99 71,96 10% 79,16 Green Medallion Print Short Sleeve 100% Cotton Line SUMMARY VAT [%] Net worth VAT Gross worth 10% 169,96 17,00 186,96 Total $ 169,96 $ 17,00 $ 186,96",
+    "expected": {
+      "invoice_number": "12408005",
+      "invoice_date": "2019-08-08",
+      "due_date": null,
+      "supplier_name": "Gonzales-Hart",
+      "supplier_address": "4245 Owens Roads Apt. 890\nRiverahaven, AK 40128",
+      "customer_name": "Shepard, Garcia and Summers",
+      "subtotal": 169.96,
+      "tax_amount": 17.0,
+      "total_amount": 186.96,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0167",
+    "ocr_text": "Invoice no: 34855339 Date of issue: 03/09/2020 Seller: Client: Alexander-Valenzuela Reyes-Sampson PSC 7782 , Box 4983 PSC 1836, Box 4614 APO AP 12492 APO AA 85127 Tax Id: 977-72-1573 Tax Id: 956-87-8556 IBAN: GBSZDVFT92400865321817 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Shaping the World: Sculpture 2,00 each 43,28 86,56 10% 95,22 from Prehistory to Now by Antony Gormley (English) SUMMARY VAT [%] Net worth VAT Gross worth 10% 86,56 8,66 95,22 Total $ 86,56 $ 8,66 $ 95,22",
+    "expected": {
+      "invoice_number": "34855339",
+      "invoice_date": "2020-03-09",
+      "due_date": null,
+      "supplier_name": "Alexander-Valenzuela",
+      "supplier_address": "PSC 7782, Box 4983\nAPO AP 12492",
+      "customer_name": "Reyes-Sampson",
+      "subtotal": 77.9,
+      "tax_amount": 8.66,
+      "total_amount": 86.56,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0376",
+    "ocr_text": "Invoice no: 60518602 Date of issue: 08/30/2016 Seller: Client: Ross Group Leblanc and Sons 9177 Torres Streets 65388 Stephen Center Apt: 014 Charleston, RI 34271 Hallport, CT 28544 Tax Id: 929-73-9404 Tax Id: 963-87-9848 IBAN: GBA4AYWK92124948516846 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Sony PlayStation 1 PSL Console 1,00 each 14,99 14,99 10% 16,49 model scph-7501 2 Sony SCPH-3OOOLR PlayStation 4,00 each 79,99 319,96 10% 351,96 2 Fat Console System wl Network Adapter 3 Nintendo Wii U 32GB Black 5,00 each 400,00 2 000,00 10% 2 200,00 Console Deluxe Set with 21 games! SUMMARY VAT [%] Net worth VAT Gross worth 10% 2 334,95 233,50 2 568,45 Total $ 2 334,95 233,50 $ 2 568,45",
+    "expected": {
+      "invoice_number": "60518602",
+      "invoice_date": "2016-08-30",
+      "due_date": null,
+      "supplier_name": "Ross Group",
+      "supplier_address": "9177 Torres Streets\nCharleston, RI 34271",
+      "customer_name": "Leblanc and Sons",
+      "subtotal": 2334.95,
+      "tax_amount": 233.5,
+      "total_amount": 2568.45,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0361",
+    "ocr_text": "Invoice no: 86575728 Date of issue: 11/24/2014 Seller: Client: Johnson-Young Garcia, Meyer and Cook 595 Juan Port Suite 703 6970 Taylor Mount North Ronald, WV 37343 Martinton, SD 55429 Tax Id: 937-77-5283 Tax Id: 907-73-8031 IBAN: GBZZKIWX90447597052446 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Kids Jordan 7 Retro Sz 2y 5,00 each 72,00 360,00 10% 396,00 2 Joma Boys Youth Gol-102 5,00 each 19,99 99,95 10% 109,94 Soccer Cleats Shoes Size 5.5 White Red Futbol NEW 3 INC International Concepts 2,00 each 73,48 146,96 10% 161,66 Children Shoes nvyzc7_ Black, Size Little Kid 2.5 Boys Slip-On Black Dress Shoes 5,00 each 19,99 99,95 10% 109,94 Loafers 3.5 W Wide Width 5 Star Wars 100% 925 sterling 1,00 each 19,88 19,88 10% 21,87 silver BB8 Darth Vader Charm R2-D2 Fiit Pandora Gift Under Armour Kids' Grade 4,00 each 44,99 179,96 10% 197,96 School Curry 3Zer0 2 Basketball Shoes SUMMARY VAT [%] Net worth VAT Gross worth 10% 906,70 90,67 997,37 Total $ 906,70 $ 90,67 $ 997,37",
+    "expected": {
+      "invoice_number": "86575728",
+      "invoice_date": "2014-11-24",
+      "due_date": null,
+      "supplier_name": "Johnson-Young",
+      "supplier_address": "595 Juan Port Suite 703\nNorth Ronald, WV 37343",
+      "customer_name": "Garcia, Meyer and Cook",
+      "subtotal": 906.7,
+      "tax_amount": 90.67,
+      "total_amount": 997.37,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0439",
+    "ocr_text": "Invoice no: 42498094 Date of issue: 03/21/2017 Seller: Client: Hall LLC Brown-Vazquez 27618 Johnson Shores Suite 030 USCGC Monroe Richport, AR 85238 FPO AA 63303 Tax Id: 911-91-7283 Tax Id: 937-72-6545 IBAN: GBOSRWVA59280101041053 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Saucony Boys' Ride ISO 3,00 each 27,99 83,97 10% 92,37 Sneaker , White/BlueNVizi Red, 7 M US Little Kid 2 Fila Shoes Sneakers Kids size 11 1,00 each 15,00 15,00 10% 16,50 Red black Gray 3 Nike Ty Black 2,00 each 15,00 30,00 10% 33,00 SUMMARY VAT [%] Net worth VAT Gross worth 10% 128,97 12,90 141,87 Total $ 128,97 $ 12,90 $ 141,87",
+    "expected": {
+      "invoice_number": "42498094",
+      "invoice_date": "2017-03-21",
+      "due_date": null,
+      "supplier_name": "Hall LLC",
+      "supplier_address": "27618 Johnson Shores Suite 030\nRichport, AR 85238",
+      "customer_name": "Brown-Vazquez",
+      "subtotal": 128.97,
+      "tax_amount": 12.9,
+      "total_amount": 141.87,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0391",
+    "ocr_text": "Invoice no: 84423800 Date of issue: 10/11/2019 Seller: Client: Reyes, Fox and Martinez Morgan Ltd 8258 Lang Trail Apt: 792 316 Alexander Run Apt: 930 Port Jasonhaven, NJ 07777 South Danabury, WV 35900 Tax Id: 913-91-4093 Tax Id: 945-98-2210 IBAN: GBO6YQKI12270767261206 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth PUMA RS DREAMER SUPER 2,00 each 125,00 250,00 10% 275,00 MARIO 64 NINTENDO Little Kids US 2.5 2 kid shoes 4,00 each 50,00 200,00 10% 220,00 3 Newborn Infant Baby Girl Boy 5,00 each 22,69 113,45 10% 124,80 Kid Winter Warm Coat Knit Outwear Hooded Jumpsuit 5 YOUTH Boys Big Kids Nike 3,00 each 89,99 269,97 10% 296,97 Jordan 6-17-23 Basketball White red Black 428818 100 5 PUMA Youth Universal FG 5,00 each 19,99 99,95 10% 109,94 Jr Soccer Cleats 5 White High Risk Red Black 5Y SUMMARY VAT [%] Net worth VAT Gross worth 10% 933,37 93,34 1 026,71 Total $ 933,37 $ 93,34 $ 1 026,71 Boys",
+    "expected": {
+      "invoice_number": "84423800",
+      "invoice_date": "2019-10-11",
+      "due_date": null,
+      "supplier_name": "Reyes, Fox and Martinez",
+      "supplier_address": "8258 Lang Trail Apt. 792\nPort Jasonhaven, NJ 07777",
+      "customer_name": "Morgan Ltd",
+      "subtotal": 933.37,
+      "tax_amount": 93.34,
+      "total_amount": 1026.71,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0362",
+    "ocr_text": "Invoice no: 76628307 Date of issue: 05/05/2019 Seller: Client: Smith-Torres Medina, Moss and Martin 911 Mckenzie Ports Apt: 946 88048 Tonya Streets Apt: 993 Jeffborough, AK 82486 Pattersonhaven, MI 03007 Tax Id: 927-81-6187 Tax Id: 915-85-0288 IBAN: GB23TSVS63621685904101 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Original Nintendo Gaming 3,00 each 475,00 1 425,00 10% 1 567,50 Console with Robot, 9 games & extras 2 GameCube Nintendo Orange 2,00 each 151,88 303,76 10% 334,14 Console Controller[2 Soft[77 AV Power Cable Memory Card 3 New Nintendo 2DS XL Console 5,00 each 129,99 649,95 10% 714,95 Black[Turquoise wl Mario Kart 7 Preinstalled -JA1141 Anbernic Retro Games 500 in 5,00 each 1,25 6,25 10% 6,87 8 Bit Classic Video Game Console Handheld Player 5 Microsoft Xbox One S00GB 1540 5,00 each 139,99 699,95 10% 769,95 Black Game Console TESTED Complete SUMMARY VAT [%] Net worth VAT Gross worth 10% 3 084,91 308,49 3 393,40 Total $ 3 084,91 $ 308,49 $ 3 393,40",
+    "expected": {
+      "invoice_number": "76628307",
+      "invoice_date": "2019-05-05",
+      "due_date": null,
+      "supplier_name": "Smith-Torres",
+      "supplier_address": "911 Mckenzie Ports Apt. 946\nJeffborough, AK 82486",
+      "customer_name": "Medina, Moss and Martin",
+      "subtotal": null,
+      "tax_amount": 308.49,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0098",
+    "ocr_text": "Invoice no: 92395596 Date of issue: 10/03/2011 Seller: Client: Rodriguez, White and Hernandez Young Inc 275 Sanders Fall Suite 646 0386 Kane Jenniferburgh, IA 31174 Zacharystad, MT 55786 Tax Id: 943-92-7534 Tax Id: 986-87-8099 IBAN: GB36EZLG32867912781587 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth LuLaRoe Nicole Dress Size 1,00 each 1,99 1,99 10% 2,19 Medium 11 SUMMARY VAT [%] Net worth VAT Gross worth 10% 1,99 0,20 2,19 Total $ 1,99 $ 0,20 $ 2,19 Alley",
+    "expected": {
+      "invoice_number": "92395596",
+      "invoice_date": "2011-10-03",
+      "due_date": null,
+      "supplier_name": "Rodriguez, White and Hernandez",
+      "supplier_address": "275 Sanders Fall Suite 646\nJenniferburgh, IA 31174",
+      "customer_name": "Young Inc",
+      "subtotal": 1.79,
+      "tax_amount": 0.2,
+      "total_amount": 1.99,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0095",
+    "ocr_text": "Invoice no: 61479635 Date of issue: 07/02/2018 Seller: Client: Kelley-Thomas Green, Kelly and Matthews 19996 Diane Well 5110 Heather Ways Port Jennifer, TX 60910 Andersontown, RI 96931 Tax Id: 969-94-5063 Tax Id: 963-81-9853 IBAN: GBZOZNFB26250974035092 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1 Executive style 5,00 each 5,99 29,95 10% 32,95 SUMMARY VAT [%] Net worth VAT Gross worth 10% 29,95 3,00 32,95 Total $ 29,95 $ 3,00 $ 32,95",
+    "expected": {
+      "invoice_number": "61479635",
+      "invoice_date": "2018-07-02",
+      "due_date": null,
+      "supplier_name": "Kelley-Thomas",
+      "supplier_address": "19996 Diane Well\nPort Jennifer, TX 60910",
+      "customer_name": "Green, Kelly and Matthews",
+      "subtotal": 29.95,
+      "tax_amount": 3.0,
+      "total_amount": 32.95,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0026",
+    "ocr_text": "Invoice no: 51295021 Date of issue: 01/05/2017 Seller: Client: Sims-Olson Martinez-English USS Bell 12196 Barrett Plain Suite 873 FPO AP 94327 North Victorborough, NY 32585 Tax Id: 922-88-3881 Tax Id: 965-87-8819 IBAN: GB64NDCS47020318571282 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. 4'x2 Black Center Top Table 2,00 each 3 688,00 7 376,00 10% 8 113,60 Italian Marquetry Gemstone Art Columba's Day Gift 2 12\" Marble Side Coffee Table 4,00 each 259,77 1 039,08 10% 1 142,99 Top Multi Stone Floral Inlay Occasional Decor W260 SUMMARY VAT [%] Net worth VAT Gross worth 10% 8 415,08 841,51 9 256,59 Total $ 8 415,08 $ 841,51 $ 9 256,59",
+    "expected": {
+      "invoice_number": "51295021",
+      "invoice_date": "2017-01-05",
+      "due_date": null,
+      "supplier_name": "Sims-Olson",
+      "supplier_address": "USS Bell\nFPO AP 94327",
+      "customer_name": "Martinez-English",
+      "subtotal": 8415.08,
+      "tax_amount": 841.51,
+      "total_amount": 9256.59,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0082",
+    "ocr_text": "Invoice no: 31293737 Date of issue: 12/15/2020 Seller: Client: Nunez Inc Alvarez Inc 6551 Janet Gardens 00625 Smith Mall Apt: 604 Michaelberg, KS 90952 New Dustin, AZ 81632 Tax Id: 914-71-5964 Tax Id: 978-70-1262 IBAN: GBIOTEWR90161825708017 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Women's black cocktail dress, 3,00 each 19,99 59,97 10% 65,97 size 2 Christmas Dress Grace Karin 1,00 each 9,99 9,99 10% 10,99 Sleeveless Christmas dress Red Black size Large 3 Windsor womens black and Pink 1,00 each 15,83 15,83 10% 17,41 Bodycon Sleeveless Dress, Womens Size Small Lumiere Large Multicolored 4,00 each 4,99 19,96 10% 21,96 Orange Short Dress NWT 5 Xhilaration Womens L Burgandy 4,00 each 14,95 59,80 10% 65,78 Boho Embroidered Festival Mini Dress NEW 6 Johnny Was Medium Linen Wrap 2,00 each 89,99 179,98 10% 197,98 Dress Dessert Rose Embroiderd Bohemian Pre-Owned Women's Nah Nah 2,00 each 12,99 25,98 10% 28,58 Dress Size 8 Black Sheer Formal Sexy SUMMARY VAT [%] Net worth VAT Gross worth 10% 371,51 37,15 408,66 Total $ 371,51 $ 37,15 $ 408,66",
+    "expected": {
+      "invoice_number": "31293737",
+      "invoice_date": "2020-12-15",
+      "due_date": null,
+      "supplier_name": "Nunez Inc",
+      "supplier_address": "6551 Janet Gardens\nMichaelberg, KS 90952",
+      "customer_name": "Alvarez Inc",
+      "subtotal": 334.36,
+      "tax_amount": 37.15,
+      "total_amount": 371.51,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0114",
+    "ocr_text": "Invoice no: 74184749 Date of issue: 03/07/2015 Seller: Client: Klein and Sons Liu-Perry Unit 6028 Box 0366 6914 Carolyn Circle DPO AP 38632 Eugenefort, VA 31831 Tax Id: 963-86-0433 Tax Id: 990-98-8702 IBAN: GB69IFZX47543651270054 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Stemless wine glass Etched 1,00 each 2,99 2,99 10% 3,29 coordinates of Myakka River State Park, Very Good SUMMARY VAT [%] Net worth VAT Gross worth 10% 2,99 0,30 3,29 Total $ 2,99 $ 0,30 $ 3,29",
+    "expected": {
+      "invoice_number": "74184749",
+      "invoice_date": "2015-03-07",
+      "due_date": null,
+      "supplier_name": "Klein and Sons",
+      "supplier_address": "Unit 6028 Box 0366\nDPO AP 38632",
+      "customer_name": "Liu-Perry",
+      "subtotal": 2.69,
+      "tax_amount": 0.3,
+      "total_amount": 2.99,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0067",
+    "ocr_text": "Invoice no: 94166183 Date of issue: 08/24/2019 Seller: Client: West-Hodges Simmons Inc 898 Jennifer Trail 17172 Thomas Spurs Suite 214 Lisamouth, MI 40976 Lorichester, WV 81274 Tax Id: 901-78-5388 Tax Id: 954-94-9932 IBAN: GB1OBXIDO6957659376976 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Matilda Jane Womans Lets Go 1,00 each 19,60 19,60 10% 21,56 Together Black Knit Dress Size M Medium NWT SUMMARY VAT [%] Net worth VAT Gross worth 10% 19,60 1,96 21,56 Total $ 19,60 $ 1,96 $ 21,56",
+    "expected": {
+      "invoice_number": "94166183",
+      "invoice_date": "2019-08-24",
+      "due_date": null,
+      "supplier_name": "West-Hodges",
+      "supplier_address": "898 Jennifer Trail\nLisamouth, MI 40976",
+      "customer_name": "Simmons Inc",
+      "subtotal": 19.6,
+      "tax_amount": 1.96,
+      "total_amount": 21.56,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0094",
+    "ocr_text": "Invoice no: 49360354 Date of issue: 05/03/2017 Seller: Client: Armstrong Inc Yu, Williams and Barry 9547 Samuel Cliffs 34887 Craig Trail Apt: 161 Samuelchester, CO 34580 Lake Sally, CA 02955 Tax Id: 956-86-6226 Tax Id: 940-88-3989 IBAN: GBZ4SATA49913307165446 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Lotto Youth Boys Fuerzapura 3,00 each 19,99 59,97 10% 65,97 LSOO Jr Soccer Cleats Size 2.5 White Blue M6147 2.5Y 2 Skechers Kids' Snap Sprints 5,00 each 29,99 149,95 10% 164,94 Sneaker Size 4 BluelBlack 975461 3 Joma Boys Youth Super Copa 5,00 each 19,99 99,95 10% 109,94 102 Soccer Cleats 5.5 White Yellow Blue Futbol NEW Joma Youth Boys Gol 205 Piso 2,00 each 19,99 39,98 10% 43,98 Multitaco Soccer Cleats 1.5 White Blue Yellow NEW 5 100Pcs Wall Stickers Home 5,00 each 1,70 8,50 10% 9,35 Decor Glow In The Dark Star sticker Decal Kids room SUMMARY VAT [%] Net worth VAT Gross worth 10% 358,35 35,84 394,19 Total $ 358,35 $ 35,84 $ 394,19",
+    "expected": {
+      "invoice_number": "49360354",
+      "invoice_date": "2017-05-03",
+      "due_date": null,
+      "supplier_name": "Armstrong Inc",
+      "supplier_address": "9547 Samuel Cliffs\nSamuelchester, CO 34580",
+      "customer_name": "Yu, Williams and Barry",
+      "subtotal": 358.35,
+      "tax_amount": 35.84,
+      "total_amount": 394.19,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0115",
+    "ocr_text": "Invoice no: 94772624 Date of issue: 03/01/2015 Seller: Client: Smith-Strickland Goodman, Rogers and Williams Unit 2720 Box 0088 9027 Velez River DPO AE 58579 West Ginamouth, NJ 71857 Tax Id: 927-77-9453 Tax Id: 975-96-7959 IBAN: GBS9CAJC98323600757545 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 3 Ikea Stainless Steel 4-bottle 2,00 each 25,00 50,00 10% 55,00 Wine Rack 300.557.60 great condition gift it! SUMMARY VAT [%] Net worth VAT Gross worth 10% 50,00 5,00 55,00 Total $ 50,00 $ 5,00 $ 55,00",
+    "expected": {
+      "invoice_number": "94772624",
+      "invoice_date": "2015-03-01",
+      "due_date": null,
+      "supplier_name": "Smith-Strickland",
+      "supplier_address": "Unit 2720 Box 0088\nDPO AE 58579",
+      "customer_name": "Goodman, Rogers and Williams",
+      "subtotal": 50.0,
+      "tax_amount": 5.0,
+      "total_amount": 55.0,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0229",
+    "ocr_text": "Invoice no: 87958388 Date of issue: 04/11/2016 Seller: Client: Robinson and Sons Jackson-Cardenas PSC 9668, Box 0970 36484 Richard Extensions Suite 325 APO AP 52365 North Valeriehaven, AZ 79970 Tax Id: 967-86-0834 Tax Id: 924-97-4700 IBAN: GBS1OLQL96796729193422 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. 16\"xl6\" Marble Top Customize 3,00 each 800,00 2 400,00 10% 2 640,00 Table Lapis Lazuli Marquetry Inlaid Halloween Gift 2 16\"xl6\" White Marble Top 3,00 each 745,99 2 237,97 10% 2 461,77 Counter Table Malachite Inlay Marquetry Art Home Decor SUMMARY VAT [%] Net worth VAT Gross worth 10% 4 637,97 463,80 5 101,77 Total $ 4 637,97 $ 463,80 $ 5 101,77",
+    "expected": {
+      "invoice_number": "87958388",
+      "invoice_date": "2016-04-11",
+      "due_date": null,
+      "supplier_name": "Robinson and Sons",
+      "supplier_address": "PSC 9668, Box 0970\nAPO AP 52365",
+      "customer_name": "Jackson-Cardenas",
+      "subtotal": null,
+      "tax_amount": 463.8,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0124",
+    "ocr_text": "Invoice no: 13891625 Date of issue: 10/14/2017 Seller: Client: Marshall-Mullins Chang, Moore and Faulkner 7958 Jack Parkway Suite 399 9736 Warren Landing Suite 496 East Kaitlyn, MD 40443 Port Jacob, NM 04357 Tax Id: 961-96-0907 Tax Id: 940-72-5586 IBAN: GB1ANBQZ25666553689315 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Custom Built Gaming Computer 4,00 each 217,50 870,00 10% 957,00 2 Dell Desktop Computer PC Core 5,00 each 124,95 624,75 10% 687,23 i5 3.1GHz 8GB RAM S00GB HD Wifi DVD Windows 10 3 Computer Desktop Gaming i5 5,00 each 315,00 1 575,00 10% 1 732,50 Ram 16 G NEW RGB Quad Core Gaming PC 3,00 each 299,99 899,97 10% 989,97 Desktop Computer 4.2 GHz 500 8GB RAM WIN 10 WIFI 5 Dell Optiplex Desktop Computer 5,00 each 169,95 849,75 10% 934,73 PC Quad Core i5 16GB 1TB HD Wifi Windows 10 Pro Custom Build HP Desktop 5,00 each 329,00 1 645,00 10% 1 809,50 Computer 16GB 2TB SSD Windows 10 Windows PC WiFi HP Compaq 6200 Pro SFF 5,00 each 113,96 569,80 10% 626,78 Desktop Computer Pentium Windows 10 System 500GB 1TB SUMMARY VAT [%] Net worth VAT Gross worth 10% 7 034,27 703,43 7 737,70 Total $ 7 034,27 $ 703,43 $ 7 737,70",
+    "expected": {
+      "invoice_number": "13891625",
+      "invoice_date": "2017-10-14",
+      "due_date": null,
+      "supplier_name": "Marshall-Mullins",
+      "supplier_address": "7958 Jack Parkway Suite 399\nEast Kaitlyn, MD 40443",
+      "customer_name": "Chang, Moore and Faulkner",
+      "subtotal": null,
+      "tax_amount": 703.43,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0293",
+    "ocr_text": "Invoice no: 36433509 Date of issue: 03/29/2021 Seller: Client: Gutierrez LLC Miller, Myers and Bean 8987 Fitzpatrick Parks Apt 322 45922 Patricia Courts New Misty, NM 20546 South William, IN 08798 Tax Id: 903-83-7680 Tax Id: 970-76-7381 IBAN: GBAOBEQA27978227402725 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. boys shoes size 5 2,00 each 5,80 11,60 10% 12,76 SUMMARY VAT [%] Net worth VAT Gross worth 10% 11,60 1,16 12,76 Total $ 11,60 $ 1,16 $ 12,76",
+    "expected": {
+      "invoice_number": "36433509",
+      "invoice_date": "2021-03-29",
+      "due_date": null,
+      "supplier_name": "Gutierrez LLC",
+      "supplier_address": "8987 Fitzpatrick Parks Apt. 322\nNew Misty, NM 20546",
+      "customer_name": "Miller, Myers and Bean",
+      "subtotal": 11.6,
+      "tax_amount": 1.16,
+      "total_amount": 12.76,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0298",
+    "ocr_text": "Invoice no: 22019496 Date of issue: 03/14/2012 Seller: Client: Barron-Rodriguez Cruz, Navarro and Brown 59843 David Squares Apt. 406 1646 Jim Locks Port Kevin, NC 81365 Lake Shannonburgh, OR 56427 Tax Id: 992-98-4203 Tax Id: 999-82-0519 IBAN: GB94NVOV09121691518608 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1 Collectors Paperweights 86 4,00 each 5,74 22,96 10% 25,26 2 History of Christianity Vol: 1 1,00 each 4,09 4,09 10% 4,50 Beginnings to 1500 by Kenneth S. Latourette 3 An Hour With Jesus 2,00 each 4,49 8,98 10% 9,88 Dr. Bob and the Good Oldtimers 5,00 each 5,61 28,05 10% 30,86 5 One Year through the Bible by 2,00 each 4,49 8,98 10% 9,88 David R. Veerman 6 Theodore Boone: The Activist by 4,00 each 4,49 17,96 10% 19,76 John Grisham Photosynthesis by Rabinowitch 5,00 each 11,31 56,55 10% 62,21 SUMMARY VAT [%] Net worth VAT Gross worth 10% 147,57 14,76 162,33 Total $ 147,57 $ 14,76 $ 162,33",
+    "expected": {
+      "invoice_number": "22019496",
+      "invoice_date": "2012-03-14",
+      "due_date": null,
+      "supplier_name": "Barron-Rodriguez",
+      "supplier_address": "59843 David Squares Apt. 406\nPort Kevin, NC 81365",
+      "customer_name": "Cruz, Navarro and Brown",
+      "subtotal": 147.57,
+      "tax_amount": 14.76,
+      "total_amount": 162.33,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0433",
+    "ocr_text": "Invoice no: 25604558 Date of issue: 03/08/2015 Seller: Client: Mcdaniel Inc Taylor and Sons 980 Henry Ville 1445 Silva Trace Penaborough, VT 44420 North Susan, TX 31627 Tax Id: 903-83-8978 Tax Id: 968-91-4447 IBAN: GBBOTMJI44741478905305 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth MARC JACOBS IVORY COTTON 3,00 each 15,99 47,97 10% 52,77 SHORT SLEEVE BEIGE SILK OVERLAY DRESS SMALL 2 Cabi 5610 Striped White Blue 4,00 each 48,99 195,96 10% 215,56 Launch Maxi Dress Womens Sz M 3 Boden Size 8 US Green & 1,00 each 35,00 35,00 10% 38,50 Dark Blue Belted Midi Wool Knit Sweater Fall Dress SUMMARY VAT [%] Net worth VAT Gross worth 10% 278,93 27,89 306,82 Total $ 278,93 $ 27,89 $ 306,82 Navy",
+    "expected": {
+      "invoice_number": "25604558",
+      "invoice_date": "2015-03-08",
+      "due_date": null,
+      "supplier_name": "Mcdaniel Inc",
+      "supplier_address": "980 Henry Ville\nPenaborough, VT 44420",
+      "customer_name": "Taylor and Sons",
+      "subtotal": 278.93,
+      "tax_amount": 27.89,
+      "total_amount": 306.82,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0263",
+    "ocr_text": "Invoice no: 67743685 Date of issue: 01/24/2018 Seller: Client: Cooper, Wilson and Tran Reed, Hall and Brown 31485 Patrick Lights Suite 740 90613 Donna Estates Leemouth, GA 78053 Danielhaven, PA 75160 Tax Id: 995-86-7856 Tax Id: 948-94-4060 IBAN: GB6OPCKC14207144188877 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth The Wire in the Blood (Tony Hill 2,00 each 15,12 30,24 10% 33,26 and Carol Jordan, Book 2) by McDermid New+- 2 Motorcycle Journeys Through 3,00 each 6,00 18,00 10% 19,80 North America A Guide for Choosing and Planning: 3 BEVERLY HILLBILLIES 1993 TV 5,00 each 24,99 124,95 10% 137,44 Show BOOK Ist Edition AUTOGRAPHED Signed STEPHEN COX Care & Repair of Furniture 2,00 each 4,25 8,50 10% 9,35 5 Taste of Home Bake Shop 4,00 each 4,49 17,96 10% 19,76 Favorites: 383 Reader Reci 6 Seashells of North America: A 2,00 each 4,49 8,98 10% 9,88 Guide to Field Ident My Passion for Design by Barbra 3,00 each 5,56 16,68 10% 18,35 Streisand SUMMARY VAT [%] Net worth VAT Gross worth 10% 225,31 22,53 247,84 Total $ 225,31 $ 22,53 $ 247,84",
+    "expected": {
+      "invoice_number": "67743685",
+      "invoice_date": "2018-01-24",
+      "due_date": null,
+      "supplier_name": "Cooper, Wilson and Tran",
+      "supplier_address": "31485 Patrick Lights Suite 740\nLeemouth, GA 78053",
+      "customer_name": "Reed, Hall and Brown",
+      "subtotal": 225.31,
+      "tax_amount": 22.53,
+      "total_amount": 247.84,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0078",
+    "ocr_text": "Invoice no: 61874671 Date of issue: 07/26/2018 Seller: Client: Gonzales-Faulkner Garcia-Jones 2532 lan Springs Suite 638 0715 Vasquez Ford Williamshire, NE 03882 East Jeanette, MD 91592 Tax Id: 992-82-8738 Tax Id: 918-90-3872 IBAN: GB53QIPA71313865022785 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. fire los angeles dress Medium 3,00 each 6,50 19,50 10% 21,45 2 Tommy Bahama Women's V 2,00 each 34,99 69,98 10% 76,98 Neck Linen Floral Dress Size M Beige Short Sleeve Tan 3 Jams World Hawaiian Dress 3,00 each 65,00 195,00 10% 214,50 Rayon SZ.L SUMMARY VAT [%] Net worth VAT Gross worth 10% 284,48 28,45 312,93 Total $ 284,48 $ 28,45 $ 312,93",
+    "expected": {
+      "invoice_number": "61874671",
+      "invoice_date": "2018-07-26",
+      "due_date": null,
+      "supplier_name": "Gonzales-Faulkner",
+      "supplier_address": "2532 lan Springs Suite 638\nWilliamshire, NE 03882",
+      "customer_name": "Garcia-Jones",
+      "subtotal": 284.48,
+      "tax_amount": 28.45,
+      "total_amount": 312.93,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0066",
+    "ocr_text": "Invoice no: 77668740 Date of issue: 01/02/2016 Seller: Client: Ryan, Garcia and Gregory Hopkins, Gonzales and Mccarthy 297 Allen Mills 3206 Adam Cliffs Apt: 677 Port John, AK 02752 South Monicaborough, MD 87314 Tax Id: 994-98-2347 Tax Id: 965-96-0570 IBAN: GB6IPCVV90649839145503 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth LuLaRoe Nicole Dress Size 1,00 each 1,99 1,99 10% 2,19 Medium 11 SUMMARY VAT [%] Net worth VAT Gross worth 10% 1,99 0,20 2,19 Total $ 1,99 $ 0,20 $ 2,19",
+    "expected": {
+      "invoice_number": "77668740",
+      "invoice_date": "2016-01-02",
+      "due_date": null,
+      "supplier_name": "Ryan, Garcia and Gregory",
+      "supplier_address": "297 Allen Mills\nPort John, AK 02752",
+      "customer_name": "Hopkins, Gonzales and Mccarthy",
+      "subtotal": 1.79,
+      "tax_amount": 0.2,
+      "total_amount": 1.99,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0015",
+    "ocr_text": "Invoice no: 46506594 Date of issue: 03/12/2012 Seller: Client: Porter-Perkins Castaneda LLC 88652 James Loaf 19558 Causeway East Alyssamouth, KS 81684 East Chelseytown, MD 95490 Tax Id: 929-76-1260 Tax Id: 940-86-9734 IBAN: GB4IGJRS28729607733931 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Nintendo 3DS Handheld Console 5,00 each 98,99 494,95 10% 544,45 Purple 2 PocketGo Bittboy v2 White 4,00 each 39,00 156,00 10% 171,60 Retro Video Game Portable Console 3.5 IPS display 3 PlayStation 3 Slim 120GB 4,00 each 99,99 399,96 10% 439,96 Black Console Microsoft Xbox 360 White 1,00 each 39,95 39,95 10% 43,95 Console, Power Supply, AV Cables *Tested, Working* 5 SONY Playstation2 Console 1,00 each 00 45,00 10% 49,50 SCPH-39000 Aqua Color TESTED 11181 Nintendo 64 Console \"Perfect\" + 1,00 each 200,00 200,00 10% 220,00 Lot Games \"6 Games\" SUMMARY VAT [%] Net worth VAT Gross worth 10% 1 335,86 133,59 1 469,45 Total $ 1 335,86 133,59 $ 1 469,45 Fry Sony 45,C",
+    "expected": {
+      "invoice_number": "46506594",
+      "invoice_date": "2012-03-12",
+      "due_date": null,
+      "supplier_name": "Porter-Perkins",
+      "supplier_address": "88652 James Loaf\nEast Alyssamouth, KS 81684",
+      "customer_name": "Castaneda LLC",
+      "subtotal": 1335.86,
+      "tax_amount": 133.59,
+      "total_amount": 1469.45,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0428",
+    "ocr_text": "Invoice no: 94215570 Date of issue: 11/05/2017 Seller: Client: Henry Inc Cole, Lee and Long 46769 James Grove Apt: 769 PSC 5057, Box 8574 Lauraton, OR 80222 APO AP 08956 Tax Id: 951-77-3930 Tax Id: 970-87-1723 IBAN: GB74VIGSO0454458523860 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Bicycle Wine Bottle 2,00 each 4,99 9,98 10% 10,98 Holder/Excellent Condition SUMMARY VAT [%] Net worth VAT Gross worth 10% 9,98 1,00 10,98 Total $ 9,98 $ 1,00 $ 10,98",
+    "expected": {
+      "invoice_number": "94215570",
+      "invoice_date": "2017-11-05",
+      "due_date": null,
+      "supplier_name": "Henry Inc",
+      "supplier_address": "46769 James Grove Apt. 769\nLauraton, OR 80222",
+      "customer_name": "Cole, Lee and Long",
+      "subtotal": 9.98,
+      "tax_amount": 1.0,
+      "total_amount": 10.98,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0006",
+    "ocr_text": "Invoice no: 72128555 Date of issue: 12/25/2013 Seller: Client: Obrien Group Duncan-Davis 6217 Boyd Ville Apt: 758 PSC 2324, Box 6632 Robbinsberg, AZ 54997 APO AP 93827 Tax Id: 905-82-5399 Tax Id: 917-86-7656 IBAN: GBZIQMAA96406297569205 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Fatawa Islamiyah (Islamic 2,00 each 99,90 199,80 10% 219,78 Verdicts) (8 Volume Set) 2 Sasinowski M-Legacy Of Ra 1,00 each 19,40 19,40 10% 21,34 BOOK NEW 3 Time Life Books: The Old West 3,00 each 139,95 419,85 10% 461,83 Series Complete 26 Volumes Master Index mn853 Tumbling by Caela Carter 3,00 each 4,49 13,47 10% 14,82 5 How to Win Friends Influence 2,00 each 6,62 13,24 10% 14,56 People SUMMARY VAT [%] Net worth VAT Gross worth 10% 665,76 66,58 732,34 Total $ 665,76 $ 66,58 $ 732,34",
+    "expected": {
+      "invoice_number": "72128555",
+      "invoice_date": "2013-12-25",
+      "due_date": null,
+      "supplier_name": "Obrien Group",
+      "supplier_address": "6217 Boyd Ville Apt. 758\nRobbinsberg, AZ 54997",
+      "customer_name": "Duncan-Davis",
+      "subtotal": 665.76,
+      "tax_amount": 66.58,
+      "total_amount": 732.34,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0363",
+    "ocr_text": "Invoice no: 16499996 Date of issue: 05/05/2019 Seller: Client: Nichols-Powell Ballard-Henry 19796 Lauren Courts USNS Brown Watkinsview, VA 84637 FPO AE 78346 Tax Id: 956-84-2083 Tax Id: 923-84-5244 IBAN: GB64PEZD24221118107054 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1 fire los angeles dress Medium 3,00 each 6,50 19,50 10% 21,45 SUMMARY VAT [%] Net worth VAT Gross worth 10% 19,50 1,95 21,45 Total 19,50 $ 1,95 $ 21,45",
+    "expected": {
+      "invoice_number": "16499996",
+      "invoice_date": "2019-05-05",
+      "due_date": null,
+      "supplier_name": "Nichols-Powell",
+      "supplier_address": "19796 Lauren Courts\nWatkinsview, VA 84637",
+      "customer_name": "Ballard-Henry",
+      "subtotal": 19.5,
+      "tax_amount": 1.95,
+      "total_amount": 21.45,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0461",
+    "ocr_text": "Invoice no: 95216794 Date of issue: 08/10/2017 Seller: Client: Nguyen, Russell and Rodriguez Adams-Burns 0424 Kristy Rapid Suite 516 053 Shawn Fields Bonniemouth, VA 53323 New Tommyborough, AK 60906 Tax Id: 946-79-3835 Tax Id: 939-82-6159 IBAN: GB94ZOCS29335948893013 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Entertaining 3,00 each 4,49 13,47 10% 14,82 2 Collectors Paperweights 86 3,00 each 5,74 17,22 10% 18,94 3 A History of Christianity Vol. 1 1,00 each 4,09 4,09 10% 4,50 Beginnings to 1500 by Kenneth S. Latourette An Hour With Jesus 2,00 each 4,49 8,98 10% 9,88 SUMMARY VAT [%] Net worth VAT Gross worth 10% 43,76 4,38 48,14 Total $ 43,76 $ 4,38 $ 48,14",
+    "expected": {
+      "invoice_number": "95216794",
+      "invoice_date": "2017-08-10",
+      "due_date": null,
+      "supplier_name": "Nguyen, Russell and Rodriguez",
+      "supplier_address": "0424 Kristy Rapid Suite 516\nBonniemouth, VA 53323",
+      "customer_name": "Adams-Burns",
+      "subtotal": 43.76,
+      "tax_amount": 4.38,
+      "total_amount": 48.14,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0011",
+    "ocr_text": "Invoice no: 68688408 Date of issue: 03/20/2016 Seller: Client: Torres and Sons Dennis, Levy and Bowen 4052 Brown Roads 523 Leslie Manors Haysstad, NJ 06418 Lake Colleenville, CT 12053 Tax Id: 953-84-2239 Tax Id: 904-82-9186 IBAN: GB84XSNO58142814072766 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Nike 747998-401 Team Hustle 3,00 each 10,99 32,97 10% 36,27 D7 Kids Blue Mid Basketball Shoes Size 4Y US 2 Jordan Nike Kid Air 1 Retro High 1,00 each 50,00 50,00 10% 55,00 Black Gray Elephant Size 7Y 838850-013 SUMMARY VAT [%] Net worth VAT Gross worth 10% 82,97 8,30 91,27 Total $ 82,97 $ 8,30 $ 91,27 Top",
+    "expected": {
+      "invoice_number": "68688408",
+      "invoice_date": "2016-03-20",
+      "due_date": null,
+      "supplier_name": "Torres and Sons",
+      "supplier_address": "4052 Brown Roads\nHaysstad, NJ 06418",
+      "customer_name": "Dennis, Levy and Bowen",
+      "subtotal": 82.97,
+      "tax_amount": 8.3,
+      "total_amount": 91.27,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0041",
+    "ocr_text": "Invoice no: 69875170 Date of issue: 07/18/2014 Seller: Client: Davis, Thomas and Larson Romero Inc 6943 Long Street Suite 644 3498 Margaret Shores East Jennifer, WV 57076 Noahtown, WA 89768 Tax Id: 984-82-1277 Tax Id: 988-79-9604 IBAN: GB63MNKB15123766783579 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Antique Vintage style hand 5,00 each 13 000,00 65 000,00 10% 71 500,00 carved table *Unique* 2 Floral two seater fabric sofa 2,00 each 199,00 398,00 10% 437,80 3 6'x3' White Marble Living Room 3,00 each 5 590,21 16 770,63 10% 18 447,69 Dining Table Top Marquetry Furniture H4743A 6'x3' Black Marble Top Dining 4,00 each 5 265,97 21 063,88 10% 23 170,27 Table Scagliola Inlay Antique Arts Kitchen Decor 5 7'x4' Buy Marble Dining Table 5,00 each 14 721,08 73 605,40 10% 80 965,94 With Black Top Marquetry Inlay Hallway Decor E944 SUMMARY VAT [%] Net worth VAT Gross worth 10% 176 837,91 17 683,79 194 521,70 Total $ 176 837,91 $ 17 683,79 $ 194 521,70 Inlay",
+    "expected": {
+      "invoice_number": "69875170",
+      "invoice_date": "2014-07-18",
+      "due_date": null,
+      "supplier_name": "Davis, Thomas and Larson",
+      "supplier_address": "6943 Long Street Suite 644\nEast Jennifer, WV 57076",
+      "customer_name": "Romero Inc",
+      "subtotal": null,
+      "tax_amount": null,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0040",
+    "ocr_text": "Invoice no: 74980573 Date of issue: 09/27/2015 Seller: Client: West Group Zimmerman and Sons 91959 Eric Pass 2246 Landry Court Wileyshire, SC 58295 Murillomouth, AZ 66593 Tax Id: 944-98-4907 Tax Id: 901-84-6442 IBAN: GBOZHMXX72577746298746 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Teva Hurricane 1019390 All 2,00 each 9,99 19,98 10% 21,98 Black Sandals with Hook and Loop Closure, Youth's 5 2 Keen Waterproof Hiking Shoes 3,00 each 35,97 107,91 10% 118,70 Kids Boys Size 12 Brown Black Outdoor Sneakers 3 KushyShoo Children Kid Rain 2,00 each 22,99 45,98 10% 50,58 Boot Shoes Rubber, Monkey, Size Youth 1 SUMMARY VAT [%] Net worth VAT Gross worth 10% 173,87 17,39 191,26 Total $ 173,87 $ 17,39 $ 191,26",
+    "expected": {
+      "invoice_number": "74980573",
+      "invoice_date": "2015-09-27",
+      "due_date": null,
+      "supplier_name": "West Group",
+      "supplier_address": "91959 Eric Pass\nWileyshire, SC 58295",
+      "customer_name": "Zimmerman and Sons",
+      "subtotal": 173.87,
+      "tax_amount": 17.39,
+      "total_amount": 191.26,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0031",
+    "ocr_text": "Invoice no: 20434959 Date of issue: 12/20/2011 Seller: Client: Garrett; Gonzales and Hurley Holloway, Stanton and Dunn 683 Savannah Fords Apt: 092 49479 James Canyon Apt. 672 West Jamesport, CT 37732 Port Stephaniehaven, AK 61071 Tax Id: 932-75-6582 Tax Id: 940-95-1310 IBAN: GB3SIHYS72111215388563 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Wine Things Unlimited 3,00 each 8,99 26,97 10% 29,67 Wine Elf Pewter Wine Bottle Stopper/Cork SUMMARY VAT [%] Net worth VAT Gross worth 10% 26,97 2,70 29,67 Total $ 26,97 $ 2,70 $ 29,67 Tipsy",
+    "expected": {
+      "invoice_number": "20434959",
+      "invoice_date": "2011-12-20",
+      "due_date": null,
+      "supplier_name": "Garrett, Gonzales and Hurley",
+      "supplier_address": "683 Savannah Fords Apt. 092\nWest Jamesport, CT 37732",
+      "customer_name": "Holloway, Stanton and Dunn",
+      "subtotal": 26.97,
+      "tax_amount": 2.7,
+      "total_amount": 29.67,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0295",
+    "ocr_text": "Invoice no: 67103708 Date of issue: 01/20/2020 Seller: Client: French PLC Hernandez Group PSC 4436, Box 0976 37039 Brown Estates Suite 872 APO AA 23238 Grantburgh, SC 87485 Tax Id: 996-90-6108 Tax Id: 939-87-2626 IBAN: GB13QPYG54009734345480 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth The Neuroscience of Emotion A 4,00 each 9,99 39,96 10% 43,96 New Synthesis by Ralph Adolphs SUMMARY VAT [%] Net worth VAT Gross worth 10% 39,96 4,00 43,96 Total $ 39,96 $ 4,00 $ 43,96",
+    "expected": {
+      "invoice_number": "67103708",
+      "invoice_date": "2020-01-20",
+      "due_date": null,
+      "supplier_name": "French PLC",
+      "supplier_address": "PSC 4436, Box 0976\nAPO AA 23238",
+      "customer_name": "Hernandez Group",
+      "subtotal": 39.96,
+      "tax_amount": 4.0,
+      "total_amount": 43.96,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0260",
+    "ocr_text": "Invoice no: 33085665 Date of issue: 11/07/2011 Seller: Client: Rose-Brown Mcclain PLC USNS Griffin 9050 Michele Parkway Apt. 396 FPO AE 90809 Rosemouth; ND 05238 Tax Id: 980-74-6558 Tax Id: 972-85-7292 IBAN: GBZSDRRS79471384188530 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Dell Desktop Computer PC Core 3,00 each 124,95 374,85 10% 412,34 i5 3.1GHz 8GB RAM S00GB HD Wifi DVD Windows 10 2 Dell Precision Workstation 4,00 each 139,00 556,00 10% 611,60 Computer Intel Xeon Quad Core 16GB 1TB Windows 10 Pro SUMMARY VAT [%] Net worth VAT Gross worth 10% 930,85 93,09 1 023,94 Total $ 930,85 $ 93,09 $ 1 023,94",
+    "expected": {
+      "invoice_number": "33085665",
+      "invoice_date": "2011-11-07",
+      "due_date": null,
+      "supplier_name": "Rose-Brown",
+      "supplier_address": "USNS Griffin\nFPO AE 90809",
+      "customer_name": "Mcclain PLC",
+      "subtotal": null,
+      "tax_amount": 93.09,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0316",
+    "ocr_text": "Invoice no: 20237936 Date of issue: 11/08/2020 Seller: Client: Santos-Lee Jackson PLC 54443 Smith Corner 602 Susan Row Apt: 412 Terriburgh, MD 73620 Port Calvinside, GA 15057 Tax Id: 994-91-2356 Tax Id: 986-86-7893 IBAN: GB94TGZE67704267849890 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Escada Long Black Dress SZ 40 4,00 each 74,99 299,96 10% 329,96 100% Silk Lining 2 Liza Byrd Dress Sz L- Coral 5,00 each 17,99 89,95 10% 98,94 Green Medallion Print Short Sleeve 100% Cotton Line SUMMARY VAT [%] Net worth VAT Gross worth 10% 389,91 38,99 428,90 Total $ 389,91 $ 38,99 $ 428,90",
+    "expected": {
+      "invoice_number": "20237936",
+      "invoice_date": "2020-11-08",
+      "due_date": null,
+      "supplier_name": "Santos-Lee",
+      "supplier_address": "54443 Smith Corner\nTerriburgh, MD 73620",
+      "customer_name": "Jackson PLC",
+      "subtotal": 389.91,
+      "tax_amount": 38.99,
+      "total_amount": 428.9,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0206",
+    "ocr_text": "Invoice no: 95163776 Date of issue: 07/10/2016 Seller: Client: Banks Group Ellis Group 1109 Newton Ville 4257 Joseph Crossing Gilesborough, DC 08319 New Natasha, WV 95056 Tax Id: 930-94-2594 Tax Id: 972-85-6372 IBAN: GB62QJUV47397861954934 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth CLEARANCE! Fast Dell Desktop 3,00 each 209,00 627,00 10% 689,70 Computer PC DUAL CORE WINDOWS 10 4/8/16GB RAM 2 HP T520 Thin Client Computer 1,00 each 37,75 37,75 10% 41,53 AMD GX-21ZJC 1.2GHz 4GB RAM TESTED !!READ BELOWW! SUMMARY VAT [%] Net worth VAT Gross worth 10% 664,75 66,48 731,23 Total $ 664,75 $ 66,48 $ 731,23",
+    "expected": {
+      "invoice_number": "95163776",
+      "invoice_date": "2016-07-10",
+      "due_date": null,
+      "supplier_name": "Banks Group",
+      "supplier_address": "1109 Newton Ville\nGilesborough, DC 08319",
+      "customer_name": "Ellis Group",
+      "subtotal": 664.75,
+      "tax_amount": 66.48,
+      "total_amount": 731.23,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0192",
+    "ocr_text": "Invoice no: 50846623 Date of issue: 01/30/2016 Seller: Client: Hood, Andrade and Kim Browning Ltd 718 Scott Garden Suite 242 0907 Lewis Centers Apt: 160 Jeffreyfort, WV 11633 Lake Jessica, NV 38156 Tax Id: 942-96-6092 Tax Id: 982-92-5280 IBAN: GBZZQPXT15450103985559 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Sony PlayStation 3 12 GB 1,00 each 109,99 109,99 10% 120,99 Charcoal Black Console (Used) SUMMARY VAT [%] Net worth VAT Gross worth 10% 109,99 11,00 120,99 Total $ 109,99 $ 11,00 $ 120,99",
+    "expected": {
+      "invoice_number": "50846623",
+      "invoice_date": "2016-01-30",
+      "due_date": null,
+      "supplier_name": "Hood, Andrade and Kim",
+      "supplier_address": "718 Scott Garden Suite 242\nJeffreyfort, WV 11633",
+      "customer_name": "Browning Ltd",
+      "subtotal": 109.99,
+      "tax_amount": 11.0,
+      "total_amount": 120.99,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0340",
+    "ocr_text": "Invoice no: 82977013 Date of issue: 12/06/2013 Seller: Client: Daniel-Morrison Snyder, Benton and Reed 7968 Williams Creek Apt: 683 9842 Kelly River West Barbara, OK 09368 Carlfort, SD 15783 Tax Id: 995-99-6193 Tax Id: 999-86-4010 IBAN: GBOSUJUT79236649126419 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Reebok Kids Boys Blue Sneakers 5,00 each 5,00 25,00 10% 27,50 Shoes US 11 No Laces 2 Kids Jordan 7 Retro Sz 2y 3,00 each 72,00 216,00 10% 237,60 Wonder Nation Kids Shoes Size 1,00 each 3,99 3,99 10% 4,39 8c SUMMARY VAT [%] Net worth VAT Gross worth 10% 244,99 24,50 269,49 Total $ 244,99 $ 24,50 $ 269,49",
+    "expected": {
+      "invoice_number": "82977013",
+      "invoice_date": "2013-12-06",
+      "due_date": null,
+      "supplier_name": "Daniel-Morrison",
+      "supplier_address": "7968 Williams Creek Apt. 683\nWest Barbara, OK 09368",
+      "customer_name": "Snyder, Benton and Reed",
+      "subtotal": 244.99,
+      "tax_amount": 24.5,
+      "total_amount": 269.49,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0054",
+    "ocr_text": "Invoice no: 69703455 Date of issue: 02/06/2014 Seller: Client: Anderson Group Hendricks, Hart and Miller 793 William Inlet 81747 Brown Corner Apt: 501 Michaelhaven, RI 22480 Baileyfort, WV 16678 Tax Id: 986-84-5664 Tax Id: 989-85-9523 IBAN: GB16SIAUS1187417423705 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Intel Compute Stick (32GB, Intel 4,00 each 45,00 180,00 10% 198,00 Atom, 1.33GHz, 2GB) PC Desktop 2 AMD Dual Core 3.9Ghz 4GB 5,00 each 249,99 1 249,95 10% 1 374,95 DDR3 500GB WiFi Windows 10 office Desktop PC Computer 3 Desktop Computer Super 3,00 each 22,71 68,13 10% 74,94 Writemaster Intel Core Duo GAMING PC Desktop Computer 2,00 each 549,99 1 099,98 10% 1 209,98 RGB BUNDLE Intel CORE i7 16GB RAM Nvidia GTX 1650 1TB 5 Fast HP Desktop Computer Intel 1,00 each 99,95 99,95 10% 109,95 Processor 4GB 160GB 17\" LCD DVD Wifi Windows 10 Computer Desktop Gaming i5 3,00 each 315,00 945,00 10% 1 039,50 Ram 16 G SUMMARY VAT [%] Net worth VAT Gross worth 10% 3 643,01 364,30 4 007,31 Total $ 3 643,01 $ 364,30 $ 4 007,31",
+    "expected": {
+      "invoice_number": "69703455",
+      "invoice_date": "2014-02-06",
+      "due_date": null,
+      "supplier_name": "Anderson Group",
+      "supplier_address": "793 William Inlet\nMichaelhaven, RI 22480",
+      "customer_name": "Hendricks, Hart and Miller",
+      "subtotal": null,
+      "tax_amount": 364.3,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0407",
+    "ocr_text": "Invoice no: 46915335 Date of issue: 07/08/2020 Seller: Client: Aguilar-Thompson Mcintyre, Becker and Moore 8038 Silva Trace Suite 635 4441 Wise Keys Valeriemouth, WV 14566 Skinnermouth, SC 35784 Tax Id: 956-83-8987 Tax Id: 978-84-3101 IBAN: GB14UOFC23209846088600 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Wine Bottle Holder From Costa 4,00 each 5,00 20,00 10% 22,00 Rica Has A Parrot Painted On It SUMMARY VAT [%] Net worth VAT Gross worth 10% 20,00 2,00 22,00 Total $ 20,00 $ 2,00 $ 22,00",
+    "expected": {
+      "invoice_number": "46915335",
+      "invoice_date": "2020-07-08",
+      "due_date": null,
+      "supplier_name": "Aguilar-Thompson",
+      "supplier_address": "8038 Silva Trace Suite 635\nValeriemouth, WV 14566",
+      "customer_name": "Mcintyre, Becker and Moore",
+      "subtotal": 20.0,
+      "tax_amount": 2.0,
+      "total_amount": 22.0,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0455",
+    "ocr_text": "Invoice no: 74494433 Date of issue: 09/12/2017 Seller: Client: Huynh-Ruiz Mcintosh-Macdonald 9148 Chambers Rapid Suite 844 272 Allen Crescent Apt: 713 North Sheila, PA 37277 Caseport, SC 53123 Tax Id: 961-72-2355 Tax Id: 970-82-4039 IBAN: GBIOTPUA77994091934658 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 4'x6' Wool Floral Handmade 4,00 each 299,00 1 196,00 10% 1 315,60 Rugs Carpet Moroccan Pastel Color Living Room Navajo 2 Tie Dyeing Fluffy Rugs Anti-Skid 2,00 each 25,48 50,96 10% 56,06 Area Rug Dining Room Carpet Floor Bedroom Mat 3 Checkered Modern Kashkoli 2,00 each 806,00 1 612,00 10% 1 773,20 Oriental Area Rug Foyer Hand-knotted Wool Carpet 4'x6' Galaxy Butterfly Area Rugs 3,00 each 13,69 41,07 10% 45,18 Children Bedroom Non-Slip Doormat Floor Mat Carpet 5 Soft Sheepskin Mat Faux Fur 4,00 each 8,99 35,96 10% 39,56 Rug Small Shaggy Non Slip Floor Carpet White Gray 6 Cartoon Rabbit Printed Round 4,00 each 177,08 708,32 10% 779,15 Carpet Area Rug Children Play Tent Floor Mat Rug SUMMARY VAT [%] Net worth VAT Gross worth 10% 3 644,31 364,43 4 008,74 Total $ 3 644,31 $ 364,43 $ 4 008,74",
+    "expected": {
+      "invoice_number": "74494433",
+      "invoice_date": "2017-09-12",
+      "due_date": null,
+      "supplier_name": "Huynh-Ruiz",
+      "supplier_address": "9148 Chambers Rapid Suite 844\nNorth Sheila, PA 37277",
+      "customer_name": "Mcintosh-Macdonald",
+      "subtotal": 3644.31,
+      "tax_amount": 364.43,
+      "total_amount": 4008.74,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0169",
+    "ocr_text": "Invoice no: 15203117 Date of issue: 05/10/2019 Seller: Client: Gutierrez, Shah and Davis Howell, Bryant and Martinez 11259 Heidi Haven 120 Martinez Gardens Suite 075 West Erik, DE 14910 Nicholasmouth, MS 36786 Tax Id: 903-87-8854 Tax Id: 933-80-9316 IBAN: GB1ZYIHU88023545549081 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. boys shoes size 5 4,00 each 5,80 23,20 10% 25,52 SUMMARY VAT [%] Net worth VAT Gross worth 10% 23,20 2,32 25,52 Total $ 23,20 $ 2,32 $ 25,52",
+    "expected": {
+      "invoice_number": "15203117",
+      "invoice_date": "2019-05-10",
+      "due_date": null,
+      "supplier_name": "Gutierrez, Shah and Davis",
+      "supplier_address": "11259 Heidi Haven\nWest Erik, DE 14910",
+      "customer_name": "Howell, Bryant and Martinez",
+      "subtotal": 23.2,
+      "tax_amount": 2.32,
+      "total_amount": 25.52,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0104",
+    "ocr_text": "Invoice no: 90188228 Date of issue: 03/28/2016 Seller: Client: Baker-Smith Lozano-Lindsey PSC 8796, Box 5451 47773 Miller Court APO AA 79359 Harrisonmouth, ME 64015 Tax Id: 938-94-6389 Tax Id: 953-85-7076 IBAN: GBSSGDNB68373704463049 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Women's black cocktail dress, 5,00 each 19,99 99,95 10% 109,94 size 2 Coolibar Sun Protection Tunic 4,00 each 26,99 107,96 10% 118,76 Dress Cover Up Size Small $ Pink Pattern UPF 50 3 NWT dRA M White Embroidered 4,00 each 20,90 83,60 10% 91,96 Nathalie Bohemian Mini Dress Vintage 80s All That Jazz Blue 3,00 each 10,00 30,00 10% 33,00 Velvet Dress Small/Medium SUMMARY VAT [%] Net worth VAT Gross worth 10% 321,51 32,15 353,66 Total $ 321,51 $ 32,15 $ 353,66",
+    "expected": {
+      "invoice_number": "90188228",
+      "invoice_date": "2016-03-28",
+      "due_date": null,
+      "supplier_name": "Baker-Smith",
+      "supplier_address": "PSC 8796, Box 5451\nAPO AA 79359",
+      "customer_name": "Lozano-Lindsey",
+      "subtotal": 321.51,
+      "tax_amount": 32.15,
+      "total_amount": 353.66,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0065",
+    "ocr_text": "Invoice no: 25194747 Date of issue: 05/19/2018 Seller: Client: Castillo-Jones Preston-Webster 396 Jones Shore Apt: 781 2986 Weber Summit North Cynthiafurt, MS 28881 Markstad, MN 43966 Tax Id: 917-87-0923 Tax Id: 944-70-8920 IBAN: GB49OZCG79609103385168 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Cherokee Boys Grayton Skate 3,00 each 19,99 59,97 10% 65,97 Shoes 12 Surf Skate Casual 12K Black Extra Laces 12Y 2 jordan 4 kids Size 8 3,00 each 23,00 69,00 10% 75,90 3 Timberland brown slip on shoes 5,00 each 2,00 10,00 10% 11,00 size 4.5 juniors SUMMARY VAT [%] Net worth VAT Gross worth 10% 138,97 13,90 152,87 Total $ 138,97 $ 13,90 $ 152,87",
+    "expected": {
+      "invoice_number": "25194747",
+      "invoice_date": "2018-05-19",
+      "due_date": null,
+      "supplier_name": "Castillo-Jones",
+      "supplier_address": "396 Jones Shore Apt. 781\nNorth Cynthiafurt, MS 28881",
+      "customer_name": "Preston-Webster",
+      "subtotal": 138.97,
+      "tax_amount": 13.9,
+      "total_amount": 152.87,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0014",
+    "ocr_text": "Invoice no: 77596491 Date of issue: 01/31/2021 Seller: Client: Tran, Hurst and Rodgers Stephenson Inc Unit 2493 Box 1389 716 Wright Flat Apt 385 DPO AP 75814 South Carrie, GA 17790 Tax Id: 988-83-0971 Tax Id: 926-85-5660 IBAN: GBO4ZWCK22425880230961 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Earl Scruggs and the 5-String 1,00 each 22,68 22,68 10% 24,95 Banjo: Revised and Enhanced Edition (Paperback or SUMMARY VAT [%] Net worth VAT Gross worth 10% 22,68 2,27 24,95 Total $ 22,68 $ 2,27 $ 24,95",
+    "expected": {
+      "invoice_number": "77596491",
+      "invoice_date": "2021-01-31",
+      "due_date": null,
+      "supplier_name": "Tran, Hurst and Rodgers",
+      "supplier_address": "Unit 2493 Box 1389\nDPO AP 75814",
+      "customer_name": "Stephenson Inc",
+      "subtotal": 22.68,
+      "tax_amount": 2.27,
+      "total_amount": 24.95,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0388",
+    "ocr_text": "Invoice no: 57600191 Date of issue: 03/17/2017 Seller: Client: Mckenzie, Johnson and Rich Dean Inc 97119 Dana Ville Apt. 547 76328 Christina Ridge Apt: 941 Bishopberg, CT 64044 Petersonfurt; IN 38814 Tax Id: 926-97-3492 Tax Id: 932-80-7476 IBAN: GB3OPKEZ32220639658830 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. New Nintendo Switch 32GB 3,00 each 299,99 899,97 10% 989,97 Console AW1134 2 sega cdx console with original 4,00 each 194,00 776,00 10% 853,60 power supply (laser info-read description) 3 Nintendo Gameboy Pocket 3,00 each 85,00 255,00 10% 280,50 Console Clear Purple with Box MGB-001 Japan Tested 53 Nintendo Wii Console 2 sets 3,00 each 99,99 299,97 10% 329,97 controllers Plus AlI Cables Included Works Great SUMMARY VAT [%] Net worth VAT Gross worth 10% 2 230,94 223,09 2 454,03 Total $ 2 230,94 $ 223,09 $ 2 454,03",
+    "expected": {
+      "invoice_number": "57600191",
+      "invoice_date": "2017-03-17",
+      "due_date": null,
+      "supplier_name": "Mckenzie, Johnson and Rich",
+      "supplier_address": "97119 Dana Ville Apt. 547\nBishopberg, CT 64044",
+      "customer_name": "Dean Inc",
+      "subtotal": null,
+      "tax_amount": 223.09,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0457",
+    "ocr_text": "Invoice no: 18670724 Date of issue: 02/02/2018 Seller: Client: Davis-Shepherd Fisher, Gonzalez and Garcia 776 Alison Inlet 939 Solomon Stream Lake Marissa, PA 96579 Mikeside OK 42819 Tax Id: 925-99-5465 Tax Id: 946-70-7914 IBAN: GBO6LENG97987218683219 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth B351 Nintendo new 3DS console 3,00 each 79,99 239,97 10% 263,97 White Japan wlstylus pen 2 SONY Playstation2 Console 3,00 each 60,00 180,00 10% 198,00 SCPH-5oooo Peal Color TESTED 11177 3 PS2 SAKURA PINK Console 4,00 each 166,00 664,00 10% 730,40 System Boxed SCPH-5OOOO Tested Japan HUGE Sony PlayStation 3 2,00 each 299,95 599,90 10% 659,89 Console Lot w/ 30 Games! System Bundle PS3 5 Nintendo Gameboy Original 1,00 each 140,00 140,00 10% 154,00 Console with Box Manual DMB-01 Japan Tested 67 Nintendo 3DS Handheld Console 4,00 each 98,99 395,96 10% 435,56 Purple SUMMARY VAT [%] Net worth VAT Gross worth 10% 2 219,83 221,98 2 441,81 Total $ 2 219,83 $ 221,98 $ 2 441,81 Gray",
+    "expected": {
+      "invoice_number": "18670724",
+      "invoice_date": "2018-02-02",
+      "due_date": null,
+      "supplier_name": "Davis-Shepherd",
+      "supplier_address": "776 Alison Inlet\nLake Marissa, PA 96579",
+      "customer_name": "Fisher, Gonzalez and Garcia",
+      "subtotal": 2219.83,
+      "tax_amount": 221.98,
+      "total_amount": 2441.81,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0060",
+    "ocr_text": "Invoice no: 80273553 Date of issue: 11/26/2012 Seller: Client: Cohen, Saunders and Chapman Gray, Conway and Burke 484 Daniel Mills Apt: 113 4444 Mary Brooks New Gary, KS 79417 Rothbury, MN 28946 Tax Id: 902-97-4185 Tax Id: 938-95-2464 IBAN: GB9SGRSB31215506829816 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Adult Kids Pokemon Pikachu 3,00 each 9,95 29,85 10% 32,83 Kigurumi Pajama Cosplay Christmas Costume Sleepwear SUMMARY VAT [%] Net worth VAT Gross worth 10% 29,85 2,98 32,83 Total $ 29,85 $ 2,98 $ 32,83",
+    "expected": {
+      "invoice_number": "80273553",
+      "invoice_date": "2012-11-26",
+      "due_date": null,
+      "supplier_name": "Cohen, Saunders and Chapman",
+      "supplier_address": "484 Daniel Mills Apt. 113\nNew Gary, KS 79417",
+      "customer_name": "Gray, Conway and Burke",
+      "subtotal": 29.85,
+      "tax_amount": 2.98,
+      "total_amount": 32.83,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0182",
+    "ocr_text": "Invoice no: 89790497 Date of issue: 10/02/2020 Seller: Client: Campbell, Chavez and Reynolds Rodriguez-Morgan 462 Lewis Manor Apt: 741 9228 Randall Harbors Richardfurt, IL 50521 Ruizstad, KY 33798 Tax Id: 993-97-1387 Tax Id: 985-95-3154 IBAN: GB3OTBYC13066170552649 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Free People Lace Dress One 5,00 each 12,00 60,00 10% 66,00 Shoulder Size 2 PAS DE CALAIS DRESS WOMENS 5,00 each 9,95 49,75 10% 54,73 SIZE 36 3 CLIFFORD & WILLS BLACK 1,00 each 5,99 5,99 10% 6,59 NETIMESH OVER TAUPE LONG DRESS SIZE SUMMARY VAT [%] Net worth VAT Gross worth 10% 115,74 11,57 127,31 Total $ 115,74 $ 11,57 $ 127,31",
+    "expected": {
+      "invoice_number": "89790497",
+      "invoice_date": "2020-10-02",
+      "due_date": null,
+      "supplier_name": "Campbell, Chavez and Reynolds",
+      "supplier_address": "462 Lewis Manor Apt. 741\nRichardfurt, IL 50521",
+      "customer_name": "Rodriguez-Morgan",
+      "subtotal": 115.74,
+      "tax_amount": 11.57,
+      "total_amount": 127.31,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0072",
+    "ocr_text": "Invoice no: 72929361 Date of issue: 06/29/2020 Seller: Client: Dawson-Strickland Hobbs-Stevens 460 Turner Loop Unit 4520 Box 4858 North Williamtown, OR 35075 DPO AP 27104 Tax Id: 978-85-9516 Tax Id: 998-97-4745 IBAN: GBS6WEKG51144252787794 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth NWT $1200 ].Crew Silk Chiffon 1,00 each 295,00 295,00 10% 324,50 Ivory Wedding Dress with Beading SUMMARY VAT [%] Net worth VAT Gross worth 10% 295,00 29,50 324,50 Total $ 295,00 $ 29,50 $ 324,50",
+    "expected": {
+      "invoice_number": "72929361",
+      "invoice_date": "2020-06-29",
+      "due_date": null,
+      "supplier_name": "Dawson-Strickland",
+      "supplier_address": "460 Turner Loop\nNorth Williamtown, OR 35075",
+      "customer_name": "Hobbs-Stevens",
+      "subtotal": 295.0,
+      "tax_amount": 29.5,
+      "total_amount": 324.5,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0107",
+    "ocr_text": "Invoice no: 40700258 Date of issue: 12/27/2013 Seller: Client: Maxwell Inc Schmidt, Brooks and Petersen PSC 1106, Box 7307 5960 Michael Passage APO AP 63015 Lake Dominiquefort, DE 48139 Tax Id: 978-85-1366 Tax Id: 941-81-4486 IBAN: GB77OGJF22133316954582 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Boys Black Dress Shoes 4,00 each 4,50 18,00 10% 19,80 2 Fila Boys Skele-Toes Bay RNR 3 1,00 each 10,25 10,25 10% 11,28 Black Running Shoes 11 Medium (D) Little Kid 9953 3 Steve Madden Bserge Boys 2,00 each 39,95 79,90 10% 87,89 Black Dress Leather Loafer Shoes US 4 NIB Kid's Boys Hiking Garden 5,00 each 31,88 159,40 10% 175,34 Sandals Leisure Closed Toe Fisherman Beach Shoes Summer 5 Nike Dangeruss Wilson Youth 4,00 each 19,95 79,80 10% 87,78 Flex Shoes Green Blue Sneakers Kids Size 12.5 Joma Boys Youth Gol-102 5,00 each 19,99 99,95 10% 109,94 Soccer Cleats Shoes Size 1.5 White Red 1.5Y NEW Diadora Youth Boys Avanti MD 1,00 each 19,99 19,99 10% 21,99 JR Soccer Cleats Size 2.5 Yellow Black NEW SUMMARY VAT [%] Net worth VAT Gross worth 10% 467,29 46,73 514,02 Total $ 467,29 $ 46,73 $ 514,02",
+    "expected": {
+      "invoice_number": "40700258",
+      "invoice_date": "2013-12-27",
+      "due_date": null,
+      "supplier_name": "Maxwell Inc",
+      "supplier_address": "PSC 1106, Box 7307\nAPO AP 63015",
+      "customer_name": "Schmidt, Brooks and Petersen",
+      "subtotal": 467.29,
+      "tax_amount": 46.73,
+      "total_amount": 514.02,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0224",
+    "ocr_text": "Invoice no: 93493698 Date of issue: 04/05/2015 Seller: Client: Gould-Martinez Gilbert-Colon 931 Ballard Mission 022 Courtney Creek Rogersstad, WV 48387 North Darrylmouth, GA 25986 Tax Id: 963-86-9561 Tax Id: 989-73-3328 IBAN: GBIIAEUNO9755215520411 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Nintendo Gameboy Pocket 3,00 each 85,00 255,00 10% 280,50 Console Clear Purple with Box MGB-001 Japan Tested 53 2 Microsoft Xbox One S Console 3,00 each 179,00 537,00 10% 590,70 5OOGB in Great Condition 3 PlayStation 5 Console 5,00 each 499,99 2 499,95 10% 2 749,95 White Disc Version CONFIRMED PRE ORDER PSS PS4 PlayStation 4 500 GB 5,00 each 349,99 1 749,95 10% 1 924,95 Console CUH-1115A Bundle, 1 Controller, 8 Games 5 Nintendo Switch Lite Yellow 4,00 each 135,00 540,00 10% 594,00 CONSOLE ONLY No Accessories or Charger [Bl-1] SUMMARY VAT [%] Net worth VAT Gross worth 10% 5 581,90 558,19 6 140,09 Total $ 5 581,90 $ 558,19 $ 6 140,09 Sony",
+    "expected": {
+      "invoice_number": "93493698",
+      "invoice_date": "2015-04-05",
+      "due_date": null,
+      "supplier_name": "Gould-Martinez",
+      "supplier_address": "931 Ballard Mission\nRogersstad, WV 48387",
+      "customer_name": "Gilbert-Colon",
+      "subtotal": null,
+      "tax_amount": 558.19,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0231",
+    "ocr_text": "Invoice no: 98396639 Date of issue: 02/27/2012 Seller: Client: Mullen-Smith Crawford PLC 5847 Mccarthy Points Suite 488 693 Melissa River Suite 422 Johnville, WY 95730 Lake Mark, WY 36311 Tax Id: 978-71-2058 Tax Id: 908-83-9228 IBAN: GBIIPPWG69818943211516 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 2x Soft Faux Fur Chair Cover 2,00 each 13,59 27,18 10% 29,90 Small Area Rugs Mat for Bedroom Floor Carpet 30cm 2 YILONG 6.56'x9.84 Blue 2,00 each 800,00 9 600,00 10% 10 560,00 Handknotted Silk Carpet Easy to Clean Indoor Rug YWX13ZA 3 YILONG 4'x6' Golden Handmade 2,00 each 3 600,00 7 200,00 10% 920,00 Carpet House Decor Hand Knotted Silk Rugs 088B Round Rug Carpets for Living 5,00 each 4,38 21,90 10% 24,09 Room Decor Kids Room Long Plush Rugs Bedroom Mats* 5 Silky Fake Fur Fluffy Carpet 5,00 each 14,61 73,05 10% 80,35 Non-slip Shaggy Area Rug Floor Mat White+Brown SUMMARY VAT [%] Net worth VAT Gross worth 10% 16 922,13 1 692,21 18 614,34 Total $ 16 922,13 $ 1 692,21 $ 18 614,34",
+    "expected": {
+      "invoice_number": "98396639",
+      "invoice_date": "2012-02-27",
+      "due_date": null,
+      "supplier_name": "Mullen-Smith",
+      "supplier_address": "5847 Mccarthy Points Suite 488\nJohnville, WY 95730",
+      "customer_name": "Crawford PLC",
+      "subtotal": null,
+      "tax_amount": null,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0058",
+    "ocr_text": "Invoice no: 80489404 Date of issue: 12/21/2013 Seller: Client: Gonzalez LLC Nelson PLC 244 Nicholas Bypass 484 Lisa Pine Bennettshire, ID 07883 North Jenniferstad, MT 51984 Tax Id: 972-83-4569 Tax Id: 908-79-1562 IBAN: GB43OYPG18782157635961 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. New Fully Automatic Red Wine 1,00 each 25,99 25,99 10% 28,59 Bottle Opener Electric Red Wine Opener Corkscrew 2 38/40/42/44mm Silicone Sport 2,00 each 3,68 7,36 10% 8,10 iWatch Band Strap for Apple Watch Series 6 5 4 3 SE 3 Vintage Crystal Red Wine 4,00 each 35,45 141,80 10% 155,98 Glasses NOS West Germany 1983 6 10 ounce elegant stems Anthropologie Gold Elegant 2,00 each 19,98 39,96 10% 43,96 Swan Decorative Metal Bottle Stopper Wine Saver 5 QcoQce Wine Bottle Opener 4,00 each 30,00 120,00 10% 132,00 6 9.5 Inch Dinosaur Bones Wine 2,00 each 24,00 48,00 10% 52,80 Bottle Holder Wine Rack 5,00 each 9,00 45,00 10% 49,50 SUMMARY VAT [%] Net worth VAT Gross worth 10% 428,11 42,81 470,92 Total $ 428,11 $ 42,81 $ 470,92",
+    "expected": {
+      "invoice_number": "80489404",
+      "invoice_date": "2013-12-21",
+      "due_date": null,
+      "supplier_name": "Gonzalez LLC",
+      "supplier_address": "244 Nicholas Bypass\nBennettshire, ID 07883",
+      "customer_name": "Nelson PLC",
+      "subtotal": 428.11,
+      "tax_amount": 42.81,
+      "total_amount": 470.92,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0353",
+    "ocr_text": "Invoice no: 10819011 Date of issue: 02/09/2018 Seller: Client: Callahan and Sons King-Harris 819 John Garden 3468 Hill Corners Suite 409 West Michael, IA 02605 North Catherine, MS 73015 Tax Id: 979-84-7639 Tax Id: 988-88-5388 IBAN: GB86NQQTO3667558194494 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Fila Boys Skele-Toes RNR 3 3,00 each 10,25 30,75 10% 33,83 Black Running Shoes 11 Medium (D) Little Kid 9953 2 NWT adidas Pulseboost HD (Big 4,00 each 84,99 339,96 10% 373,96 Kid) Casual Running Shoes Boys BLACK SIZE 4 3 PUMA Youth Universal FG 3,00 each 19,99 59,97 10% 65,97 Jr Soccer Cleats 2.5 White High Red NEW Futbol Joma Boys Youth Super Copa 4,00 each 19,99 79,96 10% 87,96 102 Soccer Cleats 2.5 White Yellow Blue Futbol NEW SUMMARY VAT [%] Net worth VAT Gross worth 10% 510,64 51,06 561,70 Total $ 510,64 $ 51,06 $ 561,70 Bay Boys",
+    "expected": {
+      "invoice_number": "10819011",
+      "invoice_date": "2018-02-09",
+      "due_date": null,
+      "supplier_name": "Callahan and Sons",
+      "supplier_address": "819 John Garden\nWest Michael, IA 02605",
+      "customer_name": "King-Harris",
+      "subtotal": 510.64,
+      "tax_amount": 51.06,
+      "total_amount": 561.7,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0352",
+    "ocr_text": "Invoice no: 50554106 Date of issue: 12/17/2012 Seller: Client: Fernandez LLC Brown-Carr Unit 8218 Box 9086 98591 Harris Islands DPO AP 82804 South Marthamouth, KY 68885 Tax Id: 984-86-2338 Tax Id: 906-94-4177 IBAN: GBZIQVKP16311519636055 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Yilong 1'x1.5' 4OOLines Area 4,00 each 540,00 2 160,00 10% 2 376,00 Rug High Density Hand knotted Silk Carpet 221H 2 Semi Antique Classic Ivory 1,00 each 843,65 843,65 10% 928,02 9'5X12'6 Handmade Living Room Oriental Carpet 3 Galaxy Butterfly Area Rugs 4,00 each 13,69 54,76 10% 60,24 Children Bedroom Non-Slip Doormat Floor Mat Carpet 3X5 Ft Cotton Chindi Rug Dining 2,00 each 17,85 35,70 10% 39,27 Room Carpet Floor Mat Handwoven Area Rug Throw 5 YILONG 5'x7.5' Handknotted 5,00 each 2 800,00 14 000,00 10% 15 400,00 Silk Carpet Whirlwind Home Decor Classic Rug 0807 European Colour Sunflower 4,00 each 13,66 54,64 10% 60,10 Pattern Mats Hallway Carpets Doormat Bedroom Area Rugs SUMMARY VAT [%] Net worth VAT Gross worth 10% 17 148,75 1 714,88 18 863,63 Total $ 17 148,75 $ 1 714,88 $ 18 863,63 Rug",
+    "expected": {
+      "invoice_number": "50554106",
+      "invoice_date": "2012-12-17",
+      "due_date": null,
+      "supplier_name": "Fernandez LLC",
+      "supplier_address": "Unit 8218 Box 9086\nDPO AP 82804",
+      "customer_name": "Brown-Carr",
+      "subtotal": null,
+      "tax_amount": null,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0256",
+    "ocr_text": "Invoice no: 77522687 Date of issue: 05/14/2019 Seller: Client: Smith, Page and Ross Powers LLC 14891 Wong Common Suite 135 84169 Taylor Pine Apt: 088 Port Charlesfort; ID 79070 East Sean, RI 05084 Tax Id: 976-94-0858 Tax Id: 974-81-1540 IBAN: GBBOBDWO00859966448115 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. 6'x3' Marble Counter Height 3,00 each 5 469,38 16 408,14 10% 18 048,95 Dining Table Top Multi Inlay Furniture Decor E95SA 2 6'x3' Multi Pietra Dura Design 5,00 each 5 355,17 26 775,85 10% 29 453,44 Marble Dining Room Table Top Furniture Decor E764 SUMMARY VAT [%] Net worth VAT Gross worth 10% 43 183,99 4 318,40 47 502,39 Total $ 43 183,99 $ 4 318,40 $ 47 502,39",
+    "expected": {
+      "invoice_number": "77522687",
+      "invoice_date": "2019-05-14",
+      "due_date": null,
+      "supplier_name": "Smith, Page and Ross",
+      "supplier_address": "14891 Wong Common Suite 135\nPort Charlesfort, ID 79070",
+      "customer_name": "Powers LLC",
+      "subtotal": null,
+      "tax_amount": null,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0383",
+    "ocr_text": "Invoice no: 23908850 Date of issue: 04/08/2016 Seller: Client: Galloway, Silva and Nelson Meza, Long and Rivera 4883 Jacqueline Grove Suite 424 981 Wade Villages Kingburgh, IL 87504 Pattersonfurt; VA 18515 Tax Id: 904-95-9465 Tax Id: 996-91-5459 IBAN: GBS6AMOT20381791595194 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1 Nike Boys Shorts Size 5 4,00 each 8,99 35,96 10% 39,56 2 kid shoes soccer 1,00 each 24,00 24,00 10% 26,40 3 Joma Youth Boys Gol 205 Piso 1,00 each 19,99 19,99 10% 21,99 Multitaco Soccer Cleats 2.5 White Blue Yellow NEW Jordan Hydro 2 (TD)-Child Size 3,00 each 5,75 17,25 10% 18,98 10c 5 Jordan 10 Retro Fusion Red Size 3,00 each 60,00 180,00 10% 198,00 6Y SUMMARY VAT [%] Net worth VAT Gross worth 10% 277,20 27,72 304,92 Total $ 277,20 $ 27,72 $ 304,92",
+    "expected": {
+      "invoice_number": "23908850",
+      "invoice_date": "2016-04-08",
+      "due_date": null,
+      "supplier_name": "Galloway, Silva and Nelson",
+      "supplier_address": "4883 Jacqueline Grove Suite 424\nKingburgh, IL 87504",
+      "customer_name": "Meza, Long and Rivera",
+      "subtotal": 277.2,
+      "tax_amount": 27.72,
+      "total_amount": 304.92,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0478",
+    "ocr_text": "Invoice no: 50357965 Date of issue: 02/06/2015 Seller: Client: Curtis-Lloyd Conner, Lucas and Mullen USNV Rodriguez 70496 James Hill Apt: 960 FPO AA 36109 Smithside, DC 23664 Tax Id: 923-85-6655 Tax Id: 964-75-1002 IBAN: GB4IKRRHO9651427977294 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth KING JAMES VERSION (KJV) , 4,00 each 52,99 211,96 10% 233,16 RAINBOW STUDY BIBLE, BLACK LEATHER with INDEX 2 The Nature Notes of an 1,00 each 26,67 26,67 10% 29,34 Edwardian Lady (Country Dia by Holden, Edith Paperback 3 The Four Agreements: A 1,00 each 3,30 3,30 10% 3,63 Practical Guide to Personal Freedom by Don Miguel Ruiz Merry Robin Hood by H. Pyle 5,00 each 19,99 99,95 10% 109,94 New Sealed Illustrated Leather Bound Gift Hardback 5 Astronomy: A Visual Guide 2,00 each 5,02 10,04 10% 11,04 SUMMARY VAT [%] Net worth VAT Gross worth 10% 351,92 35,19 387,11 Total $ 351,92 $ 35,19 $ 387,11",
+    "expected": {
+      "invoice_number": "50357965",
+      "invoice_date": "2015-02-06",
+      "due_date": null,
+      "supplier_name": "Curtis-Lloyd",
+      "supplier_address": "USNV Rodriguez\nFPO AA 36109",
+      "customer_name": "Conner, Lucas and Mullen",
+      "subtotal": 351.92,
+      "tax_amount": 35.19,
+      "total_amount": 387.11,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0205",
+    "ocr_text": "Invoice no: 47725399 Date of issue: 05/14/2013 Seller: Client: Olson, Holt and Burton Pope, Yang and Farley 1399 Brittney Divide 199 Jennifer Suite 625 West Michael, UT 00866 South Michelleview, SD 29781 Tax Id: 932-91-2959 Tax Id: 986-98-8133 IBAN: GBS6FQVFO5871352476264 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Dell Optiplex 390 i5 3.10Ghz 3,00 each 84,99 254,97 10% 280,47 Quad Core Computer w/4Gb RAM DVDRW noHD Free Ship 2 HP ProDesk G1 Desktop 1,00 each 119,95 119,95 10% 131,95 Computer Core i3 3.4GHz 8GB 5OOGB HD 19\" LCD Windows 10 PC 3 HP Windows 10 Pro Fast 4,00 each 69,95 279,80 10% 307,78 Desktop Computer PC Intel 3.00 | 8GB 1TB WIFI 6 Gigabit Lan Firewall Desktop 3,00 each 237,00 711,00 10% 782,10 Computer onboard CPU Intel core 13 15 /7 Router 5 Dell OptiPlex 390 SFF Computer 5,00 each 59,95 299,75 10% 329,73 Windows Pro i3 3.1OGHz 4GB RAM 232GB HDD 2 Gaming Computers 1,00 each 1 300,00 1 300,00 10% 1 430,00 SUMMARY VAT [%] Net worth VAT Gross worth 10% 2 965,47 296,55 3 262,02 Total $ 2 965,47 $ 296,55 $ 3 262,02 Key",
+    "expected": {
+      "invoice_number": "47725399",
+      "invoice_date": "2013-05-14",
+      "due_date": null,
+      "supplier_name": "Olson, Holt and Burton",
+      "supplier_address": "1399 Brittney Divide\nWest Michael, UT 00866",
+      "customer_name": "Pope, Yang and Farley",
+      "subtotal": 2965.47,
+      "tax_amount": 296.55,
+      "total_amount": 3262.02,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0313",
+    "ocr_text": "Invoice no: 77658002 Date of issue: 01/21/2014 Seller: Client: Mckenzie, Clay and Campos Espinoza LLC 76099 Bryan View Suite 318 7698 Davis Freeway Gregoryberg, NM 46284 Rachelport, CO 79421 Tax Id: 973-94-2620 Tax Id: 968-84-7486 IBAN: GB6gHUXE82460947316450 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Divided Black Asymmetrical 1,00 each 7,99 7,99 10% 8,79 Dress -size 8 NWT 2 Eileen Fisher Women'5 Long 4,00 each 15,99 63,96 10% 70,36 Sleeve Fleece Lined Front Pockets Dress XS Gray 3 db Yellow Link Print Fit and Flare 3,00 each 14,99 44,97 10% 49,47 Sleeveless Dress Sz M/L womens sparkle dress size 2X 5,00 each 9,99 49,95 10% 54,95 Holiday Party RED metallic 5 Lands End Womens 3/4 Sleeve 4,00 each 21,23 84,92 10% 93,41 Dress Plus 3X Navy Blue Floral Cotton Knit 482038 6 Liza Byrd Dress Sz L- Coral 2,00 each 17,99 35,98 10% 39,58 Green Medallion Print Short Sleeve 100% Cotton Line CLIFFORD & WILLS BLACK 1,00 each 5,99 5,99 10% 6,59 NETIMESH OVER TAUPE LONG DRESS SIZE SUMMARY VAT [%] Net worth VAT Gross worth 10% 293,76 29,38 323,14 Total $ 293,76 $ 29,38 $ 323,14",
+    "expected": {
+      "invoice_number": "77658002",
+      "invoice_date": "2014-01-21",
+      "due_date": null,
+      "supplier_name": "Mckenzie, Clay and Campos",
+      "supplier_address": "76099 Bryan View Suite 318\nGregoryberg, NM 46284",
+      "customer_name": "Espinoza LLC",
+      "subtotal": 293.76,
+      "tax_amount": 29.38,
+      "total_amount": 323.14,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0166",
+    "ocr_text": "Invoice no: 17599610 Date of issue: 10/11/2013 Seller: Client: Brown, Lowery and Sandoval Nash, Benitez and Johnston 932 Loretta Tunnel USCGC Murphy Jerryton, AR 32574 FPO AA 28870 Tax Id: 997-90-7465 Tax Id: 908-85-6722 IBAN: GBZ6EHRF92436526567449 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Lives of the Artists, Vol. 2 3,00 each 4,49 13,47 10% 14,82 2 Haida: Their Art and Culture 4,00 each 4,89 19,56 10% 21,52 SUMMARY VAT [%] Net worth VAT Gross worth 10% 33,03 3,30 36,33 Total $ 33,03 $ 3,30 $ 36,33",
+    "expected": {
+      "invoice_number": "17599610",
+      "invoice_date": "2013-10-11",
+      "due_date": null,
+      "supplier_name": "Brown, Lowery and Sandoval",
+      "supplier_address": "932 Loretta Tunnel\nJerryton, AR 32574",
+      "customer_name": "Nash, Benitez and Johnston",
+      "subtotal": 33.03,
+      "tax_amount": 3.3,
+      "total_amount": 36.33,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0235",
+    "ocr_text": "Invoice no: 76724637 Date of issue: 07/10/2017 Seller: Client: Harrell, Johnson and Thompson Mora and Sons 885 Franklin Fall 7352 Meadows Overpass Apt: 977 Lake Gregory, MI 85479 Danielside, PA 85793 Tax Id: 995-90-9946 Tax Id: 985-71-7752 IBAN: GBOSCKKN2O880834584252 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Under Armour black boys 5,00 each 17,00 85,00 10% 93,50 athletic shoes Ty 2 Teva Hurricane 1019390 AlI 1,00 each 9,99 9,99 10% 10,99 Black Sandals with Hook and Loop Closure, Youth's 5 3 Nike Air Force 1 Low 4,00 each 54,95 219,80 10% 241,78 314192-117 Triple White Youth Boys Size 5Y Adidas Baseball Youth Cleats 3,00 each 11,99 35,97 10% 39,57 Spikes Kids Shoes Black White Size 12K 5 Skechers Shoes Kids Size 2 3,00 each 10,00 30,00 10% 33,00 SUMMARY VAT [%] Net worth VAT Gross worth 10% 380,76 38,08 418,84 Total $ 380,76 $ 38,08 $ 418,84",
+    "expected": {
+      "invoice_number": "76724637",
+      "invoice_date": "2017-07-10",
+      "due_date": null,
+      "supplier_name": "Harrell, Johnson and Thompson",
+      "supplier_address": "885 Franklin Fall\nLake Gregory, MI 85479",
+      "customer_name": "Mora and Sons",
+      "subtotal": 380.76,
+      "tax_amount": 38.08,
+      "total_amount": 418.84,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0096",
+    "ocr_text": "Invoice no: 76229289 Date of issue: 12/04/2018 Seller: Client: Rodriguez and Sons Lucero-Brown 60916 James Squares Suite 024 20333 Erik Club Apt: 925 Codytown, NM 42311 Lake Abigailborough, MN 76772 Tax Id: 943-82-3154 Tax Id: 905-72-6065 IBAN: GB6ZDPIQO5886436296811 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Gaming PC Computer RX 580 3,00 each 400,00 1 200,00 10% 1 320,00 8GB Ryzen 5 2x8GB Ram 2 GAMING PC Desktop Computer 5,00 each 549,99 2 749,95 10% 3 024,95 RGB BUNDLE Intel CORE i7 16GB RAM Nvidia GTX 1650 1TB 3 computer 4,00 each 299,99 1 199,96 10% 1 319,96 SUMMARY VAT [%] Net worth VAT Gross worth 10% 5 149,91 514,99 5 664,90 Total $ 5 149,91 $ 514,99 $ 5 664,90",
+    "expected": {
+      "invoice_number": "76229289",
+      "invoice_date": "2018-12-04",
+      "due_date": null,
+      "supplier_name": "Rodriguez and Sons",
+      "supplier_address": "60916 James Squares Suite 024\nCodytown, NM 42311",
+      "customer_name": "Lucero-Brown",
+      "subtotal": null,
+      "tax_amount": 514.99,
+      "total_amount": null,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0004",
+    "ocr_text": "Invoice no: 16273983 Date of issue: 04/01/2017 Seller: Client: Reyes, Holloway and Lee Castillo LLC 38676 Johnson Burg Suite 666 70391 Kelsey Terrace West Rebeccamouth, SD 02588 Garcialand, VT 41740 Tax Id: 909-83-7738 Tax Id: 901-88-0463 IBAN: GBOGVWUL52026848004193 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth 1. Handmade Thick round warm 4,00 each 44,99 179,96 10% 197,96 crochet Rug Carpet Mat 97% acrylic 3% me Floor Decor 2 Rug White Moroccan Beni 2,00 each 245,00 490,00 10% 539,00 Ourain Trellis Shag Area Rug Authentic Handmade Carpet 3 Abstract Living Room Carpet 1,00 each 24,01 24,01 10% 26,41 Home Decor Nordic Style Bedside Area Rug Floor Mats Leopard Printed Rug Skin Mat 1,00 each 19,49 19,49 10% 21,44 Leather Faux Fur Animals Area Rugs Home Carpets 5 lpc Exquisite Durable Foot 2,00 each 15,57 31,14 10% 34,25 Cloth Christmas Carpet Xmas Cushion for Kitchen SUMMARY VAT [%] Net worth VAT Gross worth 10% 744,60 74,46 819,06 Total $ 744,60 $ 74,46 $ 819,06",
+    "expected": {
+      "invoice_number": "16273983",
+      "invoice_date": "2017-04-01",
+      "due_date": null,
+      "supplier_name": "Reyes, Holloway and Lee",
+      "supplier_address": "38676 Johnson Burg Suite 666\nWest Rebeccamouth, SD 02588",
+      "customer_name": "Castillo LLC",
+      "subtotal": 744.6,
+      "tax_amount": 74.46,
+      "total_amount": 819.06,
+      "currency": "USD"
+    }
+  },
+  {
+    "id": "batch1-0024",
+    "ocr_text": "Invoice no: 65028137 Date of issue: 01/03/2014 Seller: Client: Johnson, Barrett and King Townsend-Mitchell 2008 Thomas Square 0681 Thomas Field Sanchezmouth, AK 49318 Michaelshire, FL 64856 Tax Id: 944-72-9866 Tax Id: 988-84-2952 IBAN: GBIOAMVD30795287137531 ITEMS No. Description Qty UM Net price Net worth VAT [%] Gross worth Fast Dell Optiplex Windows 10 1,00 each 89,95 89,95 10% 98,95 Desktop Computer Tower PC Core i3 3.1GHz 4GB 320GB SUMMARY VAT [%] Net worth VAT Gross worth 10% 89,95 9,00 98,95 Total $ 89,95 $ 9,00 $ 98,95",
+    "expected": {
+      "invoice_number": "65028137",
+      "invoice_date": "2014-01-03",
+      "due_date": null,
+      "supplier_name": "Johnson, Barrett and King",
+      "supplier_address": "2008 Thomas Square\nSanchezmouth, AK 49318",
+      "customer_name": "Townsend-Mitchell",
+      "subtotal": 89.95,
+      "tax_amount": 9.0,
+      "total_amount": 98.95,
+      "currency": "USD"
+    }
+  }
+]
