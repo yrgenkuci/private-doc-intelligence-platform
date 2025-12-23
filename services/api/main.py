@@ -11,10 +11,13 @@ Based on FastAPI best practices:
 https://fastapi.tiangolo.com/
 """
 
+import json
 import tempfile
 import time
 import uuid
+from datetime import datetime
 from pathlib import Path
+from typing import Any
 
 from fastapi import FastAPI, File, HTTPException, Query, Request, Response, UploadFile, status
 from pydantic import BaseModel
@@ -274,3 +277,188 @@ async def upload_document(
         # Clean up temp file
         if tmp_path.exists():
             tmp_path.unlink()
+
+
+# Async processing models
+class AsyncUploadResponse(BaseModel):
+    """Response for async document upload."""
+
+    job_id: str
+    document_id: str
+    status: str
+    message: str
+
+
+class JobStatusResponse(BaseModel):
+    """Response for job status query."""
+
+    job_id: str
+    status: str
+    document_id: str
+    ocr_text: str | None = None
+    extracted_data: dict[str, Any] | None = None
+    storage_path: str | None = None
+    error: str | None = None
+    created_at: str | None = None
+    completed_at: str | None = None
+
+
+# Redis connection for async endpoints (lazy initialization)
+_arq_pool: Any = None
+
+
+async def get_arq_pool() -> Any:
+    """Get or create arq Redis connection pool."""
+    global _arq_pool
+    if _arq_pool is None and settings.queue_enabled:
+        from arq import create_pool
+        from arq.connections import RedisSettings
+
+        url = settings.redis_url
+        if url.startswith("redis://"):
+            url = url[8:]
+        host_port = url.split("/")[0]
+        host, port = host_port.split(":") if ":" in host_port else (host_port, "6379")
+        db = int(url.split("/")[1]) if "/" in url else 0
+
+        _arq_pool = await create_pool(RedisSettings(host=host, port=int(port), database=db))
+    return _arq_pool
+
+
+@app.post(
+    "/api/v1/documents/upload/async",
+    response_model=AsyncUploadResponse,
+    tags=["Documents"],
+)
+async def upload_document_async(
+    file: UploadFile = File(..., description="Image file (PNG, JPEG, etc.)"),  # noqa: B008
+    extract_fields: bool = Query(
+        False,
+        description="Enable LLM-powered structured field extraction",
+    ),
+) -> AsyncUploadResponse:
+    """Upload document for async background processing.
+
+    This endpoint queues the document for background processing and
+    returns immediately with a job ID for status tracking.
+
+    ## Usage Examples
+
+    **Submit for async processing:**
+    ```bash
+    curl -X POST "http://localhost:8000/api/v1/documents/upload/async" \\
+      -F "file=@invoice.png"
+    ```
+
+    **Check job status:**
+    ```bash
+    curl "http://localhost:8000/api/v1/jobs/{job_id}"
+    ```
+
+    ## Requirements
+
+    - Queue must be enabled (APP_QUEUE_ENABLED=true)
+    - Redis must be running (APP_REDIS_URL)
+
+    Args:
+        file: Image file to process
+        extract_fields: Enable LLM field extraction
+
+    Returns:
+        Job ID and status for tracking
+    """
+    if not settings.queue_enabled:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Async processing is not enabled. Set APP_QUEUE_ENABLED=true",
+        )
+
+    # Validate file
+    if not file.filename:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="No filename provided")
+
+    if not file.content_type or not file.content_type.startswith("image/"):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Invalid file type: {file.content_type}. Only images are supported.",
+        )
+
+    # Read file content
+    content = await file.read()
+    if not content:
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Empty file")
+
+    # Generate IDs
+    doc_id = str(uuid.uuid4())
+    job_id = str(uuid.uuid4())
+
+    # Get arq pool
+    pool = await get_arq_pool()
+    if pool is None:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Queue connection not available",
+        )
+
+    # Enqueue job
+
+    await pool.enqueue_job(
+        "process_document",
+        job_id=job_id,
+        document_id=doc_id,
+        file_content=content,
+        filename=file.filename,
+        content_type=file.content_type or "application/octet-stream",
+        extract_fields=extract_fields,
+    )
+
+    # Store initial job status
+    initial_status = {
+        "job_id": job_id,
+        "status": "pending",
+        "document_id": doc_id,
+        "created_at": datetime.utcnow().isoformat(),
+    }
+    await pool.pool.set(f"job:{job_id}", json.dumps(initial_status), ex=86400)
+
+    return AsyncUploadResponse(
+        job_id=job_id,
+        document_id=doc_id,
+        status="pending",
+        message="Document queued for processing",
+    )
+
+
+@app.get("/api/v1/jobs/{job_id}", response_model=JobStatusResponse, tags=["Jobs"])
+async def get_job_status(job_id: str) -> JobStatusResponse:
+    """Get status of an async processing job.
+
+    Args:
+        job_id: Job ID returned from async upload
+
+    Returns:
+        Current job status and results (if completed)
+    """
+    if not settings.queue_enabled:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Async processing is not enabled",
+        )
+
+    pool = await get_arq_pool()
+    if pool is None:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Queue connection not available",
+        )
+
+    # Get job status from Redis
+    job_data = await pool.pool.get(f"job:{job_id}")
+    if not job_data:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Job {job_id} not found",
+        )
+
+    job_dict = json.loads(job_data)
+    return JobStatusResponse(**job_dict)

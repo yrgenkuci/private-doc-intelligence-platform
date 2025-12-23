@@ -11,6 +11,10 @@ httpx==0.25.1
 # Object Storage (S3-compatible)
 minio==7.2.20
 
+# Async Task Queue (Redis-backed)
+arq==0.26.3
+redis==5.3.1
+
 # OCR and Image Processing
 pytesseract==0.3.10
 Pillow==10.4.0

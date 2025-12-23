@@ -109,6 +109,24 @@ class Settings(BaseSettings):
         description="Use HTTPS for storage connections",
     )
 
+    # Queue configuration (Redis-backed async task queue)
+    queue_enabled: bool = Field(
+        default=False,
+        description="Enable async task queue for background processing",
+    )
+    redis_url: str = Field(
+        default="redis://localhost:6379",
+        description="Redis connection URL (redis://host:port/db)",
+    )
+    queue_max_jobs: int = Field(
+        default=10,
+        description="Maximum concurrent jobs per worker",
+    )
+    queue_job_timeout: int = Field(
+        default=300,
+        description="Job timeout in seconds (default: 5 minutes)",
+    )
+
 
 def get_settings() -> Settings:
     """Factory function to get settings instance.
