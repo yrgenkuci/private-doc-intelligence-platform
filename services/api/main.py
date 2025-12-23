@@ -462,3 +462,265 @@ async def get_job_status(job_id: str) -> JobStatusResponse:
 
     job_dict = json.loads(job_data)
     return JobStatusResponse(**job_dict)
+
+
+# Batch processing models
+class BatchDocumentStatus(BaseModel):
+    """Status of a single document in a batch."""
+
+    document_id: str
+    job_id: str
+    filename: str
+    status: str
+
+
+class BatchUploadResponse(BaseModel):
+    """Response for batch document upload."""
+
+    batch_id: str
+    total_documents: int
+    status: str
+    documents: list[BatchDocumentStatus]
+    message: str
+
+
+class BatchStatusResponse(BaseModel):
+    """Response for batch status query."""
+
+    batch_id: str
+    total_documents: int
+    completed: int
+    failed: int
+    pending: int
+    status: str
+    documents: list[JobStatusResponse]
+    created_at: str | None = None
+
+
+@app.post(
+    "/api/v1/documents/upload/batch",
+    response_model=BatchUploadResponse,
+    tags=["Documents"],
+)
+async def upload_documents_batch(
+    files: list[UploadFile] = File(..., description="Multiple image files"),  # noqa: B008
+    extract_fields: bool = Query(
+        False,
+        description="Enable LLM-powered structured field extraction",
+    ),
+) -> BatchUploadResponse:
+    """Upload multiple documents for batch background processing.
+
+    This endpoint queues multiple documents for background processing
+    and returns a batch ID for tracking all jobs.
+
+    ## Usage Examples
+
+    **Submit batch for processing:**
+    ```bash
+    curl -X POST "http://localhost:8000/api/v1/documents/upload/batch" \\
+      -F "files=@invoice1.png" \\
+      -F "files=@invoice2.png" \\
+      -F "files=@invoice3.png"
+    ```
+
+    **Check batch status:**
+    ```bash
+    curl "http://localhost:8000/api/v1/batches/{batch_id}"
+    ```
+
+    ## Requirements
+
+    - Queue must be enabled (APP_QUEUE_ENABLED=true)
+    - Redis must be running (APP_REDIS_URL)
+    - Maximum 100 files per batch
+
+    Args:
+        files: List of image files to process
+        extract_fields: Enable LLM field extraction for all documents
+
+    Returns:
+        Batch ID and status for tracking
+    """
+    if not settings.queue_enabled:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Async processing is not enabled. Set APP_QUEUE_ENABLED=true",
+        )
+
+    # Validate batch size
+    max_batch_size = 100
+    if len(files) > max_batch_size:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail=f"Batch size exceeds maximum of {max_batch_size} files",
+        )
+
+    if len(files) == 0:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="No files provided",
+        )
+
+    # Get arq pool
+    pool = await get_arq_pool()
+    if pool is None:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Queue connection not available",
+        )
+
+    # Generate batch ID
+    batch_id = str(uuid.uuid4())
+    documents: list[BatchDocumentStatus] = []
+    job_ids: list[str] = []
+
+    # Process each file
+    for file in files:
+        # Validate file
+        if not file.filename:
+            continue
+
+        if not file.content_type or not file.content_type.startswith("image/"):
+            continue
+
+        # Read content
+        content = await file.read()
+        if not content:
+            continue
+
+        # Generate IDs
+        doc_id = str(uuid.uuid4())
+        job_id = str(uuid.uuid4())
+        job_ids.append(job_id)
+
+        # Enqueue job
+        await pool.enqueue_job(
+            "process_document",
+            job_id=job_id,
+            document_id=doc_id,
+            file_content=content,
+            filename=file.filename,
+            content_type=file.content_type or "application/octet-stream",
+            extract_fields=extract_fields,
+        )
+
+        # Store initial job status
+        initial_status = {
+            "job_id": job_id,
+            "status": "pending",
+            "document_id": doc_id,
+            "created_at": datetime.utcnow().isoformat(),
+        }
+        await pool.pool.set(f"job:{job_id}", json.dumps(initial_status), ex=86400)
+
+        documents.append(
+            BatchDocumentStatus(
+                document_id=doc_id,
+                job_id=job_id,
+                filename=file.filename,
+                status="pending",
+            )
+        )
+
+    if len(documents) == 0:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="No valid image files in batch",
+        )
+
+    # Store batch metadata
+    batch_data = {
+        "batch_id": batch_id,
+        "job_ids": job_ids,
+        "total_documents": len(documents),
+        "created_at": datetime.utcnow().isoformat(),
+    }
+    await pool.pool.set(f"batch:{batch_id}", json.dumps(batch_data), ex=86400)
+
+    return BatchUploadResponse(
+        batch_id=batch_id,
+        total_documents=len(documents),
+        status="pending",
+        documents=documents,
+        message=f"Batch of {len(documents)} documents queued for processing",
+    )
+
+
+@app.get("/api/v1/batches/{batch_id}", response_model=BatchStatusResponse, tags=["Jobs"])
+async def get_batch_status(batch_id: str) -> BatchStatusResponse:
+    """Get status of a batch processing job.
+
+    Returns aggregated status of all documents in the batch.
+
+    Args:
+        batch_id: Batch ID returned from batch upload
+
+    Returns:
+        Batch status with individual document statuses
+    """
+    if not settings.queue_enabled:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Async processing is not enabled",
+        )
+
+    pool = await get_arq_pool()
+    if pool is None:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Queue connection not available",
+        )
+
+    # Get batch metadata
+    batch_data = await pool.pool.get(f"batch:{batch_id}")
+    if not batch_data:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Batch {batch_id} not found",
+        )
+
+    batch_dict = json.loads(batch_data)
+    job_ids = batch_dict.get("job_ids", [])
+
+    # Get status of all jobs
+    documents: list[JobStatusResponse] = []
+    completed = 0
+    failed = 0
+    pending = 0
+
+    for job_id in job_ids:
+        job_data = await pool.pool.get(f"job:{job_id}")
+        if job_data:
+            job_dict = json.loads(job_data)
+            job_status = job_dict.get("status", "unknown")
+
+            if job_status == "completed":
+                completed += 1
+            elif job_status == "failed":
+                failed += 1
+            else:
+                pending += 1
+
+            documents.append(JobStatusResponse(**job_dict))
+
+    # Determine overall batch status
+    if pending > 0:
+        batch_status = "processing"
+    elif failed > 0 and completed == 0:
+        batch_status = "failed"
+    elif failed > 0:
+        batch_status = "partial"
+    else:
+        batch_status = "completed"
+
+    return BatchStatusResponse(
+        batch_id=batch_id,
+        total_documents=len(job_ids),
+        completed=completed,
+        failed=failed,
+        pending=pending,
+        status=batch_status,
+        documents=documents,
+        created_at=batch_dict.get("created_at"),
+    )
