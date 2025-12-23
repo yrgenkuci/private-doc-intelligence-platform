@@ -4,7 +4,7 @@ Get the Document Intelligence Platform running in 5 minutes, or follow the detai
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Quick Start (5 minutes)](#quick-start-5-minutes) - Local development
 2. [Detailed Setup](#detailed-setup) - Production & Kubernetes
@@ -68,7 +68,7 @@ curl http://localhost:8000/health
 # {"status":"healthy","version":"0.1.0","service":"doc-intel-api"}
 ```
 
-If you see the JSON response above, **it's working!** 🎉
+If you see the JSON response above, **it's working!**
 
 ### Step 4: Test with a Document (Optional)
 
@@ -112,7 +112,7 @@ Total: $1,650.00"""
 
 draw.text((50, 50), text, fill='black')
 img.save('test_data/invoice.png')
-print("✅ Created test_data/invoice.png")
+print("Created test_data/invoice.png")
 PYTHON
 ```
 
@@ -142,7 +142,7 @@ docker-compose logs -f
 docker-compose down
 ```
 
-**That's it for quick start!** For production setup, continue below. ⬇️
+**That's it for quick start!** For production setup, continue below.
 
 ---
 
@@ -459,11 +459,11 @@ kubectl create secret generic doc-intel-secrets \
 
 ## Security Best Practices
 
-- ✅ **Never commit `.env` files** - already in `.gitignore`
-- ✅ **Never commit secrets to Git** - use environment variables
-- ✅ **Rotate API keys regularly** - update in all environments
-- ✅ **Use different keys per environment** - dev vs staging vs prod
-- ✅ **Limit key permissions** - use least privilege principle
+- **Never commit `.env` files** - already in `.gitignore`
+- **Never commit secrets to Git** - use environment variables
+- **Rotate API keys regularly** - update in all environments
+- **Use different keys per environment** - dev vs staging vs prod
+- **Limit key permissions** - use least privilege principle
 
 ---
 

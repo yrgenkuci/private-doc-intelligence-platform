@@ -119,11 +119,11 @@ class LocalExtractionProvider(ExtractionProvider):
                 logger.info("Applying FP16 mixed precision (50% memory reduction)")
                 self._model.half()
 
-            logger.info(f"✓ Donut model loaded on {self._device.upper()}")
+            logger.info(f"Donut model loaded on {self._device.upper()}")
             if self._device == "cuda":
                 mem_gb = torch.cuda.memory_allocated(0) / 1024**3
                 precision = "FP16" if use_fp16 else "FP32"
-                logger.info(f"✓ GPU memory: {mem_gb:.2f} GB ({precision})")
+                logger.info(f"GPU memory: {mem_gb:.2f} GB ({precision})")
 
             # Optional warmup to optimize first request latency
             if self.settings.local_model_warmup:
@@ -156,7 +156,7 @@ class LocalExtractionProvider(ExtractionProvider):
             with torch.no_grad():  # Disable gradient computation
                 _ = self._extract_from_text(warmup_text)
 
-            logger.info("✓ Model warmup complete")
+            logger.info("Model warmup complete")
         except Exception as e:
             logger.warning(f"Model warmup failed (non-critical): {e}")
 
@@ -209,7 +209,7 @@ class LocalExtractionProvider(ExtractionProvider):
                 # Full Donut image-based inference will be added in future
                 invoice_data = self._extract_from_text(ocr_text)
 
-            logger.info("✓ Invoice extraction complete")
+            logger.info("Invoice extraction complete")
             return ExtractionResult(
                 invoice_data=invoice_data,
                 success=True,

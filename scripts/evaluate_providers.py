@@ -87,7 +87,7 @@ def evaluate_providers() -> None:
     if os.getenv("OPENAI_API_KEY"):
         openai_results = evaluate_provider("openai", test_invoices)
     else:
-        print("⚠ OPENAI_API_KEY not set - skipping OpenAI evaluation")
+        print("[WARN] OPENAI_API_KEY not set - skipping OpenAI evaluation")
         openai_results = None
 
     # Comparison summary
@@ -141,15 +141,15 @@ def evaluate_provider(provider_name: str, test_invoices: list) -> dict:
                 match = actual_value == expected_value
                 if not match:
                     passed = False
-                status = "✓" if match else f"✗ (expected: {expected_value})"
+                status = "OK" if match else f"MISMATCH (expected: {expected_value})"
                 print(f"  {field}: {actual_value} {status}")
 
             if passed:
                 results["passed"] += 1
-                print("  Result: ✓ PASS")
+                print("  Result: PASS")
             else:
                 results["failed"] += 1
-                print("  Result: ✗ FAIL")
+                print("  Result: FAIL")
 
             if result.invoice_data.confidence_score:
                 results["avg_confidence"] += result.invoice_data.confidence_score
@@ -157,7 +157,7 @@ def evaluate_provider(provider_name: str, test_invoices: list) -> dict:
             print(f"  Confidence: {result.invoice_data.confidence_score}")
         else:
             results["failed"] += 1
-            print(f"  Result: ✗ FAIL (error: {result.error})")
+            print(f"  Result: FAIL (error: {result.error})")
 
         print(f"  Latency: {elapsed:.3f}s")
 
@@ -209,7 +209,7 @@ def print_comparison(local_results: dict, openai_results: dict | None) -> None:
     print("KEY INSIGHTS")
     print("=" * 80)
 
-    print("\n✓ Local Provider Benefits:")
+    print("\nLocal Provider Benefits:")
     print("  - Full data sovereignty (no cloud API calls)")
     print("  - No per-request costs")
     print("  - Predictable latency")
@@ -217,13 +217,13 @@ def print_comparison(local_results: dict, openai_results: dict | None) -> None:
     print("  - Works offline")
 
     if openai_results:
-        print("\n✓ OpenAI Provider Benefits:")
+        print("\nOpenAI Provider Benefits:")
         print("  - Potentially higher accuracy on complex documents")
         print("  - No GPU infrastructure required")
         print("  - Automatic model updates")
         print("  - Broader document type support")
 
-    print("\n💡 Recommendation:")
+    print("\nRecommendation:")
     print("  Use LOCAL for: Regulated industries, high volume, cost optimization")
     print("  Use OPENAI for: Complex documents, rapid prototyping, no GPU available")
 

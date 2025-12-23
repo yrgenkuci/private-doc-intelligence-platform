@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo "🧪 Testing Document Intelligence Platform Locally"
+echo "Testing Document Intelligence Platform Locally"
 echo "=================================================="
 echo ""
 
@@ -17,50 +17,50 @@ check_service() {
     local name=$2
     
     if curl -s -f "$url" > /dev/null 2>&1; then
-        echo -e "${GREEN}✅ $name is running${NC}"
+        echo -e "${GREEN}[OK] $name is running${NC}"
         return 0
     else
-        echo -e "${RED}❌ $name is NOT running${NC}"
+        echo -e "${RED}[FAIL] $name is NOT running${NC}"
         return 1
     fi
 }
 
-echo "📋 Step 1: Checking Prerequisites"
+echo "Step 1: Checking Prerequisites"
 echo "-----------------------------------"
 
 # Check Python
 if command -v python3 &> /dev/null; then
-    echo -e "${GREEN}✅ Python3 installed:${NC} $(python3 --version)"
+    echo -e "${GREEN}[OK] Python3 installed:${NC} $(python3 --version)"
 else
-    echo -e "${RED}❌ Python3 not found${NC}"
+    echo -e "${RED}[FAIL] Python3 not found${NC}"
     exit 1
 fi
 
 # Check virtual environment
 if [ -d "venv" ]; then
-    echo -e "${GREEN}✅ Virtual environment exists${NC}"
+    echo -e "${GREEN}[OK] Virtual environment exists${NC}"
 else
-    echo -e "${YELLOW}⚠️  Virtual environment not found${NC}"
+    echo -e "${YELLOW}[WARN] Virtual environment not found${NC}"
     echo "   Run: python3 -m venv venv"
 fi
 
 # Check .env file
 if [ -f ".env" ]; then
-    echo -e "${GREEN}✅ .env file exists${NC}"
+    echo -e "${GREEN}[OK] .env file exists${NC}"
     if grep -q "OPENAI_API_KEY=sk-" .env; then
-        echo -e "${GREEN}✅ OPENAI_API_KEY is set${NC}"
+        echo -e "${GREEN}[OK] OPENAI_API_KEY is set${NC}"
     else
-        echo -e "${YELLOW}⚠️  OPENAI_API_KEY not set in .env${NC}"
+        echo -e "${YELLOW}[WARN] OPENAI_API_KEY not set in .env${NC}"
         echo "   Edit .env and add your OpenAI API key"
     fi
 else
-    echo -e "${RED}❌ .env file not found${NC}"
+    echo -e "${RED}[FAIL] .env file not found${NC}"
     echo "   Run: cp .env.example .env"
     exit 1
 fi
 
 echo ""
-echo "🔍 Step 2: Checking Services"
+echo "Step 2: Checking Services"
 echo "----------------------------"
 
 API_RUNNING=false
@@ -71,14 +71,14 @@ fi
 
 if [ "$API_RUNNING" = false ]; then
     echo ""
-    echo -e "${YELLOW}⚠️  API service not running. Start it with:${NC}"
+    echo -e "${YELLOW}[WARN] API service not running. Start it with:${NC}"
     echo "   docker compose up -d"
     echo "   OR run manually (see LOCAL-TESTING.md)"
     exit 1
 fi
 
 echo ""
-echo "🧪 Step 3: Running Tests"
+echo "Step 3: Running Tests"
 echo "------------------------"
 
 # Test 1: API Health
@@ -109,7 +109,7 @@ else
 fi
 
 echo ""
-echo "📊 Step 4: Service Information"
+echo "Step 4: Service Information"
 echo "------------------------------"
 echo "API Service:    http://localhost:8000"
 echo "API Docs:       http://localhost:8000/docs"
@@ -117,7 +117,7 @@ echo "API Metrics:    http://localhost:8000/metrics"
 echo "OpenAPI Schema: http://localhost:8000/openapi.json"
 
 echo ""
-echo "🎯 Step 5: Docker Commands"
+echo "Step 5: Docker Commands"
 echo "--------------------------"
 # Detect which docker compose command is available
 if command -v docker-compose &> /dev/null; then
@@ -134,7 +134,7 @@ echo "View logs:       $COMPOSE_CMD logs -f"
 echo "Restart:         $COMPOSE_CMD restart"
 echo ""
 
-echo "🎯 Step 6: Sample Requests"
+echo "Step 6: Sample Requests"
 echo "--------------------------"
 echo ""
 echo "Health Check:"
@@ -155,7 +155,7 @@ echo "    -F \"extract_fields=true\""
 echo ""
 
 echo ""
-echo -e "${GREEN}✅ All tests passed! Your platform is running correctly.${NC}"
+echo -e "${GREEN}[OK] All tests passed! Your platform is running correctly.${NC}"
 echo ""
 echo "Next steps:"
 echo "  1. Open http://localhost:8000/docs in your browser"

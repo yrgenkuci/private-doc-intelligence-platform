@@ -4,11 +4,11 @@ This guide shows you how to test the LLM extraction feature end-to-end to ensure
 
 ---
 
-## 🧪 Testing Levels
+## Testing Levels
 
-### Level 1: Unit Tests (No API Key Required) ✅
+### Level 1: Unit Tests (No API Key Required)
 **What it tests:** Code logic, mocking, error handling  
-**Already passing:** 37/37 tests ✅
+**Already passing:** 37/37 tests
 
 ```bash
 cd /home/yrgen/YrgenProjects/private-doc-intelligence-platform
@@ -20,7 +20,7 @@ PYTHONPATH=. pytest tests/unit/ -v
 
 ---
 
-### Level 2: Integration Tests (Requires OpenAI API Key) 🔑
+### Level 2: Integration Tests (Requires OpenAI API Key)
 
 **What it tests:** Real OpenAI API calls with actual invoices
 
@@ -38,21 +38,21 @@ PYTHONPATH=. pytest tests/integration/ -v
 
 **Expected result:** 7 tests run and pass  
 **What it verifies:**
-- ✅ Real invoice text extraction
-- ✅ Minimal data extraction
-- ✅ Empty text handling
-- ✅ Non-invoice text handling
-- ✅ European format support
-- ✅ Performance (< 10 seconds per request)
-- ✅ Retry logic
+- Real invoice text extraction
+- Minimal data extraction
+- Empty text handling
+- Non-invoice text handling
+- European format support
+- Performance (< 10 seconds per request)
+- Retry logic
 
-**Cost:** ~$0.01 (7 API calls × ~$0.0015 each)
+**Cost:** ~$0.01 (7 API calls x ~$0.0015 each)
 
 ---
 
-### Level 3: Manual API Testing (Full Stack) 🚀
+### Level 3: Manual API Testing (Full Stack)
 
-**What it tests:** Full API → OCR → LLM flow
+**What it tests:** Full API -> OCR -> LLM flow
 
 #### Prerequisites
 1. Start the API server:
@@ -69,7 +69,7 @@ Server will start at: `http://localhost:8000`
 
 ---
 
-#### Test 1: Basic Health Check ✅
+#### Test 1: Basic Health Check
 ```bash
 curl http://localhost:8000/health
 ```
@@ -85,7 +85,7 @@ curl http://localhost:8000/health
 
 ---
 
-#### Test 2: OCR Only (No Extraction) ✅
+#### Test 2: OCR Only (No Extraction)
 ```bash
 # Create a test invoice image (or use existing)
 curl -X POST "http://localhost:8000/api/v1/documents/upload" \
@@ -108,7 +108,7 @@ curl -X POST "http://localhost:8000/api/v1/documents/upload" \
 
 ---
 
-#### Test 3: OCR + LLM Extraction ✅
+#### Test 3: OCR + LLM Extraction
 ```bash
 curl -X POST "http://localhost:8000/api/v1/documents/upload?extract_fields=true" \
   -F "file=@test_data/invoice.png" \
@@ -141,7 +141,7 @@ curl -X POST "http://localhost:8000/api/v1/documents/upload?extract_fields=true"
 
 ---
 
-#### Test 4: Graceful Degradation (No API Key) ✅
+#### Test 4: Graceful Degradation (No API Key)
 ```bash
 # Stop server, unset API key
 unset OPENAI_API_KEY
@@ -164,13 +164,13 @@ curl -X POST "http://localhost:8000/api/v1/documents/upload?extract_fields=true"
 ```
 
 **What this proves:** 
-- ✅ OCR still succeeds even when LLM fails
-- ✅ No crashes or 500 errors
-- ✅ Graceful degradation works
+- OCR still succeeds even when LLM fails
+- No crashes or 500 errors
+- Graceful degradation works
 
 ---
 
-#### Test 5: Check Prometheus Metrics 📊
+#### Test 5: Check Prometheus Metrics
 ```bash
 curl http://localhost:8000/metrics | grep extraction
 ```
@@ -195,18 +195,18 @@ extraction_processing_duration_seconds_count 5.0
 
 ---
 
-#### Test 6: OpenAPI/Swagger Documentation 📚
+#### Test 6: OpenAPI/Swagger Documentation
 Open in browser: `http://localhost:8000/docs`
 
 **What to verify:**
-- ✅ `/api/v1/documents/upload` endpoint is documented
-- ✅ `extract_fields` parameter shows up with description
-- ✅ `extracted_data` field in response schema
-- ✅ Try the "Try it out" feature in Swagger UI
+- `/api/v1/documents/upload` endpoint is documented
+- `extract_fields` parameter shows up with description
+- `extracted_data` field in response schema
+- Try the "Try it out" feature in Swagger UI
 
 ---
 
-### Level 4: Load Testing (Optional) 🔥
+### Level 4: Load Testing (Optional)
 
 **What it tests:** Performance under load
 
@@ -223,7 +223,7 @@ ab -n 100 -c 10 -T 'multipart/form-data; boundary=----WebKitFormBoundary' \
 
 ---
 
-## 🎯 Quick Test Script
+## Quick Test Script
 
 Create this script to test everything quickly:
 
@@ -233,29 +233,29 @@ Create this script to test everything quickly:
 
 set -e  # Exit on error
 
-echo "🧪 Testing LLM Extraction Feature"
+echo "Testing LLM Extraction Feature"
 echo "=================================="
 
 # 1. Check if test image exists
 if [ ! -f "test_data/invoice.png" ]; then
-    echo "⚠️  Warning: test_data/invoice.png not found"
+    echo "[WARN] Warning: test_data/invoice.png not found"
     echo "   Using curl with mock file..."
 fi
 
 # 2. Test health endpoint
 echo ""
-echo "1️⃣  Testing health endpoint..."
+echo "1. Testing health endpoint..."
 curl -s http://localhost:8000/health | jq .
 if [ $? -eq 0 ]; then
-    echo "✅ Health check passed"
+    echo "[OK] Health check passed"
 else
-    echo "❌ Health check failed - is server running?"
+    echo "[FAIL] Health check failed - is server running?"
     exit 1
 fi
 
 # 3. Test OCR only
 echo ""
-echo "2️⃣  Testing OCR only (no extraction)..."
+echo "2. Testing OCR only (no extraction)..."
 if [ -f "test_data/invoice.png" ]; then
     RESPONSE=$(curl -s -X POST "http://localhost:8000/api/v1/documents/upload" \
       -F "file=@test_data/invoice.png")
@@ -265,19 +265,19 @@ if [ -f "test_data/invoice.png" ]; then
     EXTRACTED_DATA=$(echo "$RESPONSE" | jq -r .extracted_data)
     
     if [ "$SUCCESS" == "true" ] && [ "$EXTRACTED_DATA" == "null" ]; then
-        echo "✅ OCR test passed (extracted_data is null as expected)"
+        echo "[OK] OCR test passed (extracted_data is null as expected)"
     else
-        echo "❌ OCR test failed"
+        echo "[FAIL] OCR test failed"
         exit 1
     fi
 fi
 
 # 4. Test OCR + LLM extraction
 echo ""
-echo "3️⃣  Testing OCR + LLM extraction..."
+echo "3. Testing OCR + LLM extraction..."
 if [ -f "test_data/invoice.png" ]; then
     if [ -z "$OPENAI_API_KEY" ]; then
-        echo "⚠️  OPENAI_API_KEY not set - skipping LLM test"
+        echo "[WARN] OPENAI_API_KEY not set - skipping LLM test"
     else
         RESPONSE=$(curl -s -X POST "http://localhost:8000/api/v1/documents/upload?extract_fields=true" \
           -F "file=@test_data/invoice.png")
@@ -287,11 +287,11 @@ if [ -f "test_data/invoice.png" ]; then
         EXTRACTED_DATA=$(echo "$RESPONSE" | jq -r .extracted_data)
         
         if [ "$SUCCESS" == "true" ] && [ "$EXTRACTED_DATA" != "null" ]; then
-            echo "✅ LLM extraction test passed"
+            echo "[OK] LLM extraction test passed"
         elif [ "$SUCCESS" == "true" ] && [ "$EXTRACTED_DATA" == "null" ]; then
-            echo "⚠️  Extraction returned null (might be API key issue or text quality)"
+            echo "[WARN] Extraction returned null (might be API key issue or text quality)"
         else
-            echo "❌ LLM extraction test failed"
+            echo "[FAIL] LLM extraction test failed"
             exit 1
         fi
     fi
@@ -299,21 +299,21 @@ fi
 
 # 5. Check metrics
 echo ""
-echo "4️⃣  Checking Prometheus metrics..."
+echo "4. Checking Prometheus metrics..."
 METRICS=$(curl -s http://localhost:8000/metrics | grep extraction_requests_total)
 if [ -n "$METRICS" ]; then
-    echo "✅ Metrics are being recorded:"
+    echo "[OK] Metrics are being recorded:"
     echo "$METRICS"
 else
-    echo "⚠️  No extraction metrics found (might not have run extraction yet)"
+    echo "[WARN] No extraction metrics found (might not have run extraction yet)"
 fi
 
 echo ""
 echo "=================================="
-echo "✅ All tests passed!"
+echo "[OK] All tests passed!"
 echo ""
-echo "📊 View full metrics: http://localhost:8000/metrics"
-echo "📚 View API docs: http://localhost:8000/docs"
+echo "View full metrics: http://localhost:8000/metrics"
+echo "View API docs: http://localhost:8000/docs"
 ```
 
 Save as `test_extraction.sh` and run:
@@ -324,24 +324,24 @@ chmod +x test_extraction.sh
 
 ---
 
-## ✅ Definition of "Solid"
+## Definition of "Solid"
 
 Your feature is solid when:
 
-1. ✅ **Unit tests pass** (37/37)
-2. ✅ **Integration tests pass** (7/7 with API key)
-3. ✅ **Health endpoint responds** (200 OK)
-4. ✅ **OCR works without extraction** (extracted_data is null)
-5. ✅ **LLM extraction returns structured data** (with API key)
-6. ✅ **Graceful degradation works** (OCR succeeds even without API key)
-7. ✅ **Metrics are recorded** (visible in /metrics)
-8. ✅ **No errors in logs** (check console output)
-9. ✅ **Swagger docs are accessible** (http://localhost:8000/docs)
-10. ✅ **Response times acceptable** (< 10s for extraction)
+1. **Unit tests pass** (37/37)
+2. **Integration tests pass** (7/7 with API key)
+3. **Health endpoint responds** (200 OK)
+4. **OCR works without extraction** (extracted_data is null)
+5. **LLM extraction returns structured data** (with API key)
+6. **Graceful degradation works** (OCR succeeds even without API key)
+7. **Metrics are recorded** (visible in /metrics)
+8. **No errors in logs** (check console output)
+9. **Swagger docs are accessible** (http://localhost:8000/docs)
+10. **Response times acceptable** (< 10s for extraction)
 
 ---
 
-## 🐛 Common Issues & Solutions
+## Common Issues and Solutions
 
 ### Issue 1: "OPENAI_API_KEY not set"
 **Solution:** Export the key in your terminal
@@ -377,7 +377,7 @@ sudo apt-get install tesseract-ocr tesseract-ocr-eng
 
 ---
 
-## 🎯 Recommended Testing Flow
+## Recommended Testing Flow
 
 **For Development:**
 ```bash
@@ -410,7 +410,7 @@ docker run -p 8000:8000 -e OPENAI_API_KEY="$API_KEY" doc-intel:test
 
 ---
 
-## 📊 Success Criteria Checklist
+## Success Criteria Checklist
 
 Before pushing to production:
 
@@ -427,7 +427,7 @@ Before pushing to production:
 
 ---
 
-## 🚀 Next Steps After Testing
+## Next Steps After Testing
 
 Once you confirm everything is solid:
 
@@ -443,11 +443,10 @@ Once you confirm everything is solid:
 
 ---
 
-## 📚 Related Documentation
+## Related Documentation
 
 - **Quickstart Guide:** `docs/quickstart.md` - Local setup
 - **Kubernetes Deployment:** `k8s/README.md` - Production setup
 - **API Documentation:** http://localhost:8000/docs (when running locally)
 
 **Need help testing?** Let me know what you'd like to test and I can help you run specific scenarios!
-
