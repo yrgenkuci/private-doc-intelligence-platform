@@ -23,6 +23,7 @@ from fastapi import FastAPI, File, HTTPException, Query, Request, Response, Uplo
 from pydantic import BaseModel
 
 from services.api import metrics
+from services.drift.service import DriftConfig, DriftDetector
 from services.extraction.factory import create_extraction_service
 from services.extraction.schema import InvoiceData
 from services.ocr.service import OCRService
@@ -39,6 +40,7 @@ app = FastAPI(
 ocr_service = OCRService(settings)
 extraction_service = create_extraction_service(settings)
 storage_service = StorageService(settings)
+drift_detector = DriftDetector(DriftConfig())
 
 
 @app.middleware("http")
@@ -724,3 +726,173 @@ async def get_batch_status(batch_id: str) -> BatchStatusResponse:
         documents=documents,
         created_at=batch_dict.get("created_at"),
     )
+
+
+# Drift Detection models and endpoints
+class DriftStatsResponse(BaseModel):
+    """Response for drift detection statistics."""
+
+    sample_count: int
+    rolling_accuracy: float | None
+    accuracy_std_dev: float | None
+    baseline_accuracy: float | None
+    min_accuracy: float | None
+    max_accuracy: float | None
+    alerts_count: int
+    recent_alerts: list[dict[str, Any]]
+
+
+class DriftBaselineRequest(BaseModel):
+    """Request to set drift baseline."""
+
+    accuracy: float
+
+
+class DriftSampleRequest(BaseModel):
+    """Request to add a drift sample with ground truth."""
+
+    document_id: str
+    predicted: dict[str, Any]
+    expected: dict[str, Any]
+
+
+class DriftSampleResponse(BaseModel):
+    """Response after adding drift sample."""
+
+    success: bool
+    alerts_triggered: int
+    alerts: list[dict[str, Any]]
+
+
+@app.get("/api/v1/drift/stats", response_model=DriftStatsResponse, tags=["Monitoring"])
+def get_drift_stats() -> DriftStatsResponse:
+    """Get current drift detection statistics.
+
+    Returns metrics about extraction accuracy over time,
+    including rolling accuracy, alerts, and volatility.
+
+    ## Usage
+
+    ```bash
+    curl "http://localhost:8000/api/v1/drift/stats"
+    ```
+
+    ## Integration with Prometheus
+
+    Drift metrics are also exposed via `/metrics` endpoint:
+    - `extraction_drift_accuracy`: Current rolling accuracy
+    - `extraction_drift_alerts_total`: Alert counter
+    - `extraction_drift_f1_score`: F1 score distribution
+    """
+    stats = drift_detector.get_stats()
+    return DriftStatsResponse(
+        sample_count=stats["sample_count"],
+        rolling_accuracy=stats.get("rolling_accuracy"),
+        accuracy_std_dev=stats.get("accuracy_std_dev"),
+        baseline_accuracy=stats.get("baseline_accuracy"),
+        min_accuracy=stats.get("min_accuracy"),
+        max_accuracy=stats.get("max_accuracy"),
+        alerts_count=stats["alerts_count"],
+        recent_alerts=stats.get("recent_alerts", []),
+    )
+
+
+@app.post("/api/v1/drift/baseline", tags=["Monitoring"])
+def set_drift_baseline(request: DriftBaselineRequest) -> dict[str, Any]:
+    """Set the baseline accuracy for drift detection.
+
+    The baseline is used to detect accuracy drops. If accuracy
+    drops more than the configured threshold from baseline,
+    an alert is triggered.
+
+    ## Usage
+
+    ```bash
+    curl -X POST "http://localhost:8000/api/v1/drift/baseline" \\
+      -H "Content-Type: application/json" \\
+      -d '{"accuracy": 0.85}'
+    ```
+
+    Args:
+        request: Baseline accuracy (0.0 to 1.0)
+
+    Returns:
+        Confirmation of baseline set
+    """
+    if not 0.0 <= request.accuracy <= 1.0:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Accuracy must be between 0.0 and 1.0",
+        )
+
+    drift_detector.set_baseline(request.accuracy)
+    return {
+        "success": True,
+        "message": f"Baseline set to {request.accuracy:.2%}",
+        "baseline_accuracy": request.accuracy,
+    }
+
+
+@app.post(
+    "/api/v1/drift/sample",
+    response_model=DriftSampleResponse,
+    tags=["Monitoring"],
+)
+def add_drift_sample(request: DriftSampleRequest) -> DriftSampleResponse:
+    """Add a sample with ground truth for drift detection.
+
+    This endpoint allows you to submit extraction results with
+    known ground truth to track accuracy over time.
+
+    ## Usage
+
+    ```bash
+    curl -X POST "http://localhost:8000/api/v1/drift/sample" \\
+      -H "Content-Type: application/json" \\
+      -d '{
+        "document_id": "doc-123",
+        "predicted": {"invoice_number": "12345", "total_amount": 100.00},
+        "expected": {"invoice_number": "12345", "total_amount": 100.00}
+      }'
+    ```
+
+    Args:
+        request: Predicted and expected values
+
+    Returns:
+        Information about triggered alerts
+    """
+    # Create InvoiceData from predicted dict
+    predicted_data = InvoiceData(**request.predicted)
+
+    alerts = drift_detector.add_sample(
+        document_id=request.document_id,
+        provider=settings.extraction_provider,
+        predicted=predicted_data,
+        expected=request.expected,
+    )
+
+    return DriftSampleResponse(
+        success=True,
+        alerts_triggered=len(alerts),
+        alerts=[
+            {
+                "type": a.alert_type,
+                "field": a.field,
+                "current_value": a.current_value,
+                "threshold": a.threshold,
+                "message": a.message,
+            }
+            for a in alerts
+        ],
+    )
+
+
+@app.delete("/api/v1/drift/clear", tags=["Monitoring"])
+def clear_drift_data() -> dict[str, str]:
+    """Clear all drift detection data.
+
+    Removes all samples and alerts. Use with caution.
+    """
+    drift_detector.clear()
+    return {"message": "Drift data cleared"}

@@ -1,0 +1,239 @@
+# Default values for doc-intelligence
+# This is a YAML-formatted file.
+
+# Global settings
+global:
+  imageRegistry: ""
+  imagePullSecrets: []
+
+# API Service configuration
+api:
+  enabled: true
+  replicaCount: 2
+
+  image:
+    repository: doc-intelligence/api
+    tag: ""  # Defaults to Chart.appVersion
+    pullPolicy: IfNotPresent
+
+  service:
+    type: ClusterIP
+    port: 8000
+
+  ingress:
+    enabled: false
+    className: nginx
+    annotations: {}
+    hosts:
+      - host: doc-intelligence.local
+        paths:
+          - path: /
+            pathType: Prefix
+    tls: []
+
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 10
+    targetCPUUtilizationPercentage: 70
+    targetMemoryUtilizationPercentage: 80
+
+  # Pod security context
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+    fsGroup: 1000
+
+  # Container security context
+  containerSecurityContext:
+    allowPrivilegeEscalation: false
+    readOnlyRootFilesystem: true
+    capabilities:
+      drop:
+        - ALL
+
+  # Probes
+  livenessProbe:
+    httpGet:
+      path: /health
+      port: http
+    initialDelaySeconds: 10
+    periodSeconds: 10
+
+  readinessProbe:
+    httpGet:
+      path: /ready
+      port: http
+    initialDelaySeconds: 5
+    periodSeconds: 5
+
+  # Environment variables
+  env: {}
+  envFrom: []
+
+# Worker Service configuration (async processing)
+worker:
+  enabled: true
+  replicaCount: 2
+
+  image:
+    repository: doc-intelligence/api
+    tag: ""
+    pullPolicy: IfNotPresent
+
+  command:
+    - python
+    - -m
+    - services.queue.worker
+
+  resources:
+    requests:
+      cpu: 500m
+      memory: 512Mi
+    limits:
+      cpu: 2000m
+      memory: 2Gi
+
+  autoscaling:
+    enabled: true
+    minReplicas: 2
+    maxReplicas: 20
+    # Scale based on Redis queue length (via KEDA or custom metrics)
+    targetCPUUtilizationPercentage: 60
+
+  securityContext:
+    runAsNonRoot: true
+    runAsUser: 1000
+    fsGroup: 1000
+
+  containerSecurityContext:
+    allowPrivilegeEscalation: false
+    readOnlyRootFilesystem: true
+    capabilities:
+      drop:
+        - ALL
+
+# Application configuration
+config:
+  # Environment: development, staging, production
+  environment: production
+  logLevel: INFO
+
+  # OCR provider: tesseract, paddleocr
+  ocrProvider: tesseract
+
+  # Extraction provider: openai, ollama, local
+  extractionProvider: ollama
+
+  # Ollama configuration (when using self-hosted LLM)
+  ollama:
+    baseUrl: http://ollama:11434
+    model: qwen2.5:7b
+
+  # Storage configuration
+  storage:
+    enabled: true
+    bucket: documents
+
+  # Queue configuration
+  queue:
+    enabled: true
+    maxJobs: 10
+    jobTimeout: 300
+
+# Secrets (use external secrets in production)
+secrets:
+  # OpenAI API key (optional, for cloud LLM)
+  openaiApiKey: ""
+  # MinIO credentials (overridden if using subchart)
+  storageAccessKey: ""
+  storageSecretKey: ""
+
+# Redis subchart configuration
+redis:
+  enabled: true
+  architecture: standalone
+  auth:
+    enabled: false
+  master:
+    persistence:
+      enabled: true
+      size: 1Gi
+    resources:
+      requests:
+        cpu: 100m
+        memory: 128Mi
+      limits:
+        cpu: 500m
+        memory: 512Mi
+
+# MinIO subchart configuration
+minio:
+  enabled: true
+  mode: standalone
+  auth:
+    rootUser: minio
+    rootPassword: ""  # Set via secrets
+  persistence:
+    enabled: true
+    size: 10Gi
+  resources:
+    requests:
+      cpu: 100m
+      memory: 256Mi
+    limits:
+      cpu: 500m
+      memory: 1Gi
+  defaultBuckets: "documents"
+
+# Ollama deployment (optional, for self-hosted LLM)
+ollama:
+  enabled: false
+  replicaCount: 1
+  image:
+    repository: ollama/ollama
+    tag: latest
+    pullPolicy: IfNotPresent
+  model: qwen2.5:7b
+  persistence:
+    enabled: true
+    size: 20Gi
+  resources:
+    requests:
+      cpu: 1000m
+      memory: 4Gi
+    limits:
+      cpu: 4000m
+      memory: 16Gi
+      # GPU support (NVIDIA)
+      # nvidia.com/gpu: 1
+
+# ServiceMonitor for Prometheus
+serviceMonitor:
+  enabled: false
+  interval: 30s
+  scrapeTimeout: 10s
+
+# Pod disruption budget
+podDisruptionBudget:
+  enabled: true
+  minAvailable: 1
+
+# Network policies
+networkPolicy:
+  enabled: false
+
+# Service account
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+

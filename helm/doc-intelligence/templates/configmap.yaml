@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "doc-intelligence.fullname" . }}-config
+  labels:
+    {{- include "doc-intelligence.labels" . | nindent 4 }}
+data:
+  APP_ENVIRONMENT: {{ .Values.config.environment | quote }}
+  APP_LOG_LEVEL: {{ .Values.config.logLevel | quote }}
+  APP_OCR_PROVIDER: {{ .Values.config.ocrProvider | quote }}
+  APP_EXTRACTION_PROVIDER: {{ .Values.config.extractionProvider | quote }}
+  APP_OLLAMA_BASE_URL: {{ .Values.config.ollama.baseUrl | quote }}
+  APP_OLLAMA_MODEL: {{ .Values.config.ollama.model | quote }}
+  APP_STORAGE_ENABLED: {{ .Values.config.storage.enabled | quote }}
+  APP_STORAGE_ENDPOINT: {{ printf "%s:9000" (include "doc-intelligence.minioHost" .) | quote }}
+  APP_STORAGE_BUCKET: {{ .Values.config.storage.bucket | quote }}
+  APP_STORAGE_SECURE: "false"
+  APP_QUEUE_ENABLED: {{ .Values.config.queue.enabled | quote }}
+  APP_REDIS_URL: {{ printf "redis://%s:6379/0" (include "doc-intelligence.redisHost" .) | quote }}
+  APP_QUEUE_MAX_JOBS: {{ .Values.config.queue.maxJobs | quote }}
+  APP_QUEUE_JOB_TIMEOUT: {{ .Values.config.queue.jobTimeout | quote }}
+

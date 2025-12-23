@@ -1,0 +1,28 @@
+{{- if .Values.podDisruptionBudget.enabled }}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "doc-intelligence.fullname" . }}-api
+  labels:
+    {{- include "doc-intelligence.labels" . | nindent 4 }}
+    app.kubernetes.io/component: api
+spec:
+  minAvailable: {{ .Values.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      {{- include "doc-intelligence.api.selectorLabels" . | nindent 6 }}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "doc-intelligence.fullname" . }}-worker
+  labels:
+    {{- include "doc-intelligence.labels" . | nindent 4 }}
+    app.kubernetes.io/component: worker
+spec:
+  minAvailable: {{ .Values.podDisruptionBudget.minAvailable }}
+  selector:
+    matchLabels:
+      {{- include "doc-intelligence.worker.selectorLabels" . | nindent 6 }}
+{{- end }}
+

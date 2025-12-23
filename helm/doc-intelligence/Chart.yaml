@@ -1,0 +1,26 @@
+apiVersion: v2
+name: doc-intelligence
+description: Private Document Intelligence Platform - OCR and LLM extraction for regulated environments
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+keywords:
+  - document-intelligence
+  - ocr
+  - llm
+  - invoice-extraction
+  - data-sovereignty
+home: https://github.com/yrgenkuci/private-doc-intelligence-platform
+maintainers:
+  - name: Yrgen Kuci
+    email: contact@yrgenkuci.com
+dependencies:
+  - name: redis
+    version: "18.x.x"
+    repository: https://charts.bitnami.com/bitnami
+    condition: redis.enabled
+  - name: minio
+    version: "13.x.x"
+    repository: https://charts.bitnami.com/bitnami
+    condition: minio.enabled
+
