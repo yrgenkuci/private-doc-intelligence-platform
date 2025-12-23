@@ -19,6 +19,9 @@ COPY services/api/ /app/services/api/
 COPY services/shared/ /app/services/shared/
 COPY services/extraction/ /app/services/extraction/
 COPY services/ocr/ /app/services/ocr/
+COPY services/drift/ /app/services/drift/
+COPY services/storage/ /app/services/storage/
+COPY services/queue/ /app/services/queue/
 COPY pipeline/ /app/pipeline/
 
 # Set environment variables

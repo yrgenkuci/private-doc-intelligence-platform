@@ -1,119 +1,144 @@
 # Private Document Intelligence Platform
 
-Production-grade document intelligence platform on Kubernetes. OCR + LLM extraction for regulated environments with full data sovereignty.
+Production-grade document intelligence platform for regulated environments with full data sovereignty. Supports both cloud (OpenAI) and self-hosted (Ollama) LLM extraction.
 
-## Project Status
+## Features
 
-**Phase 1: Foundation** - Complete
-- Project structure and configuration management
-
-**Phase 2: Core Services** - Complete
-- Basic OCR service with Tesseract
-- Document ingestion API
-- LLM extraction service with OpenAI GPT-4o-mini
-- Evaluation harness: 96.7% Macro F1 (measured on 3 gold samples)
-
-**Phase 3: Infrastructure** - Complete
-- Docker containers
-- Kubernetes manifests
-
-**Phase 4: Observability & CI/CD** - Complete
-- Prometheus metrics
-- Grafana dashboards
-- GitHub Actions CI/CD
+- **OCR Processing** - Tesseract and PaddleOCR support
+- **LLM Extraction** - OpenAI GPT-4o-mini, Ollama (self-hosted), local Donut model
+- **Async Processing** - Redis-backed job queue with batch support
+- **Object Storage** - MinIO (S3-compatible) for document persistence
+- **Drift Detection** - Real-time accuracy monitoring with alerting
+- **Production Ready** - Helm charts, HPA, security contexts, Prometheus metrics
 
 ## Quick Start
 
-Get running in 5 minutes - see [getting-started.md](docs/getting-started.md)
-
 ### Prerequisites
-- Docker Desktop (running)
-- OpenAI API key from https://platform.openai.com/api-keys
 
-### Basic Setup
+- Python 3.11+
+- Docker (optional, for Redis/MinIO)
+- Tesseract OCR: `sudo apt install tesseract-ocr`
+
+### Installation
 
 ```bash
-# 1. Configure API key
-cp .env.example .env
-# Edit .env and add: OPENAI_API_KEY=sk-your-key-here
-
-# 2. Start services
-docker-compose up -d
-
-# 3. Test it works
-curl http://localhost:8000/health
-# Expected: {"status":"healthy",...}
-```
-
-See [getting-started.md](docs/getting-started.md) for testing with actual documents.
-
-### Advanced Setup
-
-Python development:
-```bash
+git clone https://github.com/yrgenkuci/private-doc-intelligence-platform.git
+cd private-doc-intelligence-platform
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-PYTHONPATH=. pytest tests/ -v
 ```
 
-Kubernetes deployment:
+### Configuration
+
 ```bash
-kubectl apply -k k8s/overlays/dev/
+cp .env.example .env
+# Edit .env with your settings:
+# OPENAI_API_KEY=sk-...  (for cloud LLM)
+# APP_EXTRACTION_PROVIDER=ollama  (for self-hosted)
 ```
 
-See detailed guides:
-- [getting-started.md](docs/getting-started.md) - Setup and configuration
-- [deployment.md](docs/deployment.md) - Docker and Kubernetes deployment
-- [kubernetes.md](docs/kubernetes.md) - Advanced Kubernetes configuration
+### Run API Server
 
-## Architecture
+```bash
+source .env
+uvicorn services.api.main:app --host 0.0.0.0 --port 8000
+```
 
-Based on industry best practices from:
-- Azure Document Intelligence
-- Google Document AI
-- Klippa Document Processing
-- FluxAI Private Document Intelligence
+### Test
 
-### Core Components
+```bash
+curl http://localhost:8000/health
+# {"status":"healthy","version":"0.1.0","service":"doc-intelligence-platform"}
 
-1. **Document Ingestion** - API and batch processing
-2. **OCR & Layout Analysis** - Tesseract + EasyOCR (Tesseract implemented)
-3. **LLM Extraction** - OpenAI GPT-4o-mini for structured field extraction
-4. **Validation & Storage** - PostgreSQL with schema validation (planned)
-5. **Evaluation Harness** - Precision/Recall/F1 metrics: 96.7% Macro F1 on invoice extraction (3 samples)
-6. **Kubernetes Deployment** - Kustomize manifests with GitOps
+curl -X POST "http://localhost:8000/api/v1/documents/upload?extract_fields=true" \
+  -F "file=@invoice.png"
+```
+
+## API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/health` | GET | Health check |
+| `/ready` | GET | Readiness probe |
+| `/metrics` | GET | Prometheus metrics |
+| `/api/v1/documents/upload` | POST | Sync OCR + extraction |
+| `/api/v1/documents/upload/async` | POST | Async job submission |
+| `/api/v1/documents/upload/batch` | POST | Batch processing (up to 100) |
+| `/api/v1/jobs/{job_id}` | GET | Job status |
+| `/api/v1/batches/{batch_id}` | GET | Batch status |
+| `/api/v1/drift/stats` | GET | Accuracy drift metrics |
+
+## Production Deployment
+
+### Helm (Recommended)
+
+```bash
+helm repo add bitnami https://charts.bitnami.com/bitnami
+cd helm/doc-intelligence && helm dependency update
+helm install doc-intel . \
+  --namespace doc-intelligence \
+  --create-namespace \
+  --set secrets.storageAccessKey=<minio-key> \
+  --set secrets.storageSecretKey=<minio-secret>
+```
+
+### Kubernetes (Kustomize)
+
+```bash
+kubectl apply -k k8s/overlays/prod/
+```
+
+### Docker Compose
+
+```bash
+docker-compose up -d
+```
+
+## Configuration Options
+
+| Variable | Default | Description |
+|----------|---------|-------------|
+| `APP_OCR_PROVIDER` | tesseract | OCR: `tesseract`, `paddleocr` |
+| `APP_EXTRACTION_PROVIDER` | openai | LLM: `openai`, `ollama`, `local` |
+| `APP_OLLAMA_BASE_URL` | http://localhost:11434 | Ollama server URL |
+| `APP_QUEUE_ENABLED` | false | Enable async processing |
+| `APP_REDIS_URL` | redis://localhost:6379 | Redis connection |
+| `APP_STORAGE_ENABLED` | false | Enable MinIO storage |
+
+See `services/shared/config.py` for all options.
 
 ## Documentation
 
-- [getting-started.md](docs/getting-started.md) - Setup and configuration
-- [testing.md](docs/testing.md) - Testing guide with examples
-- [deployment.md](docs/deployment.md) - Docker and production deployment
-- [kubernetes.md](docs/kubernetes.md) - Kubernetes deployment guide
-- [monitoring.md](docs/monitoring.md) - Prometheus and Grafana dashboards
-- [architecture.md](docs/architecture.md) - Technical decisions and validation
-- [roadmap.md](docs/roadmap.md) - Future enhancements
-- [.github/workflows/](.github/workflows/) - CI/CD workflows
+- [Getting Started](docs/getting-started.md) - Setup guide
+- [Testing](docs/testing.md) - Test procedures
+- [Deployment](docs/deployment.md) - Production deployment
+- [Kubernetes](docs/kubernetes.md) - K8s configuration
 
 ## Technology Stack
 
-- **Framework:** FastAPI 0.122.0
-- **Configuration:** Pydantic Settings 2.1.0
-- **LLM:** OpenAI GPT-4o-mini (via openai 1.109.1)
-- **OCR:** Tesseract + Pillow 10.4.0
-- **Testing:** Pytest with comprehensive test coverage
-- **Type Checking:** MyPy (strict mode)
-- **Code Quality:** Black + Ruff
-- **Container Orchestration:** Kubernetes + Kustomize
-- **Monitoring:** Prometheus + Grafana
+| Component | Technology |
+|-----------|------------|
+| Framework | FastAPI 0.122.0 |
+| OCR | Tesseract, PaddleOCR |
+| LLM | OpenAI, Ollama, Donut |
+| Queue | arq (Redis) |
+| Storage | MinIO (S3) |
+| Monitoring | Prometheus, Grafana |
+| Deployment | Helm, Kubernetes |
 
-## Development Guidelines
+## Development
 
-- Micro-task development (≤60 LOC per change)
-- Tests-first approach
-- Strict typing (no `any`)
-- Production-grade code quality
-- All code must pass: black, ruff, mypy, pytest
+```bash
+# Run tests
+pytest tests/unit/ -v
+
+# Code quality
+black . && ruff check . && mypy services/
+
+# Run evaluation
+python pipeline/eval/eval.py --gold data/gold/invoices_external.json
+```
 
 ## License
 
