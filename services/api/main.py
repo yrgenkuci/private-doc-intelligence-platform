@@ -24,6 +24,7 @@ from services.extraction.factory import create_extraction_service
 from services.extraction.schema import InvoiceData
 from services.ocr.service import OCRService
 from services.shared.config import get_settings
+from services.storage.service import StorageService
 
 settings = get_settings()
 app = FastAPI(
@@ -34,6 +35,7 @@ app = FastAPI(
 
 ocr_service = OCRService(settings)
 extraction_service = create_extraction_service(settings)
+storage_service = StorageService(settings)
 
 
 @app.middleware("http")
@@ -89,6 +91,7 @@ class UploadResponse(BaseModel):
     text: str
     extracted_data: InvoiceData | None = None
     error: str | None = None
+    storage_path: str | None = None
 
 
 @app.get("/health", response_model=HealthResponse, tags=["Health"])
@@ -245,8 +248,26 @@ async def upload_document(
             # Note: If extraction fails, we still return OCR text successfully
             # This provides graceful degradation - OCR succeeded even if LLM failed
 
+        # Store document in object storage if enabled
+        storage_path = None
+        if storage_service.is_available():
+            file_ext = Path(file.filename).suffix if file.filename else ".bin"
+            object_name = f"{doc_id}/original{file_ext}"
+            storage_result = storage_service.upload_bytes(
+                data=content,
+                object_name=object_name,
+                content_type=file.content_type,
+            )
+            if storage_result.success:
+                storage_path = f"{storage_result.bucket}/{object_name}"
+            # Note: Storage failure doesn't fail the request (graceful degradation)
+
         return UploadResponse(
-            success=True, document_id=doc_id, text=result.text, extracted_data=extracted_data
+            success=True,
+            document_id=doc_id,
+            text=result.text,
+            extracted_data=extracted_data,
+            storage_path=storage_path,
         )
 
     finally:

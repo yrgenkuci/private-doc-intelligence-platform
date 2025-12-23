@@ -45,6 +45,12 @@ class Settings(BaseSettings):
         description="Service version",
     )
 
+    # OCR provider configuration
+    ocr_provider: Literal["tesseract", "paddleocr"] = Field(
+        default="tesseract",
+        description="OCR provider: tesseract (CPU), paddleocr (GPU-accelerated)",
+    )
+
     # Extraction provider configuration
     extraction_provider: Literal["openai", "local", "ollama"] = Field(
         default="openai",
@@ -75,6 +81,32 @@ class Settings(BaseSettings):
     local_model_warmup: bool = Field(
         default=True,
         description="Run warmup inference on model load to optimize first request",
+    )
+
+    # Storage configuration (S3-compatible object storage)
+    storage_enabled: bool = Field(
+        default=False,
+        description="Enable document storage in S3-compatible storage (MinIO)",
+    )
+    storage_endpoint: str = Field(
+        default="localhost:9000",
+        description="S3-compatible storage endpoint (host:port)",
+    )
+    storage_access_key: str = Field(
+        default="",
+        description="Storage access key (use env var APP_STORAGE_ACCESS_KEY)",
+    )
+    storage_secret_key: str = Field(
+        default="",
+        description="Storage secret key (use env var APP_STORAGE_SECRET_KEY)",
+    )
+    storage_bucket: str = Field(
+        default="documents",
+        description="Default bucket name for document storage",
+    )
+    storage_secure: bool = Field(
+        default=False,
+        description="Use HTTPS for storage connections",
     )
 
 
