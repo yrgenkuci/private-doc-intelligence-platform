@@ -69,7 +69,7 @@ class PaddleOCRService:
         """
         if self._ocr is None:
             try:
-                from paddleocr import PaddleOCR  # type: ignore[import-untyped]
+                from paddleocr import PaddleOCR
 
                 logger.info("Initializing PaddleOCR engine...")
                 self._ocr = PaddleOCR(lang="en")

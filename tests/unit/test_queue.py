@@ -4,7 +4,7 @@ Tests task definitions and queue configuration.
 """
 
 import json
-from datetime import datetime
+from datetime import UTC, datetime
 from unittest.mock import AsyncMock, MagicMock, patch
 
 import pytest
@@ -63,7 +63,7 @@ class TestJobResult:
             job_id="job-123",
             status="pending",
             document_id="doc-456",
-            created_at=datetime.utcnow().isoformat(),
+            created_at=datetime.now(UTC).isoformat(),
         )
         assert result.status == "pending"
         assert result.ocr_text is None
@@ -77,8 +77,8 @@ class TestJobResult:
             ocr_text="Extracted text",
             extracted_data={"invoice_number": "12345"},
             storage_path="documents/doc-456/original.jpg",
-            created_at=datetime.utcnow().isoformat(),
-            completed_at=datetime.utcnow().isoformat(),
+            created_at=datetime.now(UTC).isoformat(),
+            completed_at=datetime.now(UTC).isoformat(),
         )
         assert result.status == "completed"
         assert result.ocr_text == "Extracted text"
@@ -90,8 +90,8 @@ class TestJobResult:
             status="failed",
             document_id="doc-456",
             error="OCR failed: Invalid image",
-            created_at=datetime.utcnow().isoformat(),
-            completed_at=datetime.utcnow().isoformat(),
+            created_at=datetime.now(UTC).isoformat(),
+            completed_at=datetime.now(UTC).isoformat(),
         )
         assert result.status == "failed"
         assert "OCR failed" in str(result.error)

@@ -227,17 +227,15 @@ CRITICAL Instructions for parsing:
 
 ADDRESS EXTRACTION (critical):
 - Include FULL street with Suite/Apt numbers: "33771 Powell Pike Suite 054"
-- Include city PREFIXES (East, West, North, South, Lake, New): "East Zacharyville" not "Zacharyville"
+- Include city PREFIXES (East, West, North, South, Lake, New)
 - Format: "street, city, state zip" with comma between street and city
 - Example: "45558 Davis Mountains, East Zacharyville, IA 99376"
-- When OCR shows interleaved addresses like:
-  "247 David Highway 77477 Cliff Apt. 853 Lake John, WV 84178 Washingtonbury, MS 78346"
-  The SELLER address ends at first "Tax Id:" - extract: "247 David Highway, Lake John, WV 84178"
+- When OCR shows interleaved addresses, SELLER address ends at first "Tax Id:"
 
 OCR Text:
 {ocr_text}
 
-Extract the invoice data. For supplier_address, extract ONLY the seller's full address with all parts."""
+Extract the invoice data. For supplier_address, extract ONLY the seller's full address."""
 
     def _get_invoice_schema(self) -> dict[str, Any]:
         """Get OpenAI function calling schema for InvoiceData.

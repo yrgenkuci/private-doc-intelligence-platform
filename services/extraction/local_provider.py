@@ -87,7 +87,7 @@ class LocalExtractionProvider(ExtractionProvider):
 
         try:
             import torch
-            from transformers import (  # type: ignore[import-untyped]
+            from transformers import (
                 DonutProcessor,
                 VisionEncoderDecoderModel,
             )

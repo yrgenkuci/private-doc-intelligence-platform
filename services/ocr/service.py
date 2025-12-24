@@ -12,7 +12,7 @@ https://github.com/madmaze/pytesseract
 import os
 from pathlib import Path
 
-import pytesseract  # type: ignore[import-untyped]
+import pytesseract
 from PIL import Image
 from pydantic import BaseModel
 

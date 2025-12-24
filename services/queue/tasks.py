@@ -10,7 +10,7 @@ https://arq-docs.helpmanual.io/
 import json
 import logging
 import tempfile
-from datetime import datetime
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
@@ -92,7 +92,7 @@ async def process_document(
         job_id=job_id,
         status="processing",
         document_id=document_id,
-        created_at=datetime.utcnow().isoformat(),
+        created_at=datetime.now(UTC).isoformat(),
     )
 
     # Update status in Redis
@@ -113,7 +113,7 @@ async def process_document(
             if not ocr_result.success:
                 result.status = "failed"
                 result.error = f"OCR failed: {ocr_result.error}"
-                result.completed_at = datetime.utcnow().isoformat()
+                result.completed_at = datetime.now(UTC).isoformat()
                 await redis.set(f"job:{job_id}", result.model_dump_json(), ex=86400)
                 return result.model_dump()
 
@@ -141,7 +141,7 @@ async def process_document(
                     result.storage_path = f"{storage_result.bucket}/{object_name}"
 
             result.status = "completed"
-            result.completed_at = datetime.utcnow().isoformat()
+            result.completed_at = datetime.now(UTC).isoformat()
 
         finally:
             # Clean up temp file
@@ -152,7 +152,7 @@ async def process_document(
         logger.exception(f"Job {job_id} failed with error: {e}")
         result.status = "failed"
         result.error = str(e)
-        result.completed_at = datetime.utcnow().isoformat()
+        result.completed_at = datetime.now(UTC).isoformat()
 
     # Store final result
     await redis.set(f"job:{job_id}", result.model_dump_json(), ex=86400)
