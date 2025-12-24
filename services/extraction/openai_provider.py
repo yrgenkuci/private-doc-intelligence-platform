@@ -158,7 +158,7 @@ class OpenAIExtractionProvider(ExtractionProvider):
         # 4. Migrate to tools when: (a) need multiple tools, (b) need built-in tools,
         #    or (c) OpenAI announces deprecation timeline
         return self._client.chat.completions.create(  # type: ignore[call-overload]
-            model="gpt-4o-mini",  # Cost-effective model with good accuracy
+            model=self.settings.openai_model,  # Configurable: gpt-4o-mini or gpt-4o
             messages=[
                 {
                     "role": "system",

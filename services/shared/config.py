@@ -59,6 +59,12 @@ class Settings(BaseSettings):
         ),
     )
 
+    # OpenAI configuration (for extraction_provider="openai")
+    openai_model: str = Field(
+        default="gpt-4o-mini",
+        description="OpenAI model for extraction (gpt-4o-mini=fast/cheap, gpt-4o=accurate)",
+    )
+
     # Ollama configuration (for extraction_provider="ollama")
     ollama_base_url: str = Field(
         default="http://localhost:11434",
