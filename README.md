@@ -95,12 +95,31 @@ kubectl apply -k k8s/overlays/prod/
 docker-compose up -d
 ```
 
+### Docker (Self-Hosted with Ollama)
+
+```bash
+# 1. Install and start Ollama
+curl -fsSL https://ollama.ai/install.sh | sh
+ollama pull qwen2.5:7b
+
+# 2. Run container (Linux - use --network host)
+docker run --network host \
+  -e APP_EXTRACTION_PROVIDER=ollama \
+  -e APP_OLLAMA_BASE_URL=http://localhost:11434 \
+  yrgenkuci/doc-intelligence:v0.1.0
+
+# 3. Test
+curl -X POST "http://localhost:8000/api/v1/documents/upload?extract_fields=true" \
+  -F "file=@invoice.png"
+```
+
 ## Configuration Options
 
 | Variable | Default | Description |
 |----------|---------|-------------|
 | `APP_OCR_PROVIDER` | tesseract | OCR: `tesseract`, `paddleocr` |
 | `APP_EXTRACTION_PROVIDER` | openai | LLM: `openai`, `ollama`, `local` |
+| `APP_OPENAI_MODEL` | gpt-4o-mini | Model: `gpt-4o-mini` (fast), `gpt-4o` (accurate) |
 | `APP_OLLAMA_BASE_URL` | http://localhost:11434 | Ollama server URL |
 | `APP_QUEUE_ENABLED` | false | Enable async processing |
 | `APP_REDIS_URL` | redis://localhost:6379 | Redis connection |

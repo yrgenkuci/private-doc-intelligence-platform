@@ -51,3 +51,19 @@ reports/
 # MyPy and Ruff cache
 .mypy_cache/
 .ruff_cache/
+
+# Production values (contains sensitive defaults)
+production-values.yaml
+
+# Helm downloaded dependencies
+helm/*/charts/
+helm/*/Chart.lock
+
+# Downloaded binaries
+minikube-linux-amd64
+
+# Personal scripts and docs (not for public repo)
+scripts/k8s-switch.sh
+scripts/my-dashboard.sh
+docs/kubernetes-contexts.md
+docs/
