@@ -53,9 +53,28 @@ def calculate_field_match(expected: Any, predicted: Any) -> bool:
     if isinstance(expected, int | float | Decimal) and isinstance(predicted, int | float | Decimal):
         return abs(float(expected) - float(predicted)) < 0.01
 
-    # Date comparison
-    if isinstance(expected, date) and isinstance(predicted, date):
-        return expected == predicted
+    # Date comparison - handle string vs date object
+    def normalize_date(val: Any) -> str | None:
+        """Convert date or date string to YYYY-MM-DD string."""
+        if isinstance(val, date):
+            return val.isoformat()
+        if isinstance(val, str):
+            # Already in YYYY-MM-DD format or similar
+            return val.strip()
+        return None
+
+    # Check if either value looks like a date (date object or YYYY-MM-DD string)
+    is_expected_date = isinstance(expected, date) or (
+        isinstance(expected, str) and len(expected) == 10 and expected[4:5] == "-"
+    )
+    is_predicted_date = isinstance(predicted, date) or (
+        isinstance(predicted, str) and len(predicted) == 10 and str(predicted)[4:5] == "-"
+    )
+
+    if is_expected_date and is_predicted_date:
+        exp_str = normalize_date(expected)
+        pred_str = normalize_date(predicted)
+        return exp_str == pred_str
 
     # String comparison (case-insensitive, stripped, normalized whitespace)
     if isinstance(expected, str) and isinstance(predicted, str):

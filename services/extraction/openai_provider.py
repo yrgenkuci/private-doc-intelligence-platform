@@ -219,17 +219,25 @@ CRITICAL Instructions for parsing:
 - When you see "Seller: Client:" the FIRST company name is the seller, SECOND is the client
 - For addresses in side-by-side format: Look for Tax Id patterns to find address boundaries
 - The seller address is between seller name and "Tax Id: XXX-XX-XXXX" (first Tax Id)
-- Format supplier_address as: "street, city, state zip" (use comma between street and city)
 - "Net worth" in SUMMARY = subtotal (before tax)
 - "Gross worth" or "Total" = total_amount (after tax)
 - Parse dates: "02/23/2021" -> "2021-02-23" (MM/DD/YYYY to YYYY-MM-DD)
 - European decimals: "211,77" -> 211.77 (comma is decimal separator)
 - Return null for any field not clearly present
 
+ADDRESS EXTRACTION (critical):
+- Include FULL street with Suite/Apt numbers: "33771 Powell Pike Suite 054"
+- Include city PREFIXES (East, West, North, South, Lake, New): "East Zacharyville" not "Zacharyville"
+- Format: "street, city, state zip" with comma between street and city
+- Example: "45558 Davis Mountains, East Zacharyville, IA 99376"
+- When OCR shows interleaved addresses like:
+  "247 David Highway 77477 Cliff Apt. 853 Lake John, WV 84178 Washingtonbury, MS 78346"
+  The SELLER address ends at first "Tax Id:" - extract: "247 David Highway, Lake John, WV 84178"
+
 OCR Text:
 {ocr_text}
 
-Extract the invoice data. For supplier_address, extract ONLY the seller's address."""
+Extract the invoice data. For supplier_address, extract ONLY the seller's full address with all parts."""
 
     def _get_invoice_schema(self) -> dict[str, Any]:
         """Get OpenAI function calling schema for InvoiceData.
