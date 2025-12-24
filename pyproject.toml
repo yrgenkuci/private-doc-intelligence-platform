@@ -41,6 +41,15 @@ disallow_untyped_defs = true
 explicit_package_bases = true
 mypy_path = "."
 
+# Third-party libraries without type stubs
+[[tool.mypy.overrides]]
+module = [
+    "pytesseract",
+    "paddleocr",
+    "transformers",
+]
+ignore_missing_imports = true
+
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]
